@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule - AKANKSHA 2K25</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-primary: #ffd700;
+        --color-secondary: #d32f2f;
+        --color-accent: #1e3a8a;
+        --color-bg: #faf3e0;
+        --color-text: #212529;
+        --color-white: #ffffff;
+        --color-dark: #121212;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Lato", sans-serif;
+        --transition: all 0.3s ease;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-white);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-mode {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      /* Header & Navigation */
+      .techfest-navbar {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .dark-mode .techfest-navbar {
+        background-color: #1a1a1a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .college-logo {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-text);
+        transition: var(--transition);
+      }
+
+      .dark-mode .nav-link {
+        color: var(--color-white);
+      }
+
+      .nav-link:hover {
+        color: var(--color-secondary);
+      }
+
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .schedule-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0 80px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+      }
+
+      /* Section Styling */
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      .dark-mode .section-title:after {
+        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      }
+
+      /* Schedule Filters */
+      .schedule-filters {
+        padding: 40px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .schedule-filters {
+        background-color: #1e1e1e;
+      }
+
+      .filter-btn {
+        margin: 5px;
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: 2px solid var(--color-primary);
+        background: transparent;
+        color: var(--color-text);
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .dark-mode .filter-btn {
+        color: var(--color-white);
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border-color: transparent;
+      }
+
+      /* Timeline Schedule */
+      .schedule-timeline {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .schedule-timeline {
+        background-color: #1a1a1a;
+      }
+
+      .timeline-day {
+        margin-bottom: 60px;
+      }
+
+      .day-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--color-primary);
+      }
+
+      .day-badge {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        margin-right: 20px;
+      }
+
+      .schedule-item {
+        position: relative;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        background-color: var(--color-white);
+        transition: var(--transition);
+        border-left: 4px solid var(--color-primary);
+      }
+
+      .dark-mode .schedule-item {
+        background-color: #2a2a2a;
+      }
+
+      .schedule-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .event-time {
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .event-time i {
+        margin-right: 8px;
+      }
+
+      .event-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: var(--font-heading);
+      }
+
+      .event-details {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+
+      .event-detail {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+      }
+
+      .event-detail i {
+        margin-right: 8px;
+        color: var(--color-primary);
+      }
+
+      .event-category {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+
+      .category-technical {
+        background-color: rgba(30, 58, 138, 0.1);
+        color: var(--color-accent);
+      }
+
+      .dark-mode .category-technical {
+        background-color: rgba(30, 58, 138, 0.3);
+      }
+
+      .category-gaming {
+        background-color: rgba(211, 47, 47, 0.1);
+        color: var(--color-secondary);
+      }
+
+      .dark-mode .category-gaming {
+        background-color: rgba(211, 47, 47, 0.3);
+      }
+
+      .category-cultural {
+        background-color: rgba(255, 215, 0, 0.1);
+        color: #b38f00;
+      }
+
+      .dark-mode .category-cultural {
+        background-color: rgba(255, 215, 0, 0.3);
+      }
+
+      .category-workshop {
+        background-color: rgba(0, 128, 0, 0.1);
+        color: green;
+      }
+
+      .dark-mode .category-workshop {
+        background-color: rgba(0, 128, 0, 0.3);
+      }
+
+      /* Download Section */
+      .download-section {
+        padding: 80px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .download-section {
+        background-color: #1e1e1e;
+      }
+
+      .download-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--shadow);
+        padding: 30px;
+        text-align: center;
+        background-color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .dark-mode .download-card {
+        background-color: #2a2a2a;
+      }
+
+      .download-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .download-icon {
+        font-size: 3rem;
+        color: var(--color-primary);
+        margin-bottom: 20px;
+      }
+
+      /* Footer */
+      .techfest-footer {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        padding: 60px 0 30px;
+      }
+
+      .dark-mode .techfest-footer {
+        background-color: #152555;
+      }
+
+      .footer-links h5 {
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-primary);
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background: var(--color-primary);
+        color: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      /* Dark Mode Toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Button Styles */
+      .btn-techfest {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-techfest:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .bg-cream {
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .bg-cream {
+        background-color: #1e1e1e;
+      }
+
+      /* Mobile Responsive Adjustments */
+      @media (max-width: 768px) {
+        .schedule-hero {
+          padding: 100px 0 60px;
+        }
+
+        .day-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .day-badge {
+          margin-bottom: 15px;
+        }
+
+        .event-details {
+          flex-direction: column;
+        }
+
+        .event-detail {
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logobsc.png"
+            alt="College Logo"
+            class="college-logo"
+          />
+          <span class="fw-bold"
+            >AKANKSHA <span class="text-gradient">2K25</span></span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="events.html"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
+                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Past Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-techfest ms-2" href="#"
+                >Register Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="schedule-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="anniversary-badge">
+              <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
+            </div>
+            <h1 class="display-4 fw-bold mb-3">Event Schedule</h1>
+            <p class="lead">
+              Plan your TechFest experience with our detailed day-wise schedule
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Filters -->
+    <section class="schedule-filters">
+      <div class="container">
+        <h2 class="section-title">
+          Filter <span class="text-gradient">Schedule</span>
+        </h2>
+        <p class="text-center lead mb-5">View events by category or day</p>
+
+        <div class="text-center">
+          <button class="filter-btn active" data-filter="all">
+            All Events
+          </button>
+          <button class="filter-btn" data-filter="technical">Technical</button>
+          <button class="filter-btn" data-filter="gaming">Gaming</button>
+          <button class="filter-btn" data-filter="cultural">Cultural</button>
+          <button class="filter-btn" data-filter="workshop">Workshops</button>
+          <button class="filter-btn" data-filter="day1">Day 1</button>
+          <button class="filter-btn" data-filter="day2">Day 2</button>
+          <button class="filter-btn" data-filter="day3">Day 3</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Schedule -->
+    <section class="schedule-timeline">
+      <div class="container">
+        <h2 class="section-title">
+          Event <span class="text-gradient">Timeline</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Three days of innovation, competition, and celebration
+        </p>
+
+        <!-- Day 1 -->
+        <div class="timeline-day" data-day="day1">
+          <div class="day-header">
+            <span class="day-badge">Day 1 - October 15, 2025</span>
+            <h3 class="mb-0">Inauguration & Technical Events</h3>
+          </div>
+
+          <div class="schedule-item" data-category="technical">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 9:00 AM - 10:00 AM
+            </div>
+            <h4 class="event-title">Inauguration Ceremony</h4>
+            <p>
+              Official opening of AKANKSHA 2K25 with keynote addresses and
+              lighting of the lamp.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Main Auditorium
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i> Chief Guest: Dr. Anil Sharma, CEO
+                TechVision
+              </div>
+            </div>
+            <span class="event-category category-technical">Inauguration</span>
+          </div>
+
+          <div class="schedule-item" data-category="technical">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 10:30 AM - 1:30 PM
+            </div>
+            <h4 class="event-title">Hackathon Begins</h4>
+            <p>
+              24-hour coding marathon where teams will develop innovative
+              solutions to real-world problems.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> CS Department Lab
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-users"></i> Team Event (2-4 members)
+              </div>
+            </div>
+            <span class="event-category category-technical">Technical</span>
+          </div>
+
+          <div class="schedule-item" data-category="workshop">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 2:00 PM - 4:00 PM
+            </div>
+            <h4 class="event-title">AI & Machine Learning Workshop</h4>
+            <p>
+              Hands-on session on building machine learning models with Python
+              and TensorFlow.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Seminar Hall 2
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i> Dr. Priya Mehta, Data Science Lead
+              </div>
+            </div>
+            <span class="event-category category-workshop">Workshop</span>
+          </div>
+
+          <div class="schedule-item" data-category="gaming">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 4:30 PM - 7:30 PM
+            </div>
+            <h4 class="event-title">BGMI Tournament - Qualifiers</h4>
+            <p>
+              Battle it out in the popular mobile game. Top teams will advance
+              to the finals on Day 2.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Gaming Zone
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-users"></i> Squad Registration (4 members)
+              </div>
+            </div>
+            <span class="event-category category-gaming">Gaming</span>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="timeline-day" data-day="day2">
+          <div class="day-header">
+            <span class="day-badge">Day 2 - October 16, 2025</span>
+            <h3 class="mb-0">Competitions & Workshops</h3>
+          </div>
+
+          <div class="schedule-item" data-category="technical">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 9:00 AM - 11:00 AM
+            </div>
+            <h4 class="event-title">Robotics Workshop</h4>
+            <p>
+              Learn to build and program autonomous robots with expert guidance.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Robotics Lab
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i> Prof. Rajesh Kumar
+              </div>
+            </div>
+            <span class="event-category category-technical">Technical</span>
+          </div>
+
+          <div class="schedule-item" data-category="technical">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 11:30 AM - 1:30 PM
+            </div>
+            <h4 class="event-title">Code Sprint Challenge</h4>
+            <p>
+              Individual coding competition with algorithmic problems of varying
+              difficulty.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Computer Lab 3
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i> Individual Participation
+              </div>
+            </div>
+            <span class="event-category category-technical">Technical</span>
+          </div>
+
+          <div class="schedule-item" data-category="gaming">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 2:30 PM - 5:30 PM
+            </div>
+            <h4 class="event-title">BGMI Tournament - Finals</h4>
+            <p>
+              Championship round of the BGMI tournament with the top qualifying
+              teams.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Main Auditorium
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-trophy"></i> Prize: ₹25,000
+              </div>
+            </div>
+            <span class="event-category category-gaming">Gaming</span>
+          </div>
+
+          <div class="schedule-item" data-category="cultural">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 6:00 PM - 8:00 PM
+            </div>
+            <h4 class="event-title">Battle of Bands</h4>
+            <p>
+              Music bands from various colleges compete for the title of best
+              college band.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Open Air Theater
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-users"></i> Group Performance
+              </div>
+            </div>
+            <span class="event-category category-cultural">Cultural</span>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="timeline-day" data-day="day3">
+          <div class="day-header">
+            <span class="day-badge">Day 3 - October 17, 2025</span>
+            <h3 class="mb-0">Final Competitions & Cultural Night</h3>
+          </div>
+
+          <div class="schedule-item" data-category="technical">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 9:30 AM - 10:30 AM
+            </div>
+            <h4 class="event-title">Hackathon Project Presentations</h4>
+            <p>Teams present their solutions to the panel of judges.</p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> CS Department Lab
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i> Judging Panel
+              </div>
+            </div>
+            <span class="event-category category-technical">Technical</span>
+          </div>
+
+          <div class="schedule-item" data-category="technical">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 11:00 AM - 1:00 PM
+            </div>
+            <h4 class="event-title">Robotics Competition</h4>
+            <p>Teams compete in various challenges with their built robots.</p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Robotics Arena
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-trophy"></i> Prize: ₹15,000
+              </div>
+            </div>
+            <span class="event-category category-technical">Technical</span>
+          </div>
+
+          <div class="schedule-item" data-category="cultural">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 2:00 PM - 4:00 PM
+            </div>
+            <h4 class="event-title">Dance Competition</h4>
+            <p>Solo and group dance performances competing for top honors.</p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Open Air Theater
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-trophy"></i> Prize: ₹10,000
+              </div>
+            </div>
+            <span class="event-category category-cultural">Cultural</span>
+          </div>
+
+          <div class="schedule-item" data-category="cultural">
+            <div class="event-time">
+              <i class="far fa-clock"></i> 6:00 PM - 9:00 PM
+            </div>
+            <h4 class="event-title">Cultural Night & Prize Distribution</h4>
+            <p>
+              Final ceremony with performances, announcement of winners, and
+              closing remarks.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i> Main Ground
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-star"></i> Special Performance: DJ Night
+              </div>
+            </div>
+            <span class="event-category category-cultural">Cultural</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="download-card">
+              <div class="download-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <h3 class="mb-3">Download Complete Schedule</h3>
+              <p class="mb-4">
+                Get the full schedule in PDF format for offline access and
+                printing.
+              </p>
+              <a href="#" class="btn btn-techfest">
+                <i class="fas fa-download me-2"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="techfest-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="mb-4">AKANKSHA 2K25</h4>
+            <p>
+              Celebrating 20 years of innovation and technological excellence.
+              Join us for the most exciting tech festival of the year!
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="schedule.html">Schedule</a></li>
+              <li><a href="#">Results</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Events</h5>
+            <ul>
+              <li><a href="#">Akanksha</a></li>
+              <li><a href="#">Takshak</a></li>
+              <li><a href="#">Freshers</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Exhibitions</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> College Campus, City,
+                State
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +91 9876543210</li>
+              <li>
+                <i class="fas fa-envelope me-2"></i> info@techfest2025.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 AKANKSHA 2K25. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              Designed with <i class="fas fa-heart text-danger"></i>
+              <a href="" style="color: #f0f0f0">L K Technologies</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".techfest-navbar");
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Schedule filtering functionality
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          // Remove active class from all buttons
+          document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          // Add active class to clicked button
+          this.classList.add("active");
+
+          const filter = this.getAttribute("data-filter");
+
+          if (filter === "all") {
+            // Show all events
+            document.querySelectorAll(".schedule-item").forEach((item) => {
+              item.style.display = "block";
+            });
+            document.querySelectorAll(".timeline-day").forEach((day) => {
+              day.style.display = "block";
+            });
+          } else if (["day1", "day2", "day3"].includes(filter)) {
+            // Filter by day
+            document.querySelectorAll(".timeline-day").forEach((day) => {
+              if (day.getAttribute("data-day") === filter) {
+                day.style.display = "block";
+              } else {
+                day.style.display = "none";
+              }
+            });
+            document.querySelectorAll(".schedule-item").forEach((item) => {
+              item.style.display = "block";
+            });
+          } else {
+            // Filter by category
+            document.querySelectorAll(".timeline-day").forEach((day) => {
+              day.style.display = "block";
+            });
+            document.querySelectorAll(".schedule-item").forEach((item) => {
+              if (item.getAttribute("data-category") === filter) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

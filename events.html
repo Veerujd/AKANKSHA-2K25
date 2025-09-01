@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - AKANKSHA 2K25</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-primary: #ffd700;
+        --color-secondary: #d32f2f;
+        --color-accent: #1e3a8a;
+        --color-bg: #faf3e0;
+        --color-text: #212529;
+        --color-white: #ffffff;
+        --color-dark: #121212;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Lato", sans-serif;
+        --transition: all 0.3s ease;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-white);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-mode {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      /* Header & Navigation */
+      .techfest-navbar {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .dark-mode .techfest-navbar {
+        background-color: #1a1a1a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .college-logo {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-text);
+        transition: var(--transition);
+      }
+
+      .dark-mode .nav-link {
+        color: var(--color-white);
+      }
+
+      .nav-link:hover {
+        color: var(--color-secondary);
+      }
+
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .events-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0 80px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+      }
+
+      /* Section Styling */
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      .dark-mode .section-title:after {
+        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      }
+
+      /* Event Categories */
+      .events-categories {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .events-categories {
+        background-color: #1a1a1a;
+      }
+
+      .category-card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        margin-bottom: 25px;
+        height: 100%;
+        position: relative;
+      }
+
+      .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .category-img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .category-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--color-primary);
+        color: var(--color-text);
+        padding: 5px 15px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .category-icon {
+        font-size: 2rem;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+      }
+
+      /* Event Details */
+      .event-details {
+        padding: 80px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .event-details {
+        background-color: #1e1e1e;
+      }
+
+      .event-tabs {
+        margin-bottom: 30px;
+      }
+
+      .event-tabs .nav-link {
+        border: none;
+        padding: 15px 25px;
+        font-weight: 600;
+        color: var(--color-text);
+        border-radius: 10px 10px 0 0;
+        margin-right: 5px;
+      }
+
+      .dark-mode .event-tabs .nav-link {
+        color: var(--color-white);
+      }
+
+      .event-tabs .nav-link.active {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+      }
+
+      .rules-accordion .accordion-button {
+        font-weight: 600;
+        padding: 15px 20px;
+        background-color: var(--color-white);
+        color: var(--color-text);
+      }
+
+      .dark-mode .rules-accordion .accordion-button {
+        background-color: #2a2a2a;
+        color: var(--color-white);
+      }
+
+      .rules-accordion .accordion-button:not(.collapsed) {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+      }
+
+      .rules-accordion .accordion-body {
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .rules-accordion .accordion-body {
+        background-color: #2a2a2a;
+        color: var(--color-white);
+      }
+
+      /* Registration Form */
+      .registration-form {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .registration-form {
+        background-color: #1a1a1a;
+      }
+
+      .form-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--shadow);
+        padding: 30px;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .form-card {
+        background-color: #2a2a2a;
+      }
+
+      .form-control {
+        padding: 12px 15px;
+        border: 2px solid #e1e1e1;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: var(--transition);
+      }
+
+      .dark-mode .form-control {
+        background-color: #1a1a1a;
+        border-color: #444;
+        color: var(--color-white);
+      }
+
+      .form-control:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+      }
+
+      /* Payment Options */
+      .payment-options {
+        padding: 40px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .payment-options {
+        background-color: #1e1e1e;
+      }
+
+      .payment-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--shadow);
+        padding: 25px;
+        text-align: center;
+        margin-bottom: 25px;
+        background-color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .dark-mode .payment-card {
+        background-color: #2a2a2a;
+      }
+
+      .payment-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .payment-icon {
+        font-size: 3rem;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+      }
+
+      .qr-code {
+        max-width: 200px;
+        margin: 15px auto;
+        display: block;
+      }
+
+      /* Results Section */
+      .results-section {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .results-section {
+        background-color: #1a1a1a;
+      }
+
+      .results-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .results-table thead tr {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        text-align: left;
+      }
+
+      .results-table th,
+      .results-table td {
+        padding: 15px 20px;
+      }
+
+      .results-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .results-table tbody tr {
+        background-color: #2a2a2a;
+        border-color: #444;
+      }
+
+      .results-table tbody tr:nth-of-type(even) {
+        background-color: #f8f9fa;
+      }
+
+      .dark-mode .results-table tbody tr:nth-of-type(even) {
+        background-color: #333;
+      }
+
+      .results-table tbody tr:last-of-type {
+        border-bottom: 2px solid var(--color-primary);
+      }
+
+      /* Footer */
+      .techfest-footer {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        padding: 60px 0 30px;
+      }
+
+      .dark-mode .techfest-footer {
+        background-color: #152555;
+      }
+
+      .footer-links h5 {
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-primary);
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background: var(--color-primary);
+        color: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      /* Dark Mode Toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Button Styles */
+      .btn-techfest {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-techfest:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .bg-cream {
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .bg-cream {
+        background-color: #1e1e1e;
+      }
+
+      /* Mobile Responsive Adjustments */
+      @media (max-width: 768px) {
+        .events-hero {
+          padding: 100px 0 60px;
+        }
+
+        .event-tabs .nav-link {
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+
+        .form-card {
+          padding: 20px;
+        }
+
+        .results-table {
+          font-size: 0.9rem;
+        }
+
+        .results-table th,
+        .results-table td {
+          padding: 10px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logobsc.png"
+            alt="College Logo"
+            class="college-logo"
+          />
+          <span class="fw-bold"
+            >AKANKSHA <span class="text-gradient">2K25</span></span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="events.html"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
+                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Past Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-techfest ms-2" href="#"
+                >Register Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="events-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="anniversary-badge">
+              <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
+            </div>
+            <h1 class="display-4 fw-bold mb-3">TechFest Events</h1>
+            <p class="lead">
+              Explore our exciting lineup of technical and non-technical events
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Categories -->
+    <section class="events-categories">
+      <div class="container">
+        <h2 class="section-title">
+          Event <span class="text-gradient">Categories</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Choose from our diverse range of competitions and workshops
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="category-card card h-100">
+              <span class="category-badge">Akanksha</span>
+              <img
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="category-img card-img-top"
+                alt="Technical Events"
+              />
+              <div class="card-body">
+                <div class="category-icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <h5 class="card-title">Technical Events</h5>
+                <p class="card-text">
+                  Coding competitions, hackathons, robotics, and technical
+                  workshops.
+                </p>
+                <a href="#technical" class="btn btn-techfest">View Events</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="category-card card h-100">
+              <span class="category-badge">Takshak</span>
+              <img
+                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="category-img card-img-top"
+                alt="Gaming Events"
+              />
+              <div class="card-body">
+                <div class="category-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h5 class="card-title">Gaming Events</h5>
+                <p class="card-text">
+                  Esports tournaments, BGMI, Valorant, FIFA and more gaming
+                  competitions.
+                </p>
+                <a href="#gaming" class="btn btn-techfest">View Events</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="category-card card h-100">
+              <span class="category-badge">Freshers</span>
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="category-img card-img-top"
+                alt="Cultural Events"
+              />
+              <div class="card-body">
+                <div class="category-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <h5 class="card-title">Cultural Events</h5>
+                <p class="card-text">
+                  Music, dance, drama, and other cultural performances and
+                  competitions.
+                </p>
+                <a href="#cultural" class="btn btn-techfest">View Events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details -->
+    <section class="event-details" id="technical">
+      <div class="container">
+        <h2 class="section-title">
+          Technical <span class="text-gradient">Events</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Showcase your technical skills and innovative ideas
+        </p>
+
+        <ul class="nav nav-tabs event-tabs" id="technicalTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="hackathon-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#hackathon"
+              type="button"
+              role="tab"
+            >
+              Hackathon
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="robotics-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#robotics"
+              type="button"
+              role="tab"
+            >
+              Robotics
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="coding-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#coding"
+              type="button"
+              role="tab"
+            >
+              Coding Challenge
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="technicalTabsContent">
+          <div class="tab-pane fade show active" id="hackathon" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-8">
+                <h3 class="mb-4">24-Hour Hackathon</h3>
+                <p class="lead">
+                  Build innovative solutions to real-world problems in this
+                  round-the-clock coding marathon.
+                </p>
+                <p>
+                  Participants will have 24 hours to design, develop, and
+                  present a working prototype of their solution. The theme will
+                  be announced at the start of the event.
+                </p>
+
+                <h4 class="mt-5 mb-4">Rules & Guidelines</h4>
+                <div class="accordion rules-accordion" id="hackathonRules">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#ruleOne"
+                      >
+                        Team Composition
+                      </button>
+                    </h2>
+                    <div
+                      id="ruleOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#hackathonRules"
+                    >
+                      <div class="accordion-body">
+                        Teams must consist of 2-4 members. All members must be
+                        currently enrolled students with valid ID cards.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#ruleTwo"
+                      >
+                        Project Development
+                      </button>
+                    </h2>
+                    <div
+                      id="ruleTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#hackathonRules"
+                    >
+                      <div class="accordion-body">
+                        All code must be written during the hackathon. You can
+                        use any programming language, framework, or library.
+                        Pre-built templates are allowed but must be declared.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#ruleThree"
+                      >
+                        Submission Guidelines
+                      </button>
+                    </h2>
+                    <div
+                      id="ruleThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#hackathonRules"
+                    >
+                      <div class="accordion-body">
+                        Projects must be submitted via GitHub repository link
+                        along with a brief presentation (max 5 slides)
+                        explaining the problem and solution.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Event Details</h5>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-calendar-alt me-2"></i>Date:</span>
+                      <span>Oct 15, 2025</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-clock me-2"></i>Time:</span>
+                      <span>9:00 AM - 9:00 AM</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span
+                        ><i class="fas fa-map-marker-alt me-2"></i>Venue:</span
+                      >
+                      <span>Main Auditorium</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-users me-2"></i>Team Size:</span>
+                      <span>2-4 Members</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2">
+                      <span><i class="fas fa-tag me-2"></i>Fee:</span>
+                      <span>₹500 per team</span>
+                    </div>
+                    <a href="#register" class="btn btn-techfest mt-3"
+                      >Register Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="robotics" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-8">
+                <h3 class="mb-4">Robotics Workshop & Competition</h3>
+                <p class="lead">
+                  Design, build and program robots to complete challenging tasks
+                  in this exciting competition.
+                </p>
+                <p>
+                  Participants will learn the basics of robotics in a workshop
+                  session and then compete in a robot race and obstacle course
+                  challenge.
+                </p>
+
+                <h4 class="mt-5 mb-4">Rules & Guidelines</h4>
+                <div class="accordion rules-accordion" id="roboticsRules">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#roboticsRuleOne"
+                      >
+                        Robot Specifications
+                      </button>
+                    </h2>
+                    <div
+                      id="roboticsRuleOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#roboticsRules"
+                    >
+                      <div class="accordion-body">
+                        Robots must fit within a 25cm x 25cm x 25cm dimension.
+                        Maximum weight limit is 3kg. Power source must be
+                        on-board.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#roboticsRuleTwo"
+                      >
+                        Competition Rounds
+                      </button>
+                    </h2>
+                    <div
+                      id="roboticsRuleTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#roboticsRules"
+                    >
+                      <div class="accordion-body">
+                        The competition consists of three rounds: Line
+                        following, Obstacle avoidance, and Sumo wrestling. Teams
+                        must qualify each round to advance.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Event Details</h5>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-calendar-alt me-2"></i>Date:</span>
+                      <span>Oct 16, 2025</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-clock me-2"></i>Time:</span>
+                      <span>10:00 AM - 4:00 PM</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span
+                        ><i class="fas fa-map-marker-alt me-2"></i>Venue:</span
+                      >
+                      <span>Robotics Lab</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-users me-2"></i>Team Size:</span>
+                      <span>2-3 Members</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2">
+                      <span><i class="fas fa-tag me-2"></i>Fee:</span>
+                      <span>₹300 per team</span>
+                    </div>
+                    <a href="#register" class="btn btn-techfest mt-3"
+                      >Register Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="coding" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-8">
+                <h3 class="mb-4">Code Sprint Challenge</h3>
+                <p class="lead">
+                  Test your coding skills in this intense algorithmic
+                  programming competition.
+                </p>
+                <p>
+                  Participants will solve a series of challenging programming
+                  problems within a limited time frame. Languages allowed: C,
+                  C++, Java, Python.
+                </p>
+
+                <h4 class="mt-5 mb-4">Rules & Guidelines</h4>
+                <div class="accordion rules-accordion" id="codingRules">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#codingRuleOne"
+                      >
+                        Competition Format
+                      </button>
+                    </h2>
+                    <div
+                      id="codingRuleOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#codingRules"
+                    >
+                      <div class="accordion-body">
+                        The competition will consist of 5 problems of varying
+                        difficulty. Points are awarded based on successful
+                        solutions and time taken.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#codingRuleTwo"
+                      >
+                        Individual Participation
+                      </button>
+                    </h2>
+                    <div
+                      id="codingRuleTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#codingRules"
+                    >
+                      <div class="accordion-body">
+                        This is an individual competition. No team participation
+                        allowed. Internet access will be restricted during the
+                        competition.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Event Details</h5>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-calendar-alt me-2"></i>Date:</span>
+                      <span>Oct 17, 2025</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span><i class="fas fa-clock me-2"></i>Time:</span>
+                      <span>2:00 PM - 5:00 PM</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span
+                        ><i class="fas fa-map-marker-alt me-2"></i>Venue:</span
+                      >
+                      <span>Computer Lab 3</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-bottom py-2"
+                    >
+                      <span
+                        ><i class="fas fa-users me-2"></i>Participation:</span
+                      >
+                      <span>Individual</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2">
+                      <span><i class="fas fa-tag me-2"></i>Fee:</span>
+                      <span>₹100 per person</span>
+                    </div>
+                    <a href="#register" class="btn btn-techfest mt-3"
+                      >Register Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration-form" id="register">
+      <div class="container">
+        <h2 class="section-title">
+          Event <span class="text-gradient">Registration</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Register for your preferred events and secure your spot
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-card">
+              <form id="eventRegistrationForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fullName" class="form-label">Full Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="college" class="form-label"
+                        >College Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="college"
+                        placeholder="Enter your college name"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="event" class="form-label">Select Event</label>
+                      <select class="form-control" id="event" required>
+                        <option value="">Choose an event</option>
+                        <option value="hackathon">24-Hour Hackathon</option>
+                        <option value="robotics">Robotics Workshop</option>
+                        <option value="coding">Code Sprint Challenge</option>
+                        <option value="gaming">BGMI Tournament</option>
+                        <option value="cultural">Dance Competition</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="teamSize" class="form-label">Team Size</label>
+                      <select class="form-control" id="teamSize">
+                        <option value="1">Individual (1)</option>
+                        <option value="2">2 Members</option>
+                        <option value="3">3 Members</option>
+                        <option value="4">4 Members</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row mt-3"
+                  id="teamMembersSection"
+                  style="display: none"
+                >
+                  <div class="col-12">
+                    <h5 class="mb-3">Team Members Details</h5>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="member1" class="form-label"
+                        >Member 2 Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="member1"
+                        placeholder="Enter team member name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="member1Email" class="form-label"
+                        >Member 2 Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="member1Email"
+                        placeholder="Enter team member email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="member2" class="form-label"
+                        >Member 3 Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="member2"
+                        placeholder="Enter team member name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="member2Email" class="form-label"
+                        >Member 3 Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="member2Email"
+                        placeholder="Enter team member email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="member3" class="form-label"
+                        >Member 4 Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="member3"
+                        placeholder="Enter team member name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="member3Email" class="form-label"
+                        >Member 4 Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="member3Email"
+                        placeholder="Enter team member email"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group mt-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="terms"
+                      required
+                    />
+                    <label class="form-check-label" for="terms">
+                      I agree to the <a href="#">terms and conditions</a> and
+                      event rules
+                    </label>
+                  </div>
+                </div>
+
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-techfest btn-lg">
+                    Proceed to Payment
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Options -->
+    <section class="payment-options">
+      <div class="container">
+        <h2 class="section-title">
+          Payment <span class="text-gradient">Options</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Secure and convenient payment methods available
+        </p>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="payment-card">
+              <div class="payment-icon">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <h4>Online Payment</h4>
+              <p>
+                Pay securely using credit/debit cards or net banking through our
+                Razorpay integration.
+              </p>
+              <button class="btn btn-techfest">Pay Now</button>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="payment-card">
+              <div class="payment-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h4>UPI Payment</h4>
+              <p>
+                Use any UPI app like Google Pay, PhonePe, or Paytm to make
+                instant payments.
+              </p>
+              <img
+                src="https://via.placeholder.com/150x150?text=UPI+QR"
+                alt="UPI QR Code"
+                class="qr-code"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="payment-card">
+              <div class="payment-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <h4>Bank Transfer</h4>
+              <p>
+                Transfer the amount directly to our bank account and share the
+                transaction details.
+              </p>
+              <button class="btn btn-techfest">View Bank Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <div class="container">
+        <h2 class="section-title">
+          Previous <span class="text-gradient">Results</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Check out the winners from previous editions of TechFest
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-md-6 mx-auto">
+            <div class="input-group">
+              <select class="form-select" id="yearFilter">
+                <option value="2025">AKANKSHA 2K25</option>
+                <option value="2024">TechFest 2024</option>
+                <option value="2023">TechFest 2023</option>
+              </select>
+              <select class="form-select" id="eventFilter">
+                <option value="all">All Events</option>
+                <option value="hackathon">Hackathon</option>
+                <option value="robotics">Robotics</option>
+                <option value="coding">Coding Challenge</option>
+                <option value="gaming">Gaming Tournament</option>
+              </select>
+              <button class="btn btn-techfest" type="button">
+                Filter Results
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>First Prize</th>
+                <th>Second Prize</th>
+                <th>Third Prize</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hackathon 2024</td>
+                <td>Team CodeBreakers (IIT Mumbai)</td>
+                <td>Team BitMasters (NIT Karnataka)</td>
+                <td>Team Debuggers (SV College)</td>
+              </tr>
+              <tr>
+                <td>Robotics 2024</td>
+                <td>Team RoboMasters (IIT Delhi)</td>
+                <td>Team Automatons (BITS Pilani)</td>
+                <td>Team CircuitBreakers (SV College)</td>
+              </tr>
+              <tr>
+                <td>Coding Challenge 2024</td>
+                <td>Rahul Sharma (IIT Mumbai)</td>
+                <td>Priya Patel (NIT Surathkal)</td>
+                <td>Arjun Kumar (SV College)</td>
+              </tr>
+              <tr>
+                <td>BGMI Tournament 2024</td>
+                <td>Team Elite Warriors</td>
+                <td>Team Phantom Assassins</td>
+                <td>Team Shadow Strikers</td>
+              </tr>
+              <tr>
+                <td>Dance Competition 2024</td>
+                <td>Neha & Group (St. Mary's College)</td>
+                <td>Ritvik & Group (SV College)</td>
+                <td>Ananya & Group (Women's College)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="techfest-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="mb-4">AKANKSHA 2K25</h4>
+            <p>
+              Celebrating 20 years of innovation and technological excellence.
+              Join us for the most exciting tech festival of the year!
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="#">Schedule</a></li>
+              <li><a href="#">Results</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Events</h5>
+            <ul>
+              <li><a href="#">Akanksha</a></li>
+              <li><a href="#">Takshak</a></li>
+              <li><a href="#">Freshers</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Exhibitions</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> College Campus, City,
+                State
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +91 9876543210</li>
+              <li>
+                <i class="fas fa-envelope me-2"></i> info@techfest2025.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 AKANKSHA 2K25. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              Designed with <i class="fas fa-heart text-danger"></i>
+              <a href="" style="color: #f0f0f0">L K Technologies</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".techfest-navbar");
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Team members field toggle
+      document
+        .getElementById("teamSize")
+        .addEventListener("change", function () {
+          const teamSize = parseInt(this.value);
+          const teamSection = document.getElementById("teamMembersSection");
+
+          if (teamSize > 1) {
+            teamSection.style.display = "block";
+
+            // Show/hide team member fields based on selection
+            document
+              .querySelectorAll("#teamMembersSection .form-group")
+              .forEach((field, index) => {
+                if (index < (teamSize - 1) * 2) {
+                  field.style.display = "block";
+                } else {
+                  field.style.display = "none";
+                }
+              });
+          } else {
+            teamSection.style.display = "none";
+          }
+        });
+
+      // Form submission
+      document
+        .getElementById("eventRegistrationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Registration form submitted! In a real application, this would connect to the backend."
+          );
+          // Here you would typically send the form data to your PHP backend
+        });
+    </script>
+  </body>
+</html>

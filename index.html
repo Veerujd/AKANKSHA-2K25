@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAKANKSHA 2K25 - State Level Management and Tech Fest</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-primary: #ffd700;
+        --color-secondary: #d32f2f;
+        --color-accent: #1e3a8a;
+        --color-bg: #faf3e0;
+        --color-text: #212529;
+        --color-white: #ffffff;
+        --color-dark: #121212;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Lato", sans-serif;
+        --transition: all 0.3s ease;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-white);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-mode {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      /* Header & Navigation */
+      .techfest-navbar {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .dark-mode .techfest-navbar {
+        background-color: #1a1a1a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .college-logo {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-text);
+        transition: var(--transition);
+      }
+
+      .dark-mode .nav-link {
+        color: var(--color-white);
+      }
+
+      .nav-link:hover {
+        color: var(--color-secondary);
+      }
+
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0 100px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .anniversary-badge {
+        background: linear-gradient(
+          135deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .countdown-container {
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .countdown-item {
+        margin: 0 10px;
+        min-width: 80px;
+      }
+
+      .countdown-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+      }
+
+      .countdown-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      /* Section Styling */
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      .dark-mode .section-title:after {
+        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      }
+
+      /* Event Cards */
+      .event-card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        margin-bottom: 25px;
+        height: 100%;
+      }
+
+      .event-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .event-img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .event-icon {
+        font-size: 2rem;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+      }
+
+      .participant-count {
+        background-color: var(--color-accent);
+        color: white;
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      /* Fixed Timeline */
+      .timeline {
+        position: relative;
+        padding: 40px 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        background-color: var(--color-primary);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: auto;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-right: auto;
+      }
+
+      .timeline-content {
+        position: relative;
+        width: 45%;
+        padding: 20px;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent var(--color-white);
+        right: -10px;
+        top: 20px;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--color-white) transparent transparent;
+        left: -10px;
+        top: 20px;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+        border: 4px solid var(--color-primary);
+        border-radius: 50%;
+        top: 20px;
+        left: 50%;
+        margin-left: -10px;
+        z-index: 1;
+      }
+
+      .dark-mode .timeline-content {
+        background-color: #2a2a2a;
+      }
+
+      .dark-mode .timeline-content::after {
+        border-color: transparent transparent transparent #2a2a2a !important;
+      }
+
+      .dark-mode .timeline-item:nth-child(even) .timeline-content::after {
+        border-color: transparent #2a2a2a transparent transparent !important;
+      }
+
+      /* Sponsors */
+      .sponsor-carousel {
+        padding: 30px 0;
+      }
+
+      .sponsor-img {
+        max-height: 100px;
+        width: auto;
+        margin: 0 auto;
+        filter: grayscale(100%);
+        transition: var(--transition);
+      }
+
+      .sponsor-img:hover {
+        filter: grayscale(0%);
+      }
+
+      /* Footer */
+      .techfest-footer {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        padding: 60px 0 30px;
+      }
+
+      .dark-mode .techfest-footer {
+        background-color: #152555;
+      }
+
+      .footer-links h5 {
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-primary);
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background: var(--color-primary);
+        color: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      /* Dark Mode Toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Enhanced Contact Section */
+      .contact-card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        height: 100%;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      }
+
+      .dark-mode .contact-card {
+        background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        margin-bottom: 20px;
+        background: linear-gradient(
+          135deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .contact-detail {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .contact-detail-icon {
+        font-size: 1.2rem;
+        color: var(--color-primary);
+        margin-right: 15px;
+        min-width: 20px;
+      }
+
+      /* Mobile Responsive Adjustments */
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 100px 0 80px;
+        }
+
+        .countdown-value {
+          font-size: 1.8rem;
+          padding: 10px;
+        }
+
+        .countdown-item {
+          min-width: 60px;
+          margin: 5px;
+        }
+
+        .timeline::before {
+          left: 31px;
+        }
+
+        .timeline-content {
+          width: 85%;
+          margin-left: 15% !important;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-right: unset;
+          margin-left: 15% !important;
+        }
+
+        .timeline-dot {
+          left: 31px;
+          margin-left: -10px;
+        }
+
+        .timeline-content::after {
+          display: none;
+        }
+      }
+
+      /* Button Styles */
+      .btn-techfest {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-techfest:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      /* Utility Classes */
+      .text-gradient {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .bg-cream {
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .bg-cream {
+        background-color: #1e1e1e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logobsc.png"
+            alt="College Logo"
+            class="college-logo"
+          />
+          <span class="fw-bold"
+            >AKANKSHA <span class="text-gradient">2K25</span></span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="events.html"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
+                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Past Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-techfest ms-2" href="#"
+                >Register Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="anniversary-badge">
+            <i class="fas fa-medal me-2"></i>State Level Management & Tech Fest
+          </div>
+          <h1 class="display-3 fw-bold mb-3">
+            AAKANKSHA <span class="text-gradient">2K25</span>
+          </h1>
+          <p class="lead mb-4">
+            Dare for Knowledge... Version 8.0 | Empire of Innovation: Lead the
+            Change, Rule the Market
+          </p>
+          <div class="countdown-container">
+            <div class="countdown-item">
+              <div class="countdown-value" id="days">00</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-value" id="hours">00</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-value" id="minutes">00</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-value" id="seconds">00</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-techfest btn-lg me-2 mb-2"
+              >Register Now</a
+            >
+            <a href="#" class="btn btn-outline-light btn-lg mb-2"
+              >View Events</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20 Years Celebration Section -->
+    <section class="py-5 bg-cream">
+      <div class="container py-5">
+        <h2 class="section-title">
+          About <span class="text-gradient">AAKANKSHA</span>
+        </h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="celebration-content">
+              <div class="badge bg-secondary mb-3">Version 8.0</div>
+              <h3 class="mb-4">State Level Management and Tech Fest</h3>
+              <p class="lead">
+                Join us for AAKANKSHA 2K25, where innovation meets competition
+                in this state-level management and tech fest.
+              </p>
+              <p>
+                On <strong>19th and 20th September 2025</strong>, at the Sree
+                Guru Shivayogi Bakkeshwara Mahaswamy Kalyana Mantapa, S
+                Nijalingappa Layout, Davanagere – 577004.
+              </p>
+              <div class="mt-4">
+                <div class="d-flex mb-3">
+                  <div class="me-4">
+                    <h4 class="text-gradient mb-0">7+</h4>
+                    <span>Events</span>
+                  </div>
+                  <div class="me-4">
+                    <h4 class="text-gradient mb-0">2</h4>
+                    <span>Days</span>
+                  </div>
+                  <div>
+                    <h4 class="text-gradient mb-0">State</h4>
+                    <span>Level</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Tech Fest"
+                class="img-fluid rounded shadow"
+              />
+              <div class="position-absolute top-0 start-0 mt-3 ms-3">
+                <span class="badge bg-primary p-2">Sept 19-20, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Highlights -->
+    <section class="py-5">
+      <div class="container py-5">
+        <h2 class="section-title">
+          Featured <span class="text-gradient">Events</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Explore our exciting lineup of management and technical events
+        </p>
+
+        <div class="row">
+          <!-- Empire of Innovation -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Empire of Innovation"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-crown"></i>
+                </div>
+                <h5 class="card-title">Empire of Innovation</h5>
+                <p class="card-text">
+                  Lead the Change, Rule the Market. Build your empire through
+                  innovative solutions and strategic thinking.
+                </p>
+                <div class="participant-count">Team of 4 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recruitoria Kingdom -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Recruitoria Kingdom"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h5 class="card-title">Recruitoria Kingdom</h5>
+                <p class="card-text">
+                  Empires are built on Strong Teams. Test your HR and
+                  recruitment skills in this team-based challenge.
+                </p>
+                <div class="participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Crown Coin -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Crown Coin"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-coins"></i>
+                </div>
+                <h5 class="card-title">Crown Coin</h5>
+                <p class="card-text">
+                  Crowning the future of Finance. Demonstrate your financial
+                  acumen and investment strategies.
+                </p>
+                <div class="participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hustle -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Hustle"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h5 class="card-title">Hustle</h5>
+                <p class="card-text">
+                  Distinctively Digital. A fast-paced digital marketing
+                  challenge that tests your online business skills.
+                </p>
+                <div class="participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technocratic Entertainment -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Technocratic Entertainment"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <h5 class="card-title">Technocratic Entertainment</h5>
+                <p class="card-text">
+                  Beyond Reality Within Reach. Explore the intersection of
+                  technology and entertainment in this immersive experience.
+                </p>
+                <div class="participant-count">Team of 4 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- King's Court -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="King's Court"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <h5 class="card-title">King's Court</h5>
+                <p class="card-text">
+                  Crown of Knowledge Awaits. A quiz competition that tests your
+                  general knowledge and quick thinking abilities.
+                </p>
+                <div class="participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Royal Ballet Fashion -->
+          <div class="col-md-6 col-lg-4 mb-4 mx-auto">
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Royal Ballet Fashion"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-tshirt"></i>
+                </div>
+                <h5 class="card-title">Royal Ballet Fashion</h5>
+                <p class="card-text">
+                  Dance as Universal Expression of Joy. A fusion of fashion and
+                  performance that celebrates creative expression.
+                </p>
+                <div class="participant-count">4-8 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-techfest btn-lg">View All Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed Timeline Section -->
+    <section class="py-5 bg-cream">
+      <div class="container py-5">
+        <h2 class="section-title">
+          Event <span class="text-gradient">Schedule</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Mark your calendars for September 19-20, 2025
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Day 1 - September 19, 2025</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Morning Session</h5>
+                  <ul>
+                    <li>09:00 AM - Inauguration Ceremony</li>
+                    <li>10:30 AM - Empire of Innovation Begins</li>
+                    <li>11:00 AM - Recruitoria Kingdom Prelims</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h5>Afternoon Session</h5>
+                  <ul>
+                    <li>01:30 PM - Crown Coin Competition</li>
+                    <li>03:00 PM - Hustle Digital Challenge</li>
+                    <li>04:30 PM - Technocratic Entertainment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Day 2 - September 20, 2025</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Morning Session</h5>
+                  <ul>
+                    <li>09:30 AM - King's Court Quiz</li>
+                    <li>10:45 AM - Empire of Innovation Finals</li>
+                    <li>11:30 AM - Recruitoria Kingdom Finals</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h5>Afternoon Session</h5>
+                  <ul>
+                    <li>01:00 PM - Hustle Final Round</li>
+                    <li>02:30 PM - Royal Ballet Fashion Prep</li>
+                    <li>04:00 PM - Royal Ballet Fashion Show</li>
+                    <li>06:00 PM - Valedictory Ceremony</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <h2 class="section-title">
+          Contact <span class="text-gradient">Information</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Get in touch with us for any queries or information
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="contact-card card h-100">
+              <div class="card-body text-center p-4">
+                <div class="contact-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <h4 class="card-title">Prof. M.C. Guru</h4>
+                <p class="text-muted">Principal</p>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Mobile</h6>
+                    <p class="mb-0">9886215251</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="mb-0">221816</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">bsccollege@gmail.com</p>
+                    <p class="mb-0">principal@bscfgc.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="contact-card card h-100">
+              <div class="card-body text-center p-4">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h4 class="card-title">Venue</h4>
+                <p class="text-muted">Event Location</p>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-building"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Sree Guru Shivayogi Bakkeshwara</h6>
+                    <p class="mb-0">Mahaswamy Kalyana Mantapa</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-location-arrow"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-0">S Nijalingappa Layout</p>
+                    <p class="mb-0">Davanagere – 577004</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Event Dates</h6>
+                    <p class="mb-0">September 19-20, 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mx-auto">
+            <div class="contact-card card h-100">
+              <div class="card-body text-center p-4">
+                <div class="contact-icon">
+                  <i class="fas fa-university"></i>
+                </div>
+                <h4 class="card-title">College Information</h4>
+                <p class="text-muted">B.S. Channabasappa First Grade College</p>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-map-pin"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-0">S S Layout A Block</p>
+                    <p class="mb-0">Davanagere-577004</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Website</h6>
+                    <p class="mb-0">www.bscfgc.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Office Hours</h6>
+                    <p class="mb-0">9:00 AM - 5:00 PM</p>
+                    <p class="mb-0">Monday - Saturday</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="techfest-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="mb-4">AAKANKSHA 2K25</h4>
+            <p>
+              State Level Management and Tech Fest organized by B.S.
+              Channabasappa First Grade College, Davanagere.
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Schedule</a></li>
+              <li><a href="#">Registration</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Events</h5>
+            <ul>
+              <li><a href="#">Empire of Innovation</a></li>
+              <li><a href="#">Recruitoria Kingdom</a></li>
+              <li><a href="#">Crown Coin</a></li>
+              <li><a href="#">Hustle</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> B.S. Channabasappa
+                First Grade College, Davanagere
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +91 9886215251</li>
+              <li><i class="fas fa-envelope me-2"></i> bsccollege@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 AAKANKSHA 2K25. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              Designed with <i class="fas fa-heart text-danger"></i>
+              <a href="" style="color: #f0f0f0">L K Technologies</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Countdown Timer
+      function updateCountdown() {
+        const festDate = new Date("September 19, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = festDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hours").innerText = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes").innerText = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds
+          .toString()
+          .padStart(2, "0");
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".techfest-navbar");
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

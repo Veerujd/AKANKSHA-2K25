@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - AKANKSHA 2K25</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-primary: #ffd700;
+        --color-secondary: #d32f2f;
+        --color-accent: #1e3a8a;
+        --color-bg: #faf3e0;
+        --color-text: #212529;
+        --color-white: #ffffff;
+        --color-dark: #121212;
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Roboto", sans-serif;
+        --transition: all 0.3s ease;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-white);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-mode {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      /* Header & Navigation */
+      .techfest-navbar {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .dark-mode .techfest-navbar {
+        background-color: #1a1a1a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .college-logo {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-text);
+        transition: var(--transition);
+      }
+
+      .dark-mode .nav-link {
+        color: var(--color-white);
+      }
+
+      .nav-link:hover {
+        color: var(--color-secondary);
+      }
+
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .contact-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0 80px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+      }
+
+      /* Section Styling */
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      .dark-mode .section-title:after {
+        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      }
+
+      /* Contact Form */
+      .contact-form-section {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .contact-form-section {
+        background-color: #1a1a1a;
+      }
+
+      .form-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--shadow);
+        padding: 30px;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .form-card {
+        background-color: #2a2a2a;
+      }
+
+      .form-control {
+        padding: 12px 15px;
+        border: 2px solid #e1e1e1;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: var(--transition);
+      }
+
+      .dark-mode .form-control {
+        background-color: #1a1a1a;
+        border-color: #444;
+        color: var(--color-white);
+      }
+
+      .form-control:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+      }
+
+      /* Contact Info */
+      .contact-info {
+        padding: 80px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .contact-info {
+        background-color: #1e1e1e;
+      }
+
+      .info-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--shadow);
+        padding: 25px;
+        text-align: center;
+        margin-bottom: 25px;
+        background-color: var(--color-white);
+        transition: var(--transition);
+        height: 100%;
+      }
+
+      .dark-mode .info-card {
+        background-color: #2a2a2a;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .info-icon {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+      }
+
+      /* Committee Contacts */
+      .committee-section {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .committee-section {
+        background-color: #1a1a1a;
+      }
+
+      .committee-card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        margin-bottom: 25px;
+        text-align: center;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .committee-card {
+        background-color: #2a2a2a;
+      }
+
+      .committee-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .committee-img {
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .committee-social {
+        margin-top: 15px;
+      }
+
+      .committee-social a {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background: var(--color-primary);
+        color: var(--color-text);
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: var(--transition);
+      }
+
+      .committee-social a:hover {
+        background: var(--color-secondary);
+        color: var(--color-white);
+        transform: translateY(-3px);
+      }
+
+      /* Map Section */
+      .map-section {
+        padding: 80px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .map-section {
+        background-color: #1e1e1e;
+      }
+
+      .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        height: 400px;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .faq-section {
+        background-color: #1a1a1a;
+      }
+
+      .accordion-button {
+        font-weight: 600;
+        padding: 15px 20px;
+        background-color: var(--color-white);
+        color: var(--color-text);
+      }
+
+      .dark-mode .accordion-button {
+        background-color: #2a2a2a;
+        color: var(--color-white);
+      }
+
+      .accordion-button:not(.collapsed) {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+      }
+
+      .accordion-body {
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .accordion-body {
+        background-color: #2a2a2a;
+        color: var(--color-white);
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .whatsapp-button:hover {
+        transform: scale(1.1);
+      }
+
+      /* Footer */
+      .techfest-footer {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        padding: 60px 0 30px;
+      }
+
+      .dark-mode .techfest-footer {
+        background-color: #152555;
+      }
+
+      .footer-links h5 {
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-primary);
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background: var(--color-primary);
+        color: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      /* Dark Mode Toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Button Styles */
+      .btn-techfest {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-techfest:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .bg-cream {
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .bg-cream {
+        background-color: #1e1e1e;
+      }
+
+      /* Mobile Responsive Adjustments */
+      @media (max-width: 768px) {
+        .contact-hero {
+          padding: 100px 0 60px;
+        }
+
+        .form-card {
+          padding: 20px;
+        }
+
+        .committee-img {
+          height: 150px;
+        }
+
+        .map-container {
+          height: 300px;
+        }
+
+        .whatsapp-button {
+          bottom: 90px;
+          right: 20px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logobsc.png"
+            alt="College Logo"
+            class="college-logo"
+          />
+          <span class="fw-bold"
+            >AKANKSHA <span class="text-gradient">2K25</span></span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="events.html"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
+                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Past Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-techfest ms-2" href="#"
+                >Register Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="anniversary-badge">
+              <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
+            </div>
+            <h1 class="display-4 fw-bold mb-3">Get In Touch</h1>
+            <p class="lead">
+              Have questions or need more information? We're here to help!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <div class="container">
+        <h2 class="section-title">
+          Send Us a <span class="text-gradient">Message</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          We'll get back to you as soon as possible
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-card">
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name" class="form-label">Full Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="subject" class="form-label">Subject</label>
+                      <select class="form-control" id="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="registration">Registration Help</option>
+                        <option value="events">Event Information</option>
+                        <option value="sponsorship">
+                          Sponsorship Opportunities
+                        </option>
+                        <option value="media">Media/Press Inquiry</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Type your message here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group mt-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="newsletter"
+                      checked
+                    />
+                    <label class="form-check-label" for="newsletter">
+                      I would like to receive updates about AKANKSHA 2K25
+                    </label>
+                  </div>
+                </div>
+
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-techfest btn-lg">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <div class="container">
+        <h2 class="section-title">
+          Contact <span class="text-gradient">Information</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Reach out to us through any of these channels
+        </p>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>Address</h4>
+              <p>
+                Sri Vinayaka Educational Trust (R.)<br />
+                College Campus, City, State - 560001<br />
+                India
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h4>Phone</h4>
+              <p>
+                +91 9876543210<br />
+                +91 9123456789
+              </p>
+              <p class="mt-3">
+                <a href="tel:+919876543210" class="btn btn-techfest btn-sm">
+                  <i class="fas fa-phone me-2"></i>Call Now
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h4>Email</h4>
+              <p>
+                info@techfest2025.com<br />
+                support@techfest2025.com
+              </p>
+              <p class="mt-3">
+                <a
+                  href="mailto:info@techfest2025.com"
+                  class="btn btn-techfest btn-sm"
+                >
+                  <i class="fas fa-envelope me-2"></i>Email Us
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee Contacts -->
+    <section class="committee-section">
+      <div class="container">
+        <h2 class="section-title">
+          Organizing <span class="text-gradient">Committee</span>
+        </h2>
+        <p class="text-center lead mb-5">Get in touch with our team members</p>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="committee-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="committee-img card-img-top"
+                alt="Faculty Coordinator"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Prof. Sanjay Verma</h5>
+                <p class="card-text">Faculty Coordinator</p>
+                <p class="card-text"><small>+91 9876543210</small></p>
+                <div class="committee-social">
+                  <a href="#"><i class="fas fa-envelope"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="committee-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="committee-img card-img-top"
+                alt="Student Coordinator"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Priya Sharma</h5>
+                <p class="card-text">Student Coordinator</p>
+                <p class="card-text"><small>+91 9123456789</small></p>
+                <div class="committee-social">
+                  <a href="#"><i class="fas fa-envelope"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="committee-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="committee-img card-img-top"
+                alt="Technical Head"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Rahul Patel</h5>
+                <p class="card-text">Technical Head</p>
+                <p class="card-text"><small>+91 9234567890</small></p>
+                <div class="committee-social">
+                  <a href="#"><i class="fas fa-envelope"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="committee-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="committee-img card-img-top"
+                alt="Events Head"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Neha Gupta</h5>
+                <p class="card-text">Events Head</p>
+                <p class="card-text"><small>+91 9345678901</small></p>
+                <div class="committee-social">
+                  <a href="#"><i class="fas fa-envelope"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <h2 class="section-title">
+          Our <span class="text-gradient">Location</span>
+        </h2>
+        <p class="text-center lead mb-5">Find us at the college campus</p>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9864428369683!2d77.5943141750782!3d12.908915987406032!2m3!1f0!2f0!3f0!4f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae151f9a97c4c7%3A0x2e9c8916aebe6b1!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1684831541233!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6 mx-auto text-center">
+            <h4 class="mb-3">Getting Here</h4>
+            <p>
+              The college campus is easily accessible by public transportation.
+              The nearest metro station is just 1km away, and multiple bus
+              routes stop at the campus entrance.
+            </p>
+            <a href="#" class="btn btn-techfest mt-3">
+              <i class="fas fa-directions me-2"></i>Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">
+          Frequently Asked <span class="text-gradient">Questions</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Find answers to common questions about TechFest
+        </p>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqOne"
+              >
+                How can I register for TechFest events?
+              </button>
+            </h2>
+            <div
+              id="faqOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                You can register for TechFest events through our website. Visit
+                the Events page, select the events you're interested in, and
+                complete the registration form. Payment can be made online
+                through various methods.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqTwo"
+              >
+                Can students from other colleges participate?
+              </button>
+            </h2>
+            <div
+              id="faqTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes, TechFest is open to students from all colleges. We
+                encourage participation from institutions across the country to
+                promote knowledge sharing and healthy competition.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqThree"
+              >
+                What are the accommodation arrangements for outstation
+                participants?
+              </button>
+            </h2>
+            <div
+              id="faqThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We provide accommodation facilities for outstation participants
+                at reasonable rates. You can request accommodation during the
+                registration process. Please contact us in advance for
+                arrangements.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqFour"
+              >
+                How can I become a sponsor for TechFest?
+              </button>
+            </h2>
+            <div
+              id="faqFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We welcome sponsorships from organizations interested in
+                supporting our event. Please visit our Sponsors page for
+                detailed information about sponsorship tiers and benefits, or
+                contact our sponsorship team at sponsors@techfest2025.com.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqFive"
+              >
+                Will there be workshops as part of TechFest?
+              </button>
+            </h2>
+            <div
+              id="faqFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes, TechFest includes several workshops on emerging
+                technologies conducted by industry experts. Check the Events
+                page for workshop details, schedules, and registration
+                information.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p>
+            Have more questions?
+            <a href="#contactForm" class="text-gradient">Contact us directly</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/919876543210?text=Hi,%20I%20have%20a%20question%20about%20TechFest%202025"
+      class="whatsapp-button"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="techfest-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="mb-4">AKANKSHA 2K25</h4>
+            <p>
+              Celebrating 20 years of innovation and technological excellence.
+              Join us for the most exciting tech festival of the year!
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="schedule.html">Schedule</a></li>
+              <li><a href="results.html">Results</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Events</h5>
+            <ul>
+              <li><a href="#">Akanksha</a></li>
+              <li><a href="#">Takshak</a></li>
+              <li><a href="#">Freshers</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Exhibitions</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> College Campus, City,
+                State
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +91 9876543210</li>
+              <li>
+                <i class="fas fa-envelope me-2"></i> info@techfest2025.com
+              </li>
+              <li>
+                <i class="fas fa-clock me-2"></i> 9:00 AM - 5:00 PM (Mon-Sat)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 AKANKSHA 2K25. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              Designed with <i class="fas fa-heart text-danger"></i>
+              <a href="" style="color: #f0f0f0">L K Technologies</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".techfest-navbar");
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! We will get back to you soon.");
+          // Here you would typically send the form data to your PHP backend
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - AKANKSHA 2K25</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-primary: #ffd700;
+        --color-secondary: #d32f2f;
+        --color-accent: #1e3a8a;
+        --color-bg: #faf3e0;
+        --color-text: #212529;
+        --color-white: #ffffff;
+        --color-dark: #121212;
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Roboto", sans-serif;
+        --transition: all 0.3s ease;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-white);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-mode {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      /* Header & Navigation */
+      .techfest-navbar {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .dark-mode .techfest-navbar {
+        background-color: #1a1a1a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .college-logo {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-text);
+        transition: var(--transition);
+      }
+
+      .dark-mode .nav-link {
+        color: var(--color-white);
+      }
+
+      .nav-link:hover {
+        color: var(--color-secondary);
+      }
+
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .gallery-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0 80px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+      }
+
+      /* Section Styling */
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      .dark-mode .section-title:after {
+        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      }
+
+      /* Gallery Filters */
+      .gallery-filters {
+        padding: 40px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .gallery-filters {
+        background-color: #1e1e1e;
+      }
+
+      .filter-btn {
+        margin: 5px;
+        padding: 8px 20px;
+        border-radius: 30px;
+        border: 2px solid var(--color-primary);
+        background: transparent;
+        color: var(--color-text);
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .dark-mode .filter-btn {
+        color: var(--color-white);
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border-color: transparent;
+      }
+
+      /* Gallery Grid */
+      .gallery-grid {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .gallery-grid {
+        background-color: #1a1a1a;
+      }
+
+      .gallery-item {
+        position: relative;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .gallery-img {
+        transform: scale(1.05);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        padding: 20px;
+        color: var(--color-white);
+        opacity: 0;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-category {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--color-primary);
+        color: var(--color-text);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .video-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: var(--color-white);
+        opacity: 0.8;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .video-icon {
+        opacity: 1;
+        color: var(--color-primary);
+      }
+
+      /* Anniversary Section */
+      .anniversary-gallery {
+        padding: 80px 0;
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .anniversary-gallery {
+        background-color: #1e1e1e;
+      }
+
+      .timeline-gallery {
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .timeline-gallery::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        background-color: var(--color-primary);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-white);
+        border: 4px solid var(--color-primary);
+        border-radius: 50%;
+        top: 15px;
+        right: -12px;
+        z-index: 1;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .timeline-content {
+        padding: 20px;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+      }
+
+      .dark-mode .timeline-content {
+        background-color: #2a2a2a;
+      }
+
+      .timeline-year {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 10px;
+      }
+
+      /* Modal */
+      .gallery-modal .modal-content {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+      }
+
+      .gallery-modal .modal-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+      }
+
+      .gallery-modal .btn-close {
+        filter: invert(1);
+      }
+
+      .modal-image {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .modal-video {
+        width: 100%;
+        min-height: 400px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      /* Footer */
+      .techfest-footer {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        padding: 60px 0 30px;
+      }
+
+      .dark-mode .techfest-footer {
+        background-color: #152555;
+      }
+
+      .footer-links h5 {
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-primary);
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background: var(--color-primary);
+        color: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      /* Dark Mode Toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Button Styles */
+      .btn-techfest {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-techfest:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .bg-cream {
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .bg-cream {
+        background-color: #1e1e1e;
+      }
+
+      /* Mobile Responsive Adjustments */
+      @media (max-width: 768px) {
+        .gallery-hero {
+          padding: 100px 0 60px;
+        }
+
+        .timeline-gallery::after {
+          left: 31px;
+        }
+
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        .timeline-item:nth-child(even) {
+          left: 0;
+        }
+
+        .timeline-item::after {
+          left: 22px;
+          right: auto;
+        }
+
+        .modal-video {
+          min-height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logobsc.png"
+            alt="College Logo"
+            class="college-logo"
+          />
+          <span class="fw-bold"
+            >AKANKSHA <span class="text-gradient">2K25</span></span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="events.html"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
+                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Past Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-techfest ms-2" href="#"
+                >Register Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="anniversary-badge">
+              <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
+            </div>
+            <h1 class="display-4 fw-bold mb-3">TechFest Gallery</h1>
+            <p class="lead">
+              Relive the memories from two decades of innovation and excitement
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+      <div class="container">
+        <h2 class="section-title">
+          Explore Our <span class="text-gradient">Gallery</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Filter by year or category to find specific memories
+        </p>
+
+        <div class="text-center">
+          <button class="filter-btn active" data-filter="all">All Media</button>
+          <button class="filter-btn" data-filter="2025">AKANKSHA 2K25</button>
+          <button class="filter-btn" data-filter="2024">TechFest 2024</button>
+          <button class="filter-btn" data-filter="2023">TechFest 2023</button>
+          <button class="filter-btn" data-filter="anniversary">
+            20 Years Special
+          </button>
+          <button class="filter-btn" data-filter="photos">Photos Only</button>
+          <button class="filter-btn" data-filter="videos">Videos Only</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+      <div class="container">
+        <div class="row" id="galleryContainer">
+          <!-- Gallery items will be populated here -->
+          <div class="col-md-6 col-lg-4" data-year="2025" data-type="photo">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Inauguration 2025"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2025</span>
+              <div class="gallery-overlay">
+                <h5>Inauguration Ceremony</h5>
+                <p>
+                  Chief guest lighting the lamp to mark the beginning of
+                  AKANKSHA 2K25
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-year="2025" data-type="photo">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Hackathon 2025"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2025</span>
+              <div class="gallery-overlay">
+                <h5>Hackathon</h5>
+                <p>
+                  Participants working on innovative solutions during the
+                  24-hour coding marathon
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-year="2025" data-type="video">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Gaming Tournament 2025"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2025</span>
+              <div class="video-icon">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <div class="gallery-overlay">
+                <h5>Gaming Tournament Finals</h5>
+                <p>Highlights from the intense BGMI championship match</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-year="2024" data-type="photo">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Robotics 2024"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2024</span>
+              <div class="gallery-overlay">
+                <h5>Robotics Workshop</h5>
+                <p>Students learning to build and program autonomous robots</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-year="2024" data-type="photo">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Cultural Night 2024"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2024</span>
+              <div class="gallery-overlay">
+                <h5>Cultural Night</h5>
+                <p>Colorful performances during the cultural extravaganza</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-year="2023" data-type="photo">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Paper Presentation 2023"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2023</span>
+              <div class="gallery-overlay">
+                <h5>Paper Presentation</h5>
+                <p>
+                  Students presenting their research papers to the expert panel
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-year="2023" data-type="video">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Workshop 2023"
+                class="gallery-img"
+              />
+              <span class="gallery-category">2023</span>
+              <div class="video-icon">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <div class="gallery-overlay">
+                <h5>AI Workshop</h5>
+                <p>
+                  Hands-on session on machine learning and artificial
+                  intelligence
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-year="anniversary"
+            data-type="photo"
+          >
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1524178232400-38d816f003ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="20 Years Collage"
+                class="gallery-img"
+              />
+              <span class="gallery-category">20 Years</span>
+              <div class="gallery-overlay">
+                <h5>20 Years Journey</h5>
+                <p>Collage of memories from two decades of TechFest</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4"
+            data-year="anniversary"
+            data-type="photo"
+          >
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Alumni Meet 2025"
+                class="gallery-img"
+              />
+              <span class="gallery-category">20 Years</span>
+              <div class="gallery-overlay">
+                <h5>Alumni Meet</h5>
+                <p>
+                  Former students returning to celebrate 20 years of TechFest
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <button class="btn btn-techfest" id="loadMore">Load More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anniversary Gallery -->
+    <section class="anniversary-gallery">
+      <div class="container">
+        <h2 class="section-title">
+          20 Years of <span class="text-gradient">Memories</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          A journey through two decades of innovation and excellence
+        </p>
+
+        <div class="timeline-gallery">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2005</div>
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="TechFest 2005"
+                class="img-fluid mb-3"
+              />
+              <h4>The Beginning</h4>
+              <p>
+                First edition of TechFest with 5 events and 200 participants
+                from 10 colleges.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2010</div>
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="TechFest 2010"
+                class="img-fluid mb-3"
+              />
+              <h4>Expansion</h4>
+              <p>
+                Introduced hackathons and expanded to 15 events with 500+
+                participants.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2015</div>
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="TechFest 2015"
+                class="img-fluid mb-3"
+              />
+              <h4>10th Anniversary</h4>
+              <p>Special edition with international guests and 30+ events.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2020</div>
+              <img
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="TechFest 2020"
+                class="img-fluid mb-3"
+              />
+              <h4>Virtual Pivot</h4>
+              <p>
+                Adapted to pandemic with hybrid mode, reaching 2000+
+                participants online.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-year">2025</div>
+              <img
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="AKANKSHA 2K25"
+                class="img-fluid mb-3"
+              />
+              <h4>20th Anniversary</h4>
+              <p>
+                Grand celebration with 50+ events and 5000+ participants from
+                100+ colleges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div
+      class="modal fade gallery-modal"
+      id="galleryModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Gallery Item</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="modalImageContainer">
+              <img src="" alt="" class="modal-image" id="modalImage" />
+            </div>
+            <div id="modalVideoContainer" style="display: none">
+              <iframe
+                class="modal-video"
+                id="modalVideo"
+                src=""
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="mt-3">
+              <p id="modalDescription"></p>
+              <div class="d-flex justify-content-between">
+                <span id="modalYear" class="badge bg-primary"></span>
+                <span id="modalType" class="badge bg-secondary"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="techfest-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="mb-4">AKANKSHA 2K25</h4>
+            <p>
+              Celebrating 20 years of innovation and technological excellence.
+              Join us for the most exciting tech festival of the year!
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="schedule.html">Schedule</a></li>
+              <li><a href="results.html">Results</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Events</h5>
+            <ul>
+              <li><a href="#">Akanksha</a></li>
+              <li><a href="#">Takshak</a></li>
+              <li><a href="#">Freshers</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Exhibitions</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> College Campus, City,
+                State
+              </li>
+              <li><i class="fas fa-phone me-2"></i> +91 9876543210</li>
+              <li>
+                <i class="fas fa-envelope me-2"></i> info@techfest2025.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 TechFest. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              Designed with <i class="fas fa-heart text-danger"></i>
+              <a href="" style="color: #f0f0f0">L K Technologies</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".techfest-navbar");
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Gallery filtering
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          // Remove active class from all buttons
+          document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          // Add active class to clicked button
+          this.classList.add("active");
+
+          const filter = this.getAttribute("data-filter");
+          const galleryItems = document.querySelectorAll(".gallery-item");
+
+          galleryItems.forEach((item) => {
+            const year = item.parentElement.getAttribute("data-year");
+            const type = item.parentElement.getAttribute("data-type");
+
+            if (filter === "all") {
+              item.parentElement.style.display = "block";
+            } else if (filter === "photos" && type === "photo") {
+              item.parentElement.style.display = "block";
+            } else if (filter === "videos" && type === "video") {
+              item.parentElement.style.display = "block";
+            } else if (filter === year) {
+              item.parentElement.style.display = "block";
+            } else {
+              item.parentElement.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Gallery modal functionality
+      const galleryModal = new bootstrap.Modal(
+        document.getElementById("galleryModal")
+      );
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          const title = this.querySelector("h5").textContent;
+          const description = this.querySelector("p").textContent;
+          const year = this.parentElement.getAttribute("data-year");
+          const type = this.parentElement.getAttribute("data-type");
+          const imageSrc = this.querySelector("img").src;
+
+          document.getElementById("modalTitle").textContent = title;
+          document.getElementById("modalDescription").textContent = description;
+          document.getElementById("modalYear").textContent = year;
+          document.getElementById("modalType").textContent =
+            type === "photo" ? "Photo" : "Video";
+
+          if (type === "photo") {
+            document.getElementById("modalImageContainer").style.display =
+              "block";
+            document.getElementById("modalVideoContainer").style.display =
+              "none";
+            document.getElementById("modalImage").src = imageSrc;
+          } else {
+            document.getElementById("modalImageContainer").style.display =
+              "none";
+            document.getElementById("modalVideoContainer").style.display =
+              "block";
+            // In a real application, you would set the video source here
+            document.getElementById("modalVideo").src =
+              "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Example video
+          }
+
+          galleryModal.show();
+        });
+      });
+
+      // Load more functionality
+      document
+        .getElementById("loadMore")
+        .addEventListener("click", function () {
+          // In a real application, this would load more items from a database
+          // For this example, we'll just duplicate the existing items
+          const galleryContainer = document.getElementById("galleryContainer");
+          const existingItems = galleryContainer.innerHTML;
+          galleryContainer.innerHTML += existingItems;
+        });
+    </script>
+  </body>
+</html>
