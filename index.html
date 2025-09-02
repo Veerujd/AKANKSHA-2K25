@@ -23,31 +23,31 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
       :root {
-        --color-primary: #ffd700;
-        --color-secondary: #d32f2f;
-        --color-accent: #1e3a8a;
-        --color-bg: #faf3e0;
-        --color-text: #212529;
-        --color-white: #ffffff;
-        --color-dark: #121212;
-        --font-heading: "Playfair Display", serif;
-        --font-body: "Lato", sans-serif;
-        --transition: all 0.3s ease;
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        --ak-color-primary: #ffd700;
+        --ak-color-secondary: #d32f2f;
+        --ak-color-accent: #1e3a8a;
+        --ak-color-bg: #faf3e0;
+        --ak-color-text: #212529;
+        --ak-color-white: #ffffff;
+        --ak-color-dark: #121212;
+        --ak-font-heading: "Playfair Display", serif;
+        --ak-font-body: "Lato", sans-serif;
+        --ak-transition: all 0.3s ease;
+        --ak-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --ak-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
 
       body {
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background-color: var(--color-white);
+        font-family: var(--ak-font-body);
+        color: var(--ak-color-text);
+        background-color: var(--ak-color-white);
         overflow-x: hidden;
         transition: background-color 0.3s ease;
       }
 
-      body.dark-mode {
-        background-color: var(--color-dark);
-        color: var(--color-white);
+      body.ak-dark-mode {
+        background-color: var(--ak-color-dark);
+        color: var(--ak-color-white);
       }
 
       h1,
@@ -56,90 +56,90 @@
       h4,
       h5,
       h6 {
-        font-family: var(--font-heading);
+        font-family: var(--ak-font-heading);
         font-weight: 700;
       }
 
       /* Header & Navigation */
-      .techfest-navbar {
-        background-color: var(--color-white);
-        box-shadow: var(--shadow);
+      .ak-navbar {
+        background-color: var(--ak-color-white);
+        box-shadow: var(--ak-shadow);
         padding: 15px 0;
-        transition: var(--transition);
+        transition: var(--ak-transition);
       }
 
-      .dark-mode .techfest-navbar {
+      .ak-dark-mode .ak-navbar {
         background-color: #1a1a1a;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .navbar-brand {
+      .ak-navbar-brand {
         display: flex;
         align-items: center;
       }
 
-      .college-logo {
+      .ak-college-logo {
         height: 50px;
         margin-right: 15px;
       }
 
-      .nav-item {
+      .ak-nav-item {
         margin: 0 5px;
       }
 
-      .nav-link {
+      .ak-nav-link {
         font-weight: 500;
-        color: var(--color-text);
-        transition: var(--transition);
+        color: var(--ak-color-text);
+        transition: var(--ak-transition);
       }
 
-      .dark-mode .nav-link {
-        color: var(--color-white);
+      .ak-dark-mode .ak-nav-link {
+        color: var(--ak-color-white);
       }
 
-      .nav-link:hover {
-        color: var(--color-secondary);
+      .ak-nav-link:hover {
+        color: var(--ak-color-secondary);
       }
 
-      .navbar-toggler {
+      .ak-navbar-toggler {
         border: none;
         font-size: 1.5rem;
       }
 
       /* Hero Section */
-      .hero-section {
+      .ak-hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
           url("bscclg.jpeg");
         background-size: cover;
         background-position: center;
         padding: 120px 0 100px;
-        color: var(--color-white);
+        color: var(--ak-color-white);
         text-align: center;
         position: relative;
       }
 
-      .hero-content {
+      .ak-hero-content {
         max-width: 800px;
         margin: 0 auto;
       }
 
-      .anniversary-badge {
+      .ak-anniversary-badge {
         background: linear-gradient(
           135deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--ak-color-white);
         display: inline-block;
         padding: 10px 25px;
         border-radius: 50px;
         font-weight: 600;
         margin-bottom: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        animation: pulse 2s infinite;
+        animation: ak-pulse 2s infinite;
       }
 
-      @keyframes pulse {
+      @keyframes ak-pulse {
         0% {
           transform: scale(1);
         }
@@ -151,20 +151,20 @@
         }
       }
 
-      .countdown-container {
+      .ak-countdown-container {
         margin: 30px 0;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
       }
 
-      .countdown-item {
+      .ak-countdown-item {
         margin: 0 10px;
         min-width: 80px;
         perspective: 200px;
       }
 
-      .countdown-value {
+      .ak-countdown-value {
         font-size: 2.5rem;
         font-weight: 700;
         background: rgba(255, 255, 255, 0.1);
@@ -175,11 +175,11 @@
         transform-style: preserve-3d;
       }
 
-      .countdown-value.flip {
-        animation: flip 0.5s ease forwards;
+      .ak-countdown-value.ak-flip {
+        animation: ak-flip 0.5s ease forwards;
       }
 
-      @keyframes flip {
+      @keyframes ak-flip {
         0% {
           transform: rotateX(0deg);
         }
@@ -188,86 +188,86 @@
         }
       }
 
-      .countdown-label {
+      .ak-countdown-label {
         font-size: 0.9rem;
         text-transform: uppercase;
         transition: color 0.3s ease;
       }
 
-      .countdown-item:hover .countdown-label {
-        color: var(--color-primary);
+      .ak-countdown-item:hover .ak-countdown-label {
+        color: var(--ak-color-primary);
       }
 
       /* Section Styling */
-      .section-title {
+      .ak-section-title {
         position: relative;
         margin-bottom: 40px;
         text-align: center;
       }
 
-      .section-title:after {
+      .ak-section-title:after {
         content: "";
         display: block;
         width: 80px;
         height: 4px;
         background: linear-gradient(
           to right,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
         margin: 15px auto;
         border-radius: 2px;
         transition: width 0.5s ease;
       }
 
-      .section-title:hover:after {
+      .ak-section-title:hover:after {
         width: 120px;
       }
 
-      .dark-mode .section-title:after {
-        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      .ak-dark-mode .ak-section-title:after {
+        background: linear-gradient(to right, var(--ak-color-primary), #aa2c25);
       }
 
       /* Event Cards */
-      .event-card {
+      .ak-event-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak-shadow);
+        transition: var(--ak-transition);
         margin-bottom: 25px;
         height: 100%;
         transform: translateY(0);
       }
 
-      .event-card:hover {
+      .ak-event-card:hover {
         transform: translateY(-10px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--ak-shadow-hover);
       }
 
-      .event-img {
+      .ak-event-img {
         height: 200px;
         object-fit: cover;
         transition: transform 0.5s ease;
       }
 
-      .event-card:hover .event-img {
+      .ak-event-card:hover .ak-event-img {
         transform: scale(1.05);
       }
 
-      .event-icon {
+      .ak-event-icon {
         font-size: 2rem;
-        color: var(--color-primary);
+        color: var(--ak-color-primary);
         margin-bottom: 15px;
         transition: transform 0.3s ease;
       }
 
-      .event-card:hover .event-icon {
+      .ak-event-card:hover .ak-event-icon {
         transform: rotate(15deg) scale(1.2);
       }
 
-      .participant-count {
-        background-color: var(--color-accent);
+      .ak-participant-count {
+        background-color: var(--ak-color-accent);
         color: white;
         padding: 3px 10px;
         border-radius: 15px;
@@ -277,22 +277,22 @@
         transition: all 0.3s ease;
       }
 
-      .participant-count:hover {
+      .ak-participant-count:hover {
         transform: scale(1.05);
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       }
 
       /* Fixed Timeline */
-      .timeline {
+      .ak-timeline {
         position: relative;
         padding: 40px 0;
       }
 
-      .timeline::before {
+      .ak-timeline::before {
         content: "";
         position: absolute;
         width: 4px;
-        background-color: var(--color-primary);
+        background-color: var(--ak-color-primary);
         top: 0;
         bottom: 0;
         left: 50%;
@@ -300,15 +300,15 @@
         transition: background-color 0.5s ease;
       }
 
-      .timeline:hover::before {
+      .ak-timeline:hover::before {
         background: linear-gradient(
           to bottom,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
       }
 
-      .timeline-item {
+      .ak-timeline-item {
         position: relative;
         margin-bottom: 40px;
         opacity: 0;
@@ -316,70 +316,70 @@
         transition: all 0.5s ease;
       }
 
-      .timeline-item.visible {
+      .ak-timeline-item.ak-visible {
         opacity: 1;
         transform: translateX(0);
       }
 
-      .timeline-item:nth-child(even) {
+      .ak-timeline-item:nth-child(even) {
         transform: translateX(50px);
       }
 
-      .timeline-item:nth-child(even).visible {
+      .ak-timeline-item:nth-child(even).ak-visible {
         transform: translateX(0);
       }
 
-      .timeline-item:nth-child(odd) .timeline-content {
+      .ak-timeline-item:nth-child(odd) .ak-timeline-content {
         margin-left: auto;
       }
 
-      .timeline-item:nth-child(even) .timeline-content {
+      .ak-timeline-item:nth-child(even) .ak-timeline-content {
         margin-right: auto;
       }
 
-      .timeline-content {
+      .ak-timeline-content {
         position: relative;
         width: 45%;
         padding: 20px;
-        background-color: var(--color-white);
+        background-color: var(--ak-color-white);
         border-radius: 10px;
-        box-shadow: var(--shadow);
+        box-shadow: var(--ak-shadow);
         transition: all 0.3s ease;
       }
 
-      .timeline-content:hover {
+      .ak-timeline-content:hover {
         transform: scale(1.02);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       }
 
-      .timeline-item:nth-child(odd) .timeline-content::after {
+      .ak-timeline-item:nth-child(odd) .ak-timeline-content::after {
         content: "";
         position: absolute;
         border-style: solid;
         border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent var(--color-white);
+        border-color: transparent transparent transparent var(--ak-color-white);
         right: -10px;
         top: 20px;
         transition: border-color 0.3s ease;
       }
 
-      .timeline-item:nth-child(even) .timeline-content::after {
+      .ak-timeline-item:nth-child(even) .ak-timeline-content::after {
         content: "";
         position: absolute;
         border-style: solid;
         border-width: 10px 10px 10px 0;
-        border-color: transparent var(--color-white) transparent transparent;
+        border-color: transparent var(--ak-color-white) transparent transparent;
         left: -10px;
         top: 20px;
         transition: border-color 0.3s ease;
       }
 
-      .timeline-dot {
+      .ak-timeline-dot {
         position: absolute;
         width: 20px;
         height: 20px;
-        background-color: var(--color-white);
-        border: 4px solid var(--color-primary);
+        background-color: var(--ak-color-white);
+        border: 4px solid var(--ak-color-primary);
         border-radius: 50%;
         top: 20px;
         left: 50%;
@@ -388,91 +388,93 @@
         transition: all 0.3s ease;
       }
 
-      .timeline-dot:hover {
+      .ak-timeline-dot:hover {
         transform: scale(1.5);
-        background-color: var(--color-primary);
+        background-color: var(--ak-color-primary);
       }
 
-      .dark-mode .timeline-content {
+      .ak-dark-mode .ak-timeline-content {
         background-color: #2a2a2a;
       }
 
-      .dark-mode .timeline-content::after {
+      .ak-dark-mode .ak-timeline-content::after {
         border-color: transparent transparent transparent #2a2a2a !important;
       }
 
-      .dark-mode .timeline-item:nth-child(even) .timeline-content::after {
+      .ak-dark-mode
+        .ak-timeline-item:nth-child(even)
+        .ak-timeline-content::after {
         border-color: transparent #2a2a2a transparent transparent !important;
       }
 
       /* Sponsors */
-      .sponsor-carousel {
+      .ak-sponsor-carousel {
         padding: 30px 0;
       }
 
-      .sponsor-img {
+      .ak-sponsor-img {
         max-height: 100px;
         width: auto;
         margin: 0 auto;
         filter: grayscale(100%);
-        transition: var(--transition);
+        transition: var(--ak-transition);
       }
 
-      .sponsor-img:hover {
+      .ak-sponsor-img:hover {
         filter: grayscale(0%);
         transform: scale(1.1);
       }
 
       /* Footer */
-      .techfest-footer {
-        background-color: var(--color-accent);
-        color: var(--color-white);
+      .ak-footer {
+        background-color: var(--ak-color-accent);
+        color: var(--ak-color-white);
         padding: 60px 0 30px;
       }
 
-      .dark-mode .techfest-footer {
+      .ak-dark-mode .ak-footer {
         background-color: #152555;
       }
 
-      .footer-links h5 {
-        border-bottom: 2px solid var(--color-primary);
+      .ak-footer-links h5 {
+        border-bottom: 2px solid var(--ak-color-primary);
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
         transition: all 0.3s ease;
       }
 
-      .footer-links h5:hover {
+      .ak-footer-links h5:hover {
         padding-bottom: 15px;
         border-bottom-width: 3px;
       }
 
-      .footer-links ul {
+      .ak-footer-links ul {
         list-style: none;
         padding: 0;
       }
 
-      .footer-links li {
+      .ak-footer-links li {
         margin-bottom: 10px;
         transition: transform 0.3s ease;
       }
 
-      .footer-links li:hover {
+      .ak-footer-links li:hover {
         transform: translateX(5px);
       }
 
-      .footer-links a {
+      .ak-footer-links a {
         color: rgba(255, 255, 255, 0.8);
-        transition: var(--transition);
+        transition: var(--ak-transition);
         text-decoration: none;
       }
 
-      .footer-links a:hover {
-        color: var(--color-primary);
+      .ak-footer-links a:hover {
+        color: var(--ak-color-primary);
         padding-left: 5px;
       }
 
-      .social-icons a {
+      .ak-social-icons a {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -481,18 +483,18 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         margin-right: 10px;
-        color: var(--color-white);
-        transition: var(--transition);
+        color: var(--ak-color-white);
+        transition: var(--ak-transition);
       }
 
-      .social-icons a:hover {
-        background: var(--color-primary);
-        color: var(--color-accent);
+      .ak-social-icons a:hover {
+        background: var(--ak-color-primary);
+        color: var(--ak-color-accent);
         transform: translateY(-5px) rotate(5deg);
       }
 
       /* Dark Mode Toggle */
-      .dark-mode-toggle {
+      .ak-dark-mode-toggle {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -500,96 +502,96 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--ak-color-primary);
+        color: var(--ak-color-text);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak-shadow);
+        transition: var(--ak-transition);
         border: none;
       }
 
-      .dark-mode-toggle:hover {
+      .ak-dark-mode-toggle:hover {
         transform: rotate(30deg) scale(1.1);
       }
 
       /* Enhanced Contact Section */
-      .contact-card {
+      .ak-contact-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak-shadow);
+        transition: var(--ak-transition);
         height: 100%;
         background: linear-gradient(145deg, #ffffff, #f0f0f0);
       }
 
-      .dark-mode .contact-card {
+      .ak-dark-mode .ak-contact-card {
         background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
       }
 
-      .contact-card:hover {
+      .ak-contact-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--ak-shadow-hover);
       }
 
-      .contact-icon {
+      .ak-contact-icon {
         font-size: 2.5rem;
-        color: var(--color-primary);
+        color: var(--ak-color-primary);
         margin-bottom: 20px;
         background: linear-gradient(
           135deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: transform 0.5s ease;
       }
 
-      .contact-card:hover .contact-icon {
+      .ak-contact-card:hover .ak-contact-icon {
         transform: rotate(15deg) scale(1.2);
       }
 
-      .contact-detail {
+      .ak-contact-detail {
         display: flex;
         align-items: flex-start;
         margin-bottom: 15px;
         transition: transform 0.3s ease;
       }
 
-      .contact-detail:hover {
+      .ak-contact-detail:hover {
         transform: translateX(5px);
       }
 
-      .contact-detail-icon {
+      .ak-contact-detail-icon {
         font-size: 1.2rem;
-        color: var(--color-primary);
+        color: var(--ak-color-primary);
         margin-right: 15px;
         min-width: 20px;
         transition: color 0.3s ease;
       }
 
-      .contact-detail:hover .contact-detail-icon {
-        color: var(--color-secondary);
+      .ak-contact-detail:hover .ak-contact-detail-icon {
+        color: var(--ak-color-secondary);
       }
 
       /* Map Section */
-      .map-container {
+      .ak-map-container {
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak-shadow);
+        transition: var(--ak-transition);
         height: 400px;
       }
 
-      .map-container:hover {
-        box-shadow: var(--shadow-hover);
+      .ak-map-container:hover {
+        box-shadow: var(--ak-shadow-hover);
       }
 
-      .map-container iframe {
+      .ak-map-container iframe {
         width: 100%;
         height: 100%;
         border: none;
@@ -597,67 +599,67 @@
 
       /* Mobile Responsive Adjustments */
       @media (max-width: 768px) {
-        .hero-section {
+        .ak-hero-section {
           padding: 100px 0 80px;
         }
 
-        .countdown-value {
+        .ak-countdown-value {
           font-size: 1.8rem;
           padding: 10px;
         }
 
-        .countdown-item {
+        .ak-countdown-item {
           min-width: 60px;
           margin: 5px;
         }
 
-        .timeline::before {
+        .ak-timeline::before {
           left: 31px;
         }
 
-        .timeline-content {
+        .ak-timeline-content {
           width: 85%;
           margin-left: 15% !important;
         }
 
-        .timeline-item:nth-child(even) .timeline-content {
+        .ak-timeline-item:nth-child(even) .ak-timeline-content {
           margin-right: unset;
           margin-left: 15% !important;
         }
 
-        .timeline-dot {
+        .ak-timeline-dot {
           left: 31px;
           margin-left: -10px;
         }
 
-        .timeline-content::after {
+        .ak-timeline-content::after {
           display: none;
         }
 
-        .event-card:hover {
+        .ak-event-card:hover {
           transform: translateY(-5px);
         }
       }
 
       /* Button Styles */
-      .btn-techfest {
+      .ak-btn {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--ak-color-white);
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 600;
-        transition: var(--transition);
-        box-shadow: var(--shadow);
+        transition: var(--ak-transition);
+        box-shadow: var(--ak-shadow);
         position: relative;
         overflow: hidden;
       }
 
-      .btn-techfest::before {
+      .ak-btn::before {
         content: "";
         position: absolute;
         top: 0;
@@ -673,169 +675,199 @@
         transition: all 0.6s ease;
       }
 
-      .btn-techfest:hover::before {
+      .ak-btn:hover::before {
         left: 100%;
       }
 
-      .btn-techfest:hover {
+      .ak-btn:hover {
         transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-        color: var(--color-white);
+        box-shadow: var(--ak-shadow-hover);
+        color: var(--ak-color-white);
       }
 
       /* Utility Classes */
-      .text-gradient {
+      .ak-text-gradient {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
       }
 
-      .bg-cream {
-        background-color: var(--color-bg);
+      .ak-bg-cream {
+        background-color: var(--ak-color-bg);
       }
 
-      .dark-mode .bg-cream {
+      .ak-dark-mode .ak-bg-cream {
         background-color: #1e1e1e;
       }
 
       /* Animation Classes */
-      .fade-in {
+      .ak-fade-in {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.6s ease, transform 0.6s ease;
       }
 
-      .fade-in.visible {
+      .ak-fade-in.ak-visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-      .zoom-in {
+      .ak-zoom-in {
         transform: scale(0.9);
         opacity: 0;
         transition: all 0.6s ease;
       }
 
-      .zoom-in.visible {
+      .ak-zoom-in.ak-visible {
         transform: scale(1);
         opacity: 1;
       }
 
-      .slide-in-left {
+      .ak-slide-in-left {
         transform: translateX(-50px);
         opacity: 0;
         transition: all 0.6s ease;
       }
 
-      .slide-in-left.visible {
+      .ak-slide-in-left.ak-visible {
         transform: translateX(0);
         opacity: 1;
       }
 
-      .slide-in-right {
+      .ak-slide-in-right {
         transform: translateX(50px);
         opacity: 0;
         transition: all 0.6s ease;
       }
 
-      .slide-in-right.visible {
+      .ak-slide-in-right.ak-visible {
         transform: translateX(0);
         opacity: 1;
       }
 
       /* Banner Content Styles */
-      .banner-content {
+      .ak-banner-content {
         padding: 60px 0;
       }
 
-      .banner-image {
+      .ak-banner-image {
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak-shadow);
+        transition: var(--ak-transition);
       }
 
-      .banner-image:hover {
+      .ak-banner-image:hover {
         transform: scale(1.02);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--ak-shadow-hover);
       }
 
-      .highlight-box {
+      .ak-highlight-box {
         background: linear-gradient(145deg, #ffffff, #f0f0f0);
         border-radius: 15px;
         padding: 25px;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak-shadow);
+        transition: var(--ak-transition);
         height: 100%;
       }
 
-      .dark-mode .highlight-box {
+      .ak-dark-mode .ak-highlight-box {
         background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
       }
 
-      .highlight-box:hover {
+      .ak-highlight-box:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--ak-shadow-hover);
       }
 
-      .highlight-icon {
+      .ak-highlight-icon {
         font-size: 2.5rem;
         margin-bottom: 20px;
         background: linear-gradient(
           135deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak-color-primary),
+          var(--ak-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
       /* Smaller image for about section */
-      .about-image {
+      .ak-about-image {
         max-width: 85%;
         margin: 0 auto;
         display: block;
+      }
+      /* Correct alignment for contact details */
+      .ak-contact-detail {
+        display: flex;
+        align-items: flex-start; /* Vertical alignment for desktop/tablet */
+        gap: 12px; /* Add spacing between icon and text */
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+        text-align: left; /* Ensure left alignment on larger screens */
+      }
+
+      .ak-contact-detail-icon {
+        font-size: 1.2rem;
+        color: var(--ak-color-primary);
+        margin-top: 3px;
+        min-width: 20px;
+        text-align: center;
+      }
+
+      /* On small/mobile screens, stack icon/text vertically and center for neat columns */
+      @media (max-width: 576px) {
+        .ak-contact-detail {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .ak-contact-detail-icon {
+          margin-bottom: 7px;
+          margin-top: 0;
+        }
       }
     </style>
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg ak-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ak-navbar-brand" href="#">
           <img
             src="logobsc.png"
             alt="College Logo"
-            class="college-logo"
+            class="ak-college-logo"
           />
           <span class="fw-bold"
-            >AKANKSHA <span class="text-gradient">2K25</span></span
+            >AKANKSHA <span class="ak-text-gradient">2K25</span></span
           >
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ak-navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
+          data-bs-target="#ak-navbarContent"
         >
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="collapse navbar-collapse" id="ak-navbarContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link active" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown ak-nav-item">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle ak-nav-link"
                 href="events.html"
                 id="eventsDropdown"
                 role="button"
@@ -853,20 +885,20 @@
                 <li><a class="dropdown-item" href="#">Past Events</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="schedule.html">Schedule</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="schedule.html">Schedule</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="sponsors.html">Sponsors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-techfest ms-2" href="#"
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link ak-btn ms-2" href="#"
                 >Register Now</a
               >
             </li>
@@ -876,10 +908,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="ak-hero-section">
       <div class="container">
-        <div class="hero-content">
-          <div class="anniversary-badge">
+        <div class="ak-hero-content">
+          <div class="ak-anniversary-badge">
             <i class="fas fa-medal me-2"></i>State Level Management & Tech Fest
           </div>
           <h1
@@ -887,7 +919,7 @@
             data-aos="fade-down"
             data-aos-duration="1000"
           >
-            AAKANKSHA <span class="text-gradient">2K25</span>
+            AAKANKSHA <span class="ak-text-gradient">2K25</span>
           </h1>
           <p
             class="lead mb-4"
@@ -897,33 +929,31 @@
           >
             Version 8.0 | Desire for Knowledge
           </p>
-          <div class="countdown-container">
-            <div class="countdown-item">
-              <div class="countdown-value" id="days">00</div>
-              <div class="countdown-label">Days</div>
+          <div class="ak-countdown-container">
+            <div class="ak-countdown-item">
+              <div class="ak-countdown-value" id="ak-days">00</div>
+              <div class="ak-countdown-label">Days</div>
             </div>
-            <div class="countdown-item">
-              <div class="countdown-value" id="hours">00</div>
-              <div class="countdown-label">Hours</div>
+            <div class="ak-countdown-item">
+              <div class="ak-countdown-value" id="ak-hours">00</div>
+              <div class="ak-countdown-label">Hours</div>
             </div>
-            <div class="countdown-item">
-              <div class="countdown-value" id="minutes">00</div>
-              <div class="countdown-label">Minutes</div>
+            <div class="ak-countdown-item">
+              <div class="ak-countdown-value" id="ak-minutes">00</div>
+              <div class="ak-countdown-label">Minutes</div>
             </div>
-            <div class="countdown-item">
-              <div class="countdown-value" id="seconds">00</div>
-              <div class="countdown-label">Seconds</div>
+            <div class="ak-countdown-item">
+              <div class="ak-countdown-value" id="ak-seconds">00</div>
+              <div class="ak-countdown-label">Seconds</div>
             </div>
           </div>
           <div
-            class="hero-buttons"
+            class="ak-hero-buttons"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="400"
           >
-            <a href="#" class="btn btn-techfest btn-lg me-2 mb-2"
-              >Register Now</a
-            >
+            <a href="#" class="btn ak-btn btn-lg me-2 mb-2">Register Now</a>
             <a href="#" class="btn btn-outline-light btn-lg mb-2"
               >View Events</a
             >
@@ -933,19 +963,19 @@
     </section>
 
     <!-- Banner Content Section -->
-    <section class="banner-content py-5 bg-cream">
+    <section class="ak-banner-content py-5 ak-bg-cream">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-up">
-          About <span class="text-gradient">AAKANKSHA 2K25</span>
+        <h2 class="ak-section-title" data-aos="fade-up">
+          About <span class="ak-text-gradient">AAKANKSHA 2K25</span>
         </h2>
 
         <div class="row align-items-center mb-5">
           <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-            <div class="banner-image text-center">
+            <div class="ak-banner-image text-center">
               <img
                 src="bscclg.jpeg"
                 alt="AAKANKSHA 2K25"
-                class="img-fluid rounded about-image"
+                class="img-fluid rounded ak-about-image"
               />
             </div>
           </div>
@@ -963,15 +993,15 @@
               and showcase their talents.
             </p>
             <div class="mt-4">
-              <a href="#" class="btn btn-techfest">Learn More</a>
+              <a href="#" class="btn ak-btn">Learn More</a>
             </div>
           </div>
         </div>
 
         <div class="row mt-5">
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-            <div class="highlight-box text-center">
-              <div class="highlight-icon">
+            <div class="ak-highlight-box text-center">
+              <div class="ak-highlight-icon">
                 <i class="fas fa-trophy"></i>
               </div>
               <h4>Prestigious Competitions</h4>
@@ -982,8 +1012,8 @@
             </div>
           </div>
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="highlight-box text-center">
-              <div class="highlight-icon">
+            <div class="ak-highlight-box text-center">
+              <div class="ak-highlight-icon">
                 <i class="fas fa-users"></i>
               </div>
               <h4>Networking Opportunities</h4>
@@ -994,8 +1024,8 @@
             </div>
           </div>
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="highlight-box text-center">
-              <div class="highlight-icon">
+            <div class="ak-highlight-box text-center">
+              <div class="ak-highlight-icon">
                 <i class="fas fa-lightbulb"></i>
               </div>
               <h4>Innovation Showcase</h4>
@@ -1012,8 +1042,8 @@
     <!-- Events Highlights -->
     <section class="py-5">
       <div class="container py-5">
-        <h2 class="section-title" data-aos="fade-up">
-          Featured <span class="text-gradient">Events</span>
+        <h2 class="ak-section-title" data-aos="fade-up">
+          Featured <span class="ak-text-gradient">Events</span>
         </h2>
         <p
           class="text-center lead mb-5"
@@ -1030,14 +1060,14 @@
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            <div class="event-card card h-100">
+            <div class="ak-event-card card h-100">
               <img
-                src="images/empire.jpg"
-                class="event-img card-img-top"
+                src="empire.jpg"
+                class="ak-event-img card-img-top"
                 alt="Empire of Innovation"
               />
               <div class="card-body">
-                <div class="event-icon">
+                <div class="ak-event-icon">
                   <i class="fas fa-crown"></i>
                 </div>
                 <h5 class="card-title">Empire of Innovation</h5>
@@ -1045,8 +1075,8 @@
                   Lead the Change, Rule the Market. Build your empire through
                   innovative solutions and strategic thinking.
                 </p>
-                <div class="participant-count">Team of 4 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+                <div class="ak-participant-count">Team of 4 Participants</div>
+                <a href="#" class="btn ak-btn mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1057,14 +1087,14 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="event-card card h-100">
+            <div class="ak-event-card card h-100">
               <img
-                src="images/crown-coin.jpg"
-                class="event-img card-img-top"
+                src="crown-coin.jpg"
+                class="ak-event-img card-img-top"
                 alt="Crown Coin"
               />
               <div class="card-body">
-                <div class="event-icon">
+                <div class="ak-event-icon">
                   <i class="fas fa-coins"></i>
                 </div>
                 <h5 class="card-title">Crown Coin</h5>
@@ -1072,8 +1102,8 @@
                   Crowning the future of Finance. Demonstrate your financial
                   acumen and investment strategies.
                 </p>
-                <div class="participant-count">Team of 2 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+                <div class="ak-participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn ak-btn mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1084,14 +1114,14 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="event-card card h-100">
+            <div class="ak-event-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
+                class="ak-event-img card-img-top"
                 alt="Technocratic Entertainment"
               />
               <div class="card-body">
-                <div class="event-icon">
+                <div class="ak-event-icon">
                   <i class="fas fa-vr-cardboard"></i>
                 </div>
                 <h5 class="card-title">Technocratic Entertainment</h5>
@@ -1099,8 +1129,8 @@
                   Beyond Reality Within Reach. Explore the intersection of
                   technology and entertainment in this immersive experience.
                 </p>
-                <div class="participant-count">Team of 4 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+                <div class="ak-participant-count">Team of 4 Participants</div>
+                <a href="#" class="btn ak-btn mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1111,14 +1141,14 @@
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            <div class="event-card card h-100">
+            <div class="ak-event-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
+                class="ak-event-img card-img-top"
                 alt="Hustle"
               />
               <div class="card-body">
-                <div class="event-icon">
+                <div class="ak-event-icon">
                   <i class="fas fa-bolt"></i>
                 </div>
                 <h5 class="card-title">Human Rights HUSTLE</h5>
@@ -1126,8 +1156,8 @@
                   Distinctively Digital. A fast-paced digital marketing
                   challenge that tests your online business skills.
                 </p>
-                <div class="participant-count">Team of 2 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+                <div class="ak-participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn ak-btn mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1138,14 +1168,14 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="event-card card h-100">
+            <div class="ak-event-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
+                class="ak-event-img card-img-top"
                 alt="King's Court"
               />
               <div class="card-body">
-                <div class="event-icon">
+                <div class="ak-event-icon">
                   <i class="fas fa-gem"></i>
                 </div>
                 <h5 class="card-title">King's Court</h5>
@@ -1153,35 +1183,8 @@
                   Crown of Knowledge Awaits. A quiz competition that tests your
                   general knowledge and quick thinking abilities.
                 </p>
-                <div class="participant-count">Team of 2 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- King's Court -->
-          <div
-            class="col-md-6 col-lg-4 mb-4"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="event-card card h-100">
-              <img
-                src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
-                alt="King's Court"
-              />
-              <div class="card-body">
-                <div class="event-icon">
-                  <i class="fas fa-gem"></i>
-                </div>
-                <h5 class="card-title">King's Court</h5>
-                <p class="card-text">
-                  Crown of Knowledge Awaits. A quiz competition that tests your
-                  general knowledge and quick thinking abilities.
-                </p>
-                <div class="participant-count">Team of 2 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+                <div class="ak-participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn ak-btn mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1192,14 +1195,14 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="event-card card h-100">
+            <div class="ak-event-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1599669454699-248893623464?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
+                class="ak-event-img card-img-top"
                 alt="Royal Ballet Fashion"
               />
               <div class="card-body">
-                <div class="event-icon">
+                <div class="ak-event-icon">
                   <i class="fas fa-tshirt"></i>
                 </div>
                 <h5 class="card-title">Royal Ballet Fashion</h5>
@@ -1207,8 +1210,8 @@
                   Dance as Universal Expression of Joy. A fusion of fashion and
                   dance that celebrates creativity and cultural expression.
                 </p>
-                <div class="participant-count">4-8 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+                <div class="ak-participant-count">4-8 Participants</div>
+                <a href="#" class="btn ak-btn mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1217,10 +1220,10 @@
     </section>
 
     <!-- Fixed Timeline Section -->
-    <section class="py-5 bg-cream">
+    <section class="py-5 ak-bg-cream">
       <div class="container py-5">
-        <h2 class="section-title" data-aos="fade-up">
-          Event <span class="text-gradient">Schedule</span>
+        <h2 class="ak-section-title" data-aos="fade-up">
+          Event <span class="ak-text-gradient">Schedule</span>
         </h2>
         <p
           class="text-center lead mb-5"
@@ -1230,10 +1233,10 @@
           Mark your calendars for September 19-20, 2025
         </p>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
+        <div class="ak-timeline">
+          <div class="ak-timeline-item">
+            <div class="ak-timeline-dot"></div>
+            <div class="ak-timeline-content">
               <h4>Day 1 - September 19, 2025</h4>
               <div class="row">
                 <div class="col-md-6">
@@ -1256,9 +1259,9 @@
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
+          <div class="ak-timeline-item">
+            <div class="ak-timeline-dot"></div>
+            <div class="ak-timeline-content">
               <h4>Day 2 - September 20, 2025</h4>
               <div class="row">
                 <div class="col-md-6">
@@ -1288,8 +1291,8 @@
     <!-- Location Map Section -->
     <section class="py-5">
       <div class="container py-5">
-        <h2 class="section-title" data-aos="fade-up">
-          Event <span class="text-gradient">Location</span>
+        <h2 class="ak-section-title" data-aos="fade-up">
+          Event <span class="ak-text-gradient">Location</span>
         </h2>
         <p
           class="text-center lead mb-5"
@@ -1301,7 +1304,7 @@
 
         <div class="row">
           <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-            <div class="map-container">
+            <div class="ak-map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.112981100659!2d75.9183143148705!3d14.454812986942015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzE3LjMiTiA3NcKwNTUnMTQuNiJF!5e1!3m2!1sen!2sin!4v1624961302688!5m2!1sen!2sin"
                 allowfullscreen=""
@@ -1310,12 +1313,12 @@
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-left">
-            <div class="contact-card card h-100">
+            <div class="ak-contact-card card h-100">
               <div class="card-body p-4">
                 <h3 class="card-title mb-4">Venue Details</h3>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
                   <div>
@@ -1327,8 +1330,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-calendar-alt"></i>
                   </div>
                   <div>
@@ -1337,8 +1340,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-clock"></i>
                   </div>
                   <div>
@@ -1347,8 +1350,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-info-circle"></i>
                   </div>
                   <div>
@@ -1359,7 +1362,7 @@
                 </div>
 
                 <div class="mt-4">
-                  <a href="#" class="btn btn-techfest me-2">Get Directions</a>
+                  <a href="#" class="btn ak-btn me-2">Get Directions</a>
                   <a href="#" class="btn btn-outline-secondary"
                     >Download Brochure</a
                   >
@@ -1372,10 +1375,10 @@
     </section>
 
     <!-- Enhanced Contact Section -->
-    <section class="py-5 bg-cream">
+    <section class="py-5 ak-bg-cream">
       <div class="container py-5">
-        <h2 class="section-title" data-aos="fade-up">
-          Contact <span class="text-gradient">Information</span>
+        <h2 class="ak-section-title" data-aos="fade-up">
+          Contact <span class="ak-text-gradient">Information</span>
         </h2>
         <p
           class="text-center lead mb-5"
@@ -1391,16 +1394,16 @@
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            <div class="contact-card card h-100">
+            <div class="ak-contact-card card h-100">
               <div class="card-body text-center p-4">
-                <div class="contact-icon">
+                <div class="ak-contact-icon">
                   <i class="fas fa-user-tie"></i>
                 </div>
                 <h4 class="card-title">Prof. M.C. Guru</h4>
                 <p class="text-muted">Principal</p>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-phone"></i>
                   </div>
                   <div>
@@ -1409,8 +1412,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-phone-alt"></i>
                   </div>
                   <div>
@@ -1419,8 +1422,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-envelope"></i>
                   </div>
                   <div>
@@ -1438,16 +1441,16 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="contact-card card h-100">
+            <div class="ak-contact-card card h-100">
               <div class="card-body text-center p-4">
-                <div class="contact-icon">
+                <div class="ak-contact-icon">
                   <i class="fas fa-users"></i>
                 </div>
                 <h4 class="card-title">Event Coordinators</h4>
                 <p class="text-muted">AAKANKSHA 2K25 Team</p>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-user"></i>
                   </div>
                   <div>
@@ -1456,8 +1459,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-user"></i>
                   </div>
                   <div>
@@ -1466,8 +1469,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-envelope"></i>
                   </div>
                   <div>
@@ -1484,16 +1487,16 @@
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <div class="contact-card card h-100">
+            <div class="ak-contact-card card h-100">
               <div class="card-body text-center p-4">
-                <div class="contact-icon">
+                <div class="ak-contact-icon">
                   <i class="fas fa-university"></i>
                 </div>
                 <h4 class="card-title">College Information</h4>
                 <p class="text-muted">B.S. Channabasappa First Grade College</p>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-map-pin"></i>
                   </div>
                   <div>
@@ -1503,8 +1506,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-globe"></i>
                   </div>
                   <div>
@@ -1513,8 +1516,8 @@
                   </div>
                 </div>
 
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
+                <div class="ak-contact-detail">
+                  <div class="ak-contact-detail-icon">
                     <i class="fas fa-clock"></i>
                   </div>
                   <div>
@@ -1531,7 +1534,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="techfest-footer">
+    <footer class="ak-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
@@ -1540,7 +1543,7 @@
               State Level Management and Tech Fest organized by B.S.
               Channabasappa First Grade College, Davanagere.
             </p>
-            <div class="social-icons mt-4">
+            <div class="ak-social-icons mt-4">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1548,7 +1551,7 @@
               <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ak-footer-links">
             <h5>Quick Links</h5>
             <ul>
               <li><a href="#">Home</a></li>
@@ -1558,7 +1561,7 @@
               <li><a href="#">Registration</a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ak-footer-links">
             <h5>Events</h5>
             <ul>
               <li><a href="#">Empire of Innovation</a></li>
@@ -1568,7 +1571,7 @@
               <li><a href="#">View All</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-4 footer-links">
+          <div class="col-lg-4 col-md-4 ak-footer-links">
             <h5>Contact Us</h5>
             <ul>
               <li>
@@ -1596,7 +1599,7 @@
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" id="darkModeToggle">
+    <button class="ak-dark-mode-toggle" id="ak-darkModeToggle">
       <i class="fas fa-moon"></i>
     </button>
 
@@ -1628,40 +1631,40 @@
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Add flip animation when values change
-        const daysElem = document.getElementById("days");
-        const hoursElem = document.getElementById("hours");
-        const minutesElem = document.getElementById("minutes");
-        const secondsElem = document.getElementById("seconds");
+        const daysElem = document.getElementById("ak-days");
+        const hoursElem = document.getElementById("ak-hours");
+        const minutesElem = document.getElementById("ak-minutes");
+        const secondsElem = document.getElementById("ak-seconds");
 
         if (daysElem.innerText !== days.toString().padStart(2, "0")) {
-          daysElem.classList.add("flip");
+          daysElem.classList.add("ak-flip");
           setTimeout(() => {
             daysElem.innerText = days.toString().padStart(2, "0");
-            daysElem.classList.remove("flip");
+            daysElem.classList.remove("ak-flip");
           }, 250);
         }
 
         if (hoursElem.innerText !== hours.toString().padStart(2, "0")) {
-          hoursElem.classList.add("flip");
+          hoursElem.classList.add("ak-flip");
           setTimeout(() => {
             hoursElem.innerText = hours.toString().padStart(2, "0");
-            hoursElem.classList.remove("flip");
+            hoursElem.classList.remove("ak-flip");
           }, 250);
         }
 
         if (minutesElem.innerText !== minutes.toString().padStart(2, "0")) {
-          minutesElem.classList.add("flip");
+          minutesElem.classList.add("ak-flip");
           setTimeout(() => {
             minutesElem.innerText = minutes.toString().padStart(2, "0");
-            minutesElem.classList.remove("flip");
+            minutesElem.classList.remove("ak-flip");
           }, 250);
         }
 
         if (secondsElem.innerText !== seconds.toString().padStart(2, "0")) {
-          secondsElem.classList.add("flip");
+          secondsElem.classList.add("ak-flip");
           setTimeout(() => {
             secondsElem.innerText = seconds.toString().padStart(2, "0");
-            secondsElem.classList.remove("flip");
+            secondsElem.classList.remove("ak-flip");
           }, 250);
         }
       }
@@ -1670,30 +1673,30 @@
       updateCountdown();
 
       // Dark Mode Toggle
-      const darkModeToggle = document.getElementById("darkModeToggle");
+      const darkModeToggle = document.getElementById("ak-darkModeToggle");
       const body = document.body;
 
       // Check for saved dark mode preference
-      if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
+      if (localStorage.getItem("ak-darkMode") === "enabled") {
+        body.classList.add("ak-dark-mode");
         darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
 
       darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+        body.classList.toggle("ak-dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
+        if (body.classList.contains("ak-dark-mode")) {
+          localStorage.setItem("ak-darkMode", "enabled");
           darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         } else {
-          localStorage.setItem("darkMode", "disabled");
+          localStorage.setItem("ak-darkMode", "disabled");
           darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
       });
 
       // Navbar scroll effect
       window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".techfest-navbar");
+        const navbar = document.querySelector(".ak-navbar");
         if (window.scrollY > 50) {
           navbar.style.padding = "10px 0";
           navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
@@ -1704,7 +1707,7 @@
       });
 
       // Timeline animation on scroll
-      const timelineItems = document.querySelectorAll(".timeline-item");
+      const timelineItems = document.querySelectorAll(".ak-timeline-item");
 
       function checkTimelineItems() {
         const triggerBottom = window.innerHeight * 0.8;
@@ -1713,7 +1716,7 @@
           const itemTop = item.getBoundingClientRect().top;
 
           if (itemTop < triggerBottom) {
-            item.classList.add("visible");
+            item.classList.add("ak-visible");
           }
         });
       }
