@@ -22,31 +22,31 @@
     />
     <style>
       :root {
-        --color-primary: #ffd700;
-        --color-secondary: #d32f2f;
-        --color-accent: #1e3a8a;
-        --color-bg: #faf3e0;
-        --color-text: #212529;
-        --color-white: #ffffff;
-        --color-dark: #121212;
-        --font-heading: "Playfair Display", serif;
-        --font-body: "Lato", sans-serif;
-        --transition: all 0.3s ease;
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        --ak2k25-color-primary: #ffd700;
+        --ak2k25-color-secondary: #d32f2f;
+        --ak2k25-color-accent: #1e3a8a;
+        --ak2k25-color-bg: #faf3e0;
+        --ak2k25-color-text: #212529;
+        --ak2k25-color-white: #ffffff;
+        --ak2k25-color-dark: #121212;
+        --ak2k25-font-heading: "Playfair Display", serif;
+        --ak2k25-font-body: "Lato", sans-serif;
+        --ak2k25-transition: all 0.3s ease;
+        --ak2k25-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --ak2k25-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
 
       body {
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background-color: var(--color-white);
+        font-family: var(--ak2k25-font-body);
+        color: var(--ak2k25-color-text);
+        background-color: var(--ak2k25-color-white);
         overflow-x: hidden;
         transition: background-color 0.3s ease;
       }
 
-      body.dark-mode {
-        background-color: var(--color-dark);
-        color: var(--color-white);
+      body.ak2k25-dark-mode {
+        background-color: var(--ak2k25-color-dark);
+        color: var(--ak2k25-color-white);
       }
 
       h1,
@@ -55,387 +55,750 @@
       h4,
       h5,
       h6 {
-        font-family: var(--font-heading);
+        font-family: var(--ak2k25-font-heading);
         font-weight: 700;
       }
 
       /* Header & Navigation */
-      .techfest-navbar {
-        background-color: var(--color-white);
-        box-shadow: var(--shadow);
+      .ak2k25-techfest-navbar {
+        background-color: var(--ak2k25-color-white);
+        box-shadow: var(--ak2k25-shadow);
         padding: 15px 0;
-        transition: var(--transition);
+        transition: var(--ak2k25-transition);
       }
 
-      .dark-mode .techfest-navbar {
+      .ak2k25-dark-mode .ak2k25-techfest-navbar {
         background-color: #1a1a1a;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .navbar-brand {
+      .ak2k25-navbar-brand {
         display: flex;
         align-items: center;
       }
 
-      .college-logo {
+      .ak2k25-college-logo {
         height: 50px;
         margin-right: 15px;
       }
 
-      .nav-item {
+      .ak2k25-nav-item {
         margin: 0 5px;
       }
 
-      .nav-link {
+      .ak2k25-nav-link {
         font-weight: 500;
-        color: var(--color-text);
-        transition: var(--transition);
+        color: var(--ak2k25-color-text);
+        transition: var(--ak2k25-transition);
       }
 
-      .dark-mode .nav-link {
-        color: var(--color-white);
+      .ak2k25-dark-mode .ak2k25-nav-link {
+        color: var(--ak2k25-color-white);
       }
 
-      .nav-link:hover {
-        color: var(--color-secondary);
+      .ak2k25-nav-link:hover {
+        color: var(--ak2k25-color-secondary);
       }
 
-      .navbar-toggler {
+      .ak2k25-navbar-toggler {
         border: none;
         font-size: 1.5rem;
       }
 
       /* Hero Section */
-      .events-hero {
+      .ak2k25-events-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
           url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
         background-size: cover;
         background-position: center;
         padding: 120px 0 80px;
-        color: var(--color-white);
+        color: var(--ak2k25-color-white);
         text-align: center;
         position: relative;
       }
 
+      .ak2k25-anniversary-badge {
+        display: inline-block;
+        background: linear-gradient(
+          45deg,
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
+        );
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        animation: ak2k25-pulse 2s infinite;
+      }
+
+      @keyframes ak2k25-pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       /* Section Styling */
-      .section-title {
+      .ak2k25-section-title {
         position: relative;
         margin-bottom: 40px;
         text-align: center;
       }
 
-      .section-title:after {
+      .ak2k25-section-title:after {
         content: "";
         display: block;
         width: 80px;
         height: 4px;
         background: linear-gradient(
           to right,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
         );
         margin: 15px auto;
         border-radius: 2px;
       }
 
-      .dark-mode .section-title:after {
-        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      .ak2k25-dark-mode .ak2k25-section-title:after {
+        background: linear-gradient(
+          to right,
+          var(--ak2k25-color-primary),
+          #aa2c25
+        );
       }
 
-      /* Event Categories */
-      .events-categories {
+      /* About Sections */
+      .ak2k25-about-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--ak2k25-color-white);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
       }
 
-      .dark-mode .events-categories {
+      .ak2k25-about-section.ak2k25-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ak2k25-dark-mode .ak2k25-about-section {
         background-color: #1a1a1a;
       }
 
-      .category-card {
+      .ak2k25-college-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--ak2k25-shadow);
+        transition: var(--ak2k25-transition);
+      }
+
+      .ak2k25-college-image:hover {
+        transform: scale(1.02);
+        box-shadow: var(--ak2k25-shadow-hover);
+      }
+
+      /* Event Categories */
+      .ak2k25-events-categories {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-bg);
+      }
+
+      .ak2k25-dark-mode .ak2k25-events-categories {
+        background-color: #1e1e1e;
+      }
+
+      .ak2k25-category-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak2k25-shadow);
+        transition: var(--ak2k25-transition);
         margin-bottom: 25px;
         height: 100%;
         position: relative;
+        opacity: 0;
+        transform: translateY(30px);
       }
 
-      .category-card:hover {
+      .ak2k25-category-card.ak2k25-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ak2k25-category-card:hover {
         transform: translateY(-10px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--ak2k25-shadow-hover);
       }
 
-      .category-img {
+      .ak2k25-category-img {
         height: 200px;
         object-fit: cover;
       }
 
-      .category-badge {
+      .ak2k25-category-badge {
         position: absolute;
         top: 15px;
         right: 15px;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--ak2k25-color-primary);
+        color: var(--ak2k25-color-text);
         padding: 5px 15px;
         border-radius: 30px;
         font-weight: 600;
         font-size: 0.9rem;
       }
 
-      .category-icon {
+      .ak2k25-category-icon {
         font-size: 2rem;
-        color: var(--color-primary);
+        color: var(--ak2k25-color-primary);
         margin-bottom: 15px;
       }
 
       /* Event Details */
-      .event-details {
+      .ak2k25-event-details {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--ak2k25-color-white);
       }
 
-      .dark-mode .event-details {
-        background-color: #1e1e1e;
-      }
-
-      .event-tabs {
-        margin-bottom: 30px;
-      }
-
-      .event-tabs .nav-link {
-        border: none;
-        padding: 15px 25px;
-        font-weight: 600;
-        color: var(--color-text);
-        border-radius: 10px 10px 0 0;
-        margin-right: 5px;
-      }
-
-      .dark-mode .event-tabs .nav-link {
-        color: var(--color-white);
-      }
-
-      .event-tabs .nav-link.active {
-        background: linear-gradient(
-          45deg,
-          var(--color-primary),
-          var(--color-secondary)
-        );
-        color: var(--color-white);
-      }
-
-      .rules-accordion .accordion-button {
-        font-weight: 600;
-        padding: 15px 20px;
-        background-color: var(--color-white);
-        color: var(--color-text);
-      }
-
-      .dark-mode .rules-accordion .accordion-button {
-        background-color: #2a2a2a;
-        color: var(--color-white);
-      }
-
-      .rules-accordion .accordion-button:not(.collapsed) {
-        background: linear-gradient(
-          45deg,
-          var(--color-primary),
-          var(--color-secondary)
-        );
-        color: var(--color-white);
-      }
-
-      .rules-accordion .accordion-body {
-        background-color: var(--color-white);
-      }
-
-      .dark-mode .rules-accordion .accordion-body {
-        background-color: #2a2a2a;
-        color: var(--color-white);
-      }
-
-      /* Registration Form */
-      .registration-form {
-        padding: 80px 0;
-        background-color: var(--color-white);
-      }
-
-      .dark-mode .registration-form {
+      .ak2k25-dark-mode .ak2k25-event-details {
         background-color: #1a1a1a;
       }
 
-      .form-card {
-        border-radius: 15px;
-        border: none;
-        box-shadow: var(--shadow);
-        padding: 30px;
-        background-color: var(--color-white);
+      .ak2k25-event-tabs {
+        margin-bottom: 30px;
       }
 
-      .dark-mode .form-card {
+      .ak2k25-event-tabs .ak2k25-nav-link {
+        border: none;
+        padding: 15px 25px;
+        font-weight: 600;
+        color: var(--ak2k25-color-text);
+        border-radius: 10px 10px 0 0;
+        margin-right: 5px;
+        transition: var(--ak2k25-transition);
+      }
+
+      .ak2k25-dark-mode .ak2k25-event-tabs .ak2k25-nav-link {
+        color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-event-tabs .ak2k25-nav-link.ak2k25-active {
+        background: linear-gradient(
+          45deg,
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
+        );
+        color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-event-content {
+        padding: 30px;
+        background-color: var(--ak2k25-color-bg);
+        border-radius: 0 0 15px 15px;
+        box-shadow: var(--ak2k25-shadow);
+      }
+
+      .ak2k25-dark-mode .ak2k25-event-content {
         background-color: #2a2a2a;
       }
 
-      .form-control {
+      .ak2k25-rules-accordion .ak2k25-accordion-button {
+        font-weight: 600;
+        padding: 15px 20px;
+        background-color: var(--ak2k25-color-white);
+        color: var(--ak2k25-color-text);
+        transition: var(--ak2k25-transition);
+      }
+
+      .ak2k25-dark-mode .ak2k25-rules-accordion .ak2k25-accordion-button {
+        background-color: #2a2a2a;
+        color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-rules-accordion .ak2k25-accordion-button:not(.ak2k25-collapsed) {
+        background: linear-gradient(
+          45deg,
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
+        );
+        color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-rules-accordion .ak2k25-accordion-body {
+        background-color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-dark-mode .ak2k25-rules-accordion .ak2k25-accordion-body {
+        background-color: #2a2a2a;
+        color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-coordinator-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .ak2k25-coordinator-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+      }
+
+      .ak2k25-dark-mode .ak2k25-coordinator-list li {
+        border-color: #444;
+      }
+
+      .ak2k25-coordinator-list i {
+        margin-right: 10px;
+        color: var(--ak2k25-color-primary);
+      }
+
+      /* General Rules */
+      .ak2k25-general-rules {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-bg);
+      }
+
+      .ak2k25-dark-mode .ak2k25-general-rules {
+        background-color: #1e1e1e;
+      }
+
+      .ak2k25-rules-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .ak2k25-rules-list li {
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: var(--ak2k25-color-white);
+        border-radius: 10px;
+        box-shadow: var(--ak2k25-shadow);
+        position: relative;
+        padding-left: 60px;
+        transition: var(--ak2k25-transition);
+        opacity: 0;
+        transform: translateX(-30px);
+        /* Added to fix animation */
+        animation-duration: 0.8s;
+        animation-fill-mode: both;
+      }
+
+      .ak2k25-rules-list li.ak2k25-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .ak2k25-dark-mode .ak2k25-rules-list li {
+        background-color: #2a2a2a;
+      }
+
+      .ak2k25-rules-list li:hover {
+        transform: translateX(5px);
+      }
+
+      .ak2k25-rules-list li:before {
+        content: "!";
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background: var(--ak2k25-color-primary);
+        color: var(--ak2k25-color-text);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      /* Schedule Section */
+      .ak2k25-schedule {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-dark-mode .ak2k25-schedule {
+        background-color: #1a1a1a;
+      }
+
+      .ak2k25-timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .ak2k25-timeline:after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: var(--ak2k25-color-primary);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      .ak2k25-timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .ak2k25-timeline-item.ak2k25-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ak2k25-timeline-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .ak2k25-timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .ak2k25-timeline-item:after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: var(--ak2k25-color-white);
+        border: 4px solid var(--ak2k25-color-primary);
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .ak2k25-timeline-item:nth-child(odd):after {
+        right: -13px;
+      }
+
+      .ak2k25-timeline-item:nth-child(even):after {
+        left: -13px;
+      }
+
+      .ak2k25-timeline-content {
+        padding: 20px;
+        background-color: var(--ak2k25-color-bg);
+        position: relative;
+        border-radius: 6px;
+        box-shadow: var(--ak2k25-shadow);
+        transition: var(--ak2k25-transition);
+      }
+
+      .ak2k25-dark-mode .ak2k25-timeline-content {
+        background-color: #2a2a2a;
+      }
+
+      .ak2k25-timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--ak2k25-shadow-hover);
+      }
+
+      /* Facilities Section */
+      .ak2k25-facilities {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-bg);
+      }
+
+      .ak2k25-dark-mode .ak2k25-facilities {
+        background-color: #1e1e1e;
+      }
+
+      .ak2k25-facility-card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: var(--ak2k25-shadow);
+        transition: var(--ak2k25-transition);
+        margin-bottom: 25px;
+        height: 100%;
+        background-color: var(--ak2k25-color-white);
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      .ak2k25-facility-card.ak2k25-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ak2k25-dark-mode .ak2k25-facility-card {
+        background-color: #2a2a2a;
+      }
+
+      .ak2k25-facility-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--ak2k25-shadow-hover);
+      }
+
+      .ak2k25-facility-icon {
+        font-size: 3rem;
+        color: var(--ak2k25-color-primary);
+        margin-bottom: 15px;
+      }
+
+      /* Contact Section */
+      .ak2k25-contact {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-dark-mode .ak2k25-contact {
+        background-color: #1a1a1a;
+      }
+
+      .ak2k25-contact-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--ak2k25-shadow);
+        padding: 30px;
+        background-color: var(--ak2k25-color-bg);
+        transition: var(--ak2k25-transition);
+      }
+
+      .ak2k25-dark-mode .ak2k25-contact-card {
+        background-color: #2a2a2a;
+      }
+
+      .ak2k25-contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--ak2k25-shadow-hover);
+      }
+
+      /* Gallery Section */
+      .ak2k25-gallery {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-bg);
+      }
+
+      .ak2k25-dark-mode .ak2k25-gallery {
+        background-color: #1e1e1e;
+      }
+
+      .ak2k25-gallery-item {
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        box-shadow: var(--ak2k25-shadow);
+        transition: var(--ak2k25-transition);
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      .ak2k25-gallery-item.ak2k25-visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .ak2k25-gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: var(--ak2k25-shadow-hover);
+      }
+
+      .ak2k25-gallery-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: var(--ak2k25-transition);
+      }
+
+      .ak2k25-gallery-item:hover .ak2k25-gallery-img {
+        transform: scale(1.1);
+      }
+
+      /* Registration Form */
+      .ak2k25-registration-form {
+        padding: 80px 0;
+        background-color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-dark-mode .ak2k25-registration-form {
+        background-color: #1a1a1a;
+      }
+
+      .ak2k25-form-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: var(--ak2k25-shadow);
+        padding: 30px;
+        background-color: var(--ak2k25-color-white);
+      }
+
+      .ak2k25-dark-mode .ak2k25-form-card {
+        background-color: #2a2a2a;
+      }
+
+      .ak2k25-form-control {
         padding: 12px 15px;
         border: 2px solid #e1e1e1;
         border-radius: 10px;
         margin-bottom: 20px;
-        transition: var(--transition);
+        transition: var(--ak2k25-transition);
       }
 
-      .dark-mode .form-control {
+      .ak2k25-dark-mode .ak2k25-form-control {
         background-color: #1a1a1a;
         border-color: #444;
-        color: var(--color-white);
+        color: var(--ak2k25-color-white);
       }
 
-      .form-control:focus {
-        border-color: var(--color-primary);
+      .ak2k25-form-control:focus {
+        border-color: var(--ak2k25-color-primary);
         box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
       }
 
       /* Payment Options */
-      .payment-options {
+      .ak2k25-payment-options {
         padding: 40px 0;
-        background-color: var(--color-bg);
+        background-color: var(--ak2k25-color-bg);
       }
 
-      .dark-mode .payment-options {
+      .ak2k25-dark-mode .ak2k25-payment-options {
         background-color: #1e1e1e;
       }
 
-      .payment-card {
+      .ak2k25-payment-card {
         border-radius: 15px;
         border: none;
-        box-shadow: var(--shadow);
+        box-shadow: var(--ak2k25-shadow);
         padding: 25px;
         text-align: center;
         margin-bottom: 25px;
-        background-color: var(--color-white);
-        transition: var(--transition);
+        background-color: var(--ak2k25-color-white);
+        transition: var(--ak2k25-transition);
       }
 
-      .dark-mode .payment-card {
+      .ak2k25-dark-mode .ak2k25-payment-card {
         background-color: #2a2a2a;
       }
 
-      .payment-card:hover {
+      .ak2k25-payment-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--ak2k25-shadow-hover);
       }
 
-      .payment-icon {
+      .ak2k25-payment-icon {
         font-size: 3rem;
-        color: var(--color-primary);
+        color: var(--ak2k25-color-primary);
         margin-bottom: 15px;
       }
 
-      .qr-code {
+      .ak2k25-qr-code {
         max-width: 200px;
         margin: 15px auto;
         display: block;
       }
 
       /* Results Section */
-      .results-section {
+      .ak2k25-results-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--ak2k25-color-white);
       }
 
-      .dark-mode .results-section {
+      .ak2k25-dark-mode .ak2k25-results-section {
         background-color: #1a1a1a;
       }
 
-      .results-table {
+      .ak2k25-results-table {
         width: 100%;
         border-collapse: collapse;
         margin: 25px 0;
         font-size: 1rem;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: var(--shadow);
+        box-shadow: var(--ak2k25-shadow);
       }
 
-      .results-table thead tr {
+      .ak2k25-results-table thead tr {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--ak2k25-color-white);
         text-align: left;
       }
 
-      .results-table th,
-      .results-table td {
+      .ak2k25-results-table th,
+      .ak2k25-results-table td {
         padding: 15px 20px;
       }
 
-      .results-table tbody tr {
+      .ak2k25-results-table tbody tr {
         border-bottom: 1px solid #dddddd;
-        background-color: var(--color-white);
+        background-color: var(--ak2k25-color-white);
       }
 
-      .dark-mode .results-table tbody tr {
+      .ak2k25-dark-mode .ak2k25-results-table tbody tr {
         background-color: #2a2a2a;
         border-color: #444;
       }
 
-      .results-table tbody tr:nth-of-type(even) {
+      .ak2k25-results-table tbody tr:nth-of-type(even) {
         background-color: #f8f9fa;
       }
 
-      .dark-mode .results-table tbody tr:nth-of-type(even) {
+      .ak2k25-dark-mode .ak2k25-results-table tbody tr:nth-of-type(even) {
         background-color: #333;
       }
 
-      .results-table tbody tr:last-of-type {
-        border-bottom: 2px solid var(--color-primary);
+      .ak2k25-results-table tbody tr:last-of-type {
+        border-bottom: 2px solid var(--ak2k25-color-primary);
       }
 
       /* Footer */
-      .techfest-footer {
-        background-color: var(--color-accent);
-        color: var(--color-white);
+      .ak2k25-techfest-footer {
+        background-color: var(--ak2k25-color-accent);
+        color: var(--ak2k25-color-white);
         padding: 60px 0 30px;
       }
 
-      .dark-mode .techfest-footer {
+      .ak2k25-dark-mode .ak2k25-techfest-footer {
         background-color: #152555;
       }
 
-      .footer-links h5 {
-        border-bottom: 2px solid var(--color-primary);
+      .ak2k25-footer-links h5 {
+        border-bottom: 2px solid var(--ak2k25-color-primary);
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
+        color: var(--ak2k25-color-white);
       }
 
-      .footer-links ul {
+      .ak2k25-footer-links ul {
         list-style: none;
         padding: 0;
       }
 
-      .footer-links li {
+      .ak2k25-footer-links li {
         margin-bottom: 10px;
       }
 
-      .footer-links a {
+      .ak2k25-footer-links a {
         color: rgba(255, 255, 255, 0.8);
-        transition: var(--transition);
+        transition: var(--ak2k25-transition);
         text-decoration: none;
       }
 
-      .footer-links a:hover {
-        color: var(--color-primary);
+      .ak2k25-footer-links a:hover {
+        color: var(--ak2k25-color-primary);
         padding-left: 5px;
       }
 
-      .social-icons a {
+      .ak2k25-social-icons a {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -444,18 +807,18 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         margin-right: 10px;
-        color: var(--color-white);
-        transition: var(--transition);
+        color: var(--ak2k25-color-white);
+        transition: var(--ak2k25-transition);
       }
 
-      .social-icons a:hover {
-        background: var(--color-primary);
-        color: var(--color-accent);
+      .ak2k25-social-icons a:hover {
+        background: var(--ak2k25-color-primary);
+        color: var(--ak2k25-color-accent);
         transform: translateY(-5px);
       }
 
       /* Dark Mode Toggle */
-      .dark-mode-toggle {
+      .ak2k25-dark-mode-toggle {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -463,84 +826,118 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--ak2k25-color-primary);
+        color: var(--ak2k25-color-text);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--ak2k25-shadow);
+        transition: var(--ak2k25-transition);
         border: none;
       }
 
-      .dark-mode-toggle:hover {
+      .ak2k25-dark-mode-toggle:hover {
         transform: rotate(30deg);
       }
 
       /* Button Styles */
-      .btn-techfest {
+      .ak2k25-btn-techfest {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--ak2k25-color-white);
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 600;
-        transition: var(--transition);
-        box-shadow: var(--shadow);
+        transition: var(--ak2k25-transition);
+        box-shadow: var(--ak2k25-shadow);
       }
 
-      .btn-techfest:hover {
+      .ak2k25-btn-techfest:hover {
         transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-        color: var(--color-white);
+        box-shadow: var(--ak2k25-shadow-hover);
+        color: var(--ak2k25-color-white);
       }
 
       /* Text Gradient */
-      .text-gradient {
+      .ak2k25-text-gradient {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--ak2k25-color-primary),
+          var(--ak2k25-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
       }
 
-      .bg-cream {
-        background-color: var(--color-bg);
+      .ak2k25-bg-cream {
+        background-color: var(--ak2k25-color-bg);
       }
 
-      .dark-mode .bg-cream {
+      .ak2k25-dark-mode .ak2k25-bg-cream {
         background-color: #1e1e1e;
+      }
+
+      /* Animation Classes */
+      .ak2k25-fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .ak2k25-fade-in.ak2k25-visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       /* Mobile Responsive Adjustments */
       @media (max-width: 768px) {
-        .events-hero {
+        .ak2k25-events-hero {
           padding: 100px 0 60px;
         }
 
-        .event-tabs .nav-link {
+        .ak2k25-event-tabs .ak2k25-nav-link {
           padding: 10px 15px;
           font-size: 0.9rem;
         }
 
-        .form-card {
+        .ak2k25-form-card {
           padding: 20px;
         }
 
-        .results-table {
+        .ak2k25-timeline:after {
+          left: 31px;
+        }
+
+        .ak2k25-timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        .ak2k25-timeline-item:nth-child(even) {
+          left: 0;
+        }
+
+        .ak2k25-timeline-item:after {
+          left: 18px;
+        }
+
+        .ak2k25-timeline-item:nth-child(odd):after {
+          right: auto;
+        }
+
+        .ak2k25-results-table {
           font-size: 0.9rem;
         }
 
-        .results-table th,
-        .results-table td {
+        .ak2k25-results-table th,
+        .ak2k25-results-table td {
           padding: 10px 15px;
         }
       }
@@ -548,21 +945,20 @@
   </head>
   <body>
     <!-- Navigation -->
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg ak2k25-techfest-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ak2k25-navbar-brand" href="#">
           <img
             src="logobsc.png"
             alt="College Logo"
-            class="college-logo"
+            class="ak2k25-college-logo"
           />
           <span class="fw-bold"
-            >AKANKSHA <span class="text-gradient">2K25</span></span
+            >AKANKSHA <span class="ak2k25-text-gradient">2K25</span></span
           >
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ak2k25-navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
@@ -571,15 +967,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+            <li class="nav-item ak2k25-nav-item">
+              <a class="nav-link ak2k25-nav-link active" href="index.html"
+                >Home</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+            <li class="nav-item ak2k25-nav-item">
+              <a class="nav-link ak2k25-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item ak2k25-nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link ak2k25-nav-link dropdown-toggle"
                 href="events.html"
                 id="eventsDropdown"
                 role="button"
@@ -597,20 +995,30 @@
                 <li><a class="dropdown-item" href="#">Past Events</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="schedule.html">Schedule</a>
+            <li class="nav-item ak2k25-nav-item">
+              <a class="nav-link ak2k25-nav-link" href="schedule.html"
+                >Schedule</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+            <li class="nav-item ak2k25-nav-item">
+              <a class="nav-link ak2k25-nav-link" href="gallery.html"
+                >Gallery</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            <li class="nav-item ak2k25-nav-item">
+              <a class="nav-link ak2k25-nav-link" href="sponsors.html"
+                >Sponsors</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+            <li class="nav-item ak2k25-nav-item">
+              <a class="nav-link ak2k25-nav-link" href="contact.html"
+                >Contact</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-techfest ms-2" href="#"
+            <li class="nav-item ak2k25-nav-item">
+              <a
+                class="nav-link ak2k25-nav-link ak2k25-btn-techfest ms-2"
+                href="#"
                 >Register Now</a
               >
             </li>
@@ -618,96 +1026,266 @@
         </div>
       </div>
     </nav>
+
     <!-- Hero Section -->
-    <section class="events-hero">
+    <section class="ak2k25-events-hero">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <div class="anniversary-badge">
+            <div class="ak2k25-anniversary-badge">
               <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
             </div>
-            <h1 class="display-4 fw-bold mb-3">AKANKSHA 2K25 Events</h1>
-            <p class="lead">
-              Explore our exciting lineup of technical and non-technical events
+            <h1 class="display-4 fw-bold mb-3">AAKANKSHA 2K25</h1>
+            <p class="lead mb-4">
+              Empire of Innovation – Lead the Change, Rule the Market
+            </p>
+            <p class="mb-4">
+              <i class="fas fa-calendar-alt me-2"></i>March 15-17, 2025 |
+              <i class="fas fa-map-marker-alt me-2"></i>B.S. Channabasappa First
+              Grade College
+            </p>
+            <a href="#registration" class="ak2k25-btn-techfest btn-lg"
+              >Register Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About the College Section -->
+    <section id="about-college" class="ak2k25-about-section">
+      <div class="container">
+        <h2 class="ak2k25-section-title">About Our College</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="ak2k25-college-image">
+              <img
+                src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="College Campus"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-3">B.S. Channabasappa First Grade College</h3>
+            <p>
+              Established with a vision to provide quality education and foster
+              holistic development, B.S. Channabasappa First Grade College has
+              been a beacon of knowledge since its inception.
+            </p>
+            <p>
+              Affiliated with the renowned University of Mysore, our institution
+              has consistently produced outstanding alumni who have excelled in
+              diverse fields including technology, business, arts, and public
+              service.
+            </p>
+            <p>
+              Our mission is to empower students with knowledge, skills, and
+              ethical values to become future leaders and responsible global
+              citizens.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Event Categories -->
-    <section class="events-categories">
+    <!-- About AAKANKSHA Fest Section -->
+    <section id="about-fest" class="ak2k25-about-section ak2k25-bg-cream">
       <div class="container">
-        <h2 class="section-title">
-          Event <span class="text-gradient">Categories</span>
-        </h2>
-        <p class="text-center lead mb-5">
-          Choose from our diverse range of competitions and workshops
-        </p>
-
+        <h2 class="ak2k25-section-title">About AAKANKSHA</h2>
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="category-card card h-100">
-              <span class="category-badge">Akanksha</span>
+          <div class="col-lg-8 mx-auto text-center">
+            <p>
+              AAKANKSHA, our annual techno-cultural fest, began in 2007-08 with
+              a vision to create a platform for students to showcase their
+              talents beyond academics. Over the years, it has grown into one of
+              the most anticipated college events in the region.
+            </p>
+            <p>
+              This year, as we celebrate our 20th anniversary, AAKANKSHA 2K25
+              promises to be bigger and better with the theme "Empire of
+              Innovation". The fest aims to foster innovative thinking and
+              develop managerial and technical skills among participants.
+            </p>
+            <p>
+              Last year, we hosted over 2,000 participants from 50+ colleges
+              across the state. This year, we're expanding further with more
+              events, workshops, and opportunities for students to learn,
+              compete, and grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Overview Panel -->
+    <section id="events-overview" class="ak2k25-events-categories">
+      <div class="container">
+        <h2 class="ak2k25-section-title">Events Overview</h2>
+        <div class="row">
+          <!-- Event 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-category-card">
               <img
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="category-img card-img-top"
-                alt="Technical Events"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-category-img card-img-top"
+                alt="Recruitoria Kingdom"
               />
+              <span class="ak2k25-category-badge">Technical</span>
               <div class="card-body">
-                <div class="category-icon">
-                  <i class="fas fa-laptop-code"></i>
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-chart-line"></i>
                 </div>
-                <h5 class="card-title">Technical Events</h5>
+                <h5 class="card-title">Recruitoria Kingdom</h5>
                 <p class="card-text">
-                  Coding competitions, hackathons, robotics, and technical
-                  workshops.
+                  Where talent meets opportunity. Showcase your skills to
+                  industry leaders.
                 </p>
-                <a href="#technical" class="btn btn-techfest">View Events</a>
+                <a href="#recruitoria" class="ak2k25-btn-techfest"
+                  >Learn More</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="category-card card h-100">
-              <span class="category-badge">Takshak</span>
+          <!-- Event 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-category-card">
               <img
-                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="category-img card-img-top"
-                alt="Gaming Events"
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-category-img card-img-top"
+                alt="Crown Coin"
               />
+              <span class="ak2k25-category-badge">Business</span>
               <div class="card-body">
-                <div class="category-icon">
-                  <i class="fas fa-gamepad"></i>
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-coins"></i>
                 </div>
-                <h5 class="card-title">Gaming Events</h5>
+                <h5 class="card-title">Crown Coin</h5>
                 <p class="card-text">
-                  Esports tournaments, BGMI, Valorant, FIFA and more gaming
-                  competitions.
+                  Test your business acumen in this exciting stock market
+                  simulation game.
                 </p>
-                <a href="#gaming" class="btn btn-techfest">View Events</a>
+                <a href="#crown-coin" class="ak2k25-btn-techfest">Learn More</a>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="category-card card h-100">
-              <span class="category-badge">Freshers</span>
+          <!-- Event 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-category-card">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-category-img card-img-top"
+                alt="Hustle"
+              />
+              <span class="ak2k25-category-badge">Management</span>
+              <div class="card-body">
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+                <h5 class="card-title">Hustle</h5>
+                <p class="card-text">
+                  Marketing challenge where creativity meets strategy. Pitch
+                  your ideas to win.
+                </p>
+                <a href="#hustle" class="ak2k25-btn-techfest">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-category-card">
               <img
                 src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="category-img card-img-top"
-                alt="Cultural Events"
+                class="ak2k25-category-img card-img-top"
+                alt="Technocratic Entertainment"
               />
+              <span class="ak2k25-category-badge">Technical</span>
               <div class="card-body">
-                <div class="category-icon">
-                  <i class="fas fa-music"></i>
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-gamepad"></i>
                 </div>
-                <h5 class="card-title">Cultural Events</h5>
+                <h5 class="card-title">Technocratic Entertainment</h5>
                 <p class="card-text">
-                  Music, dance, drama, and other cultural performances and
-                  competitions.
+                  Gaming arena where tech meets entertainment. Compete in
+                  various gaming challenges.
                 </p>
-                <a href="#cultural" class="btn btn-techfest">View Events</a>
+                <a href="#technocratic" class="ak2k25-btn-techfest"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-category-card">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-category-img card-img-top"
+                alt="King's Court"
+              />
+              <span class="ak2k25-category-badge">Cultural</span>
+              <div class="card-body">
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-gavel"></i>
+                </div>
+                <h5 class="card-title">King's Court</h5>
+                <p class="card-text">
+                  Debate and discussion platform to voice your opinions on
+                  contemporary issues.
+                </p>
+                <a href="#kings-court" class="ak2k25-btn-techfest"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-category-card">
+              <img
+                src="https://images.unsplash.com/photo-1532453288672-adaa20c37c41?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-category-img card-img-top"
+                alt="Royal Ballet Fashion"
+              />
+              <span class="ak2k25-category-badge">Cultural</span>
+              <div class="card-body">
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-tshirt"></i>
+                </div>
+                <h5 class="card-title">Royal Ballet Fashion</h5>
+                <p class="card-text">
+                  Fashion show with a twist of ballet. Showcase your creativity
+                  on the runway.
+                </p>
+                <a href="#fashion" class="ak2k25-btn-techfest">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 7 -->
+          <div class="col-lg-4 col-md-6 mb-4 mx-auto">
+            <div class="ak2k25-category-card">
+              <img
+                src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-category-img card-img-top"
+                alt="Inter College Test"
+              />
+              <span class="ak2k25-category-badge">Academic</span>
+              <div class="card-body">
+                <div class="ak2k25-category-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h5 class="card-title">Inter College Test</h5>
+                <p class="card-text">
+                  Test your knowledge across various subjects. Prove your
+                  academic excellence.
+                </p>
+                <a href="#test" class="ak2k25-btn-techfest">Learn More</a>
               </div>
             </div>
           </div>
@@ -715,611 +1293,473 @@
       </div>
     </section>
 
-    <!-- Event Details -->
-    <section class="event-details" id="technical">
+    <!-- Detailed Event Sections -->
+    <section id="event-details" class="ak2k25-event-details">
       <div class="container">
-        <h2 class="section-title">
-          Technical <span class="text-gradient">Events</span>
-        </h2>
-        <p class="text-center lead mb-5">
-          Showcase your technical skills and innovative ideas
-        </p>
+        <h2 class="ak2k25-section-title">Event Details</h2>
 
-        <ul class="nav nav-tabs event-tabs" id="technicalTabs" role="tablist">
-          <li class="nav-item" role="presentation">
+        <!-- Event Tabs -->
+        <ul
+          class="nav nav-pills ak2k25-event-tabs justify-content-center"
+          id="eventTabs"
+          role="tablist"
+        >
+          <li class="nav-item ak2k25-nav-item" role="presentation">
             <button
-              class="nav-link active"
-              id="hackathon-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#hackathon"
+              class="nav-link ak2k25-nav-link ak2k25-active"
+              id="recruitoria-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#recruitoria"
               type="button"
               role="tab"
             >
-              Hackathon
+              Recruitoria Kingdom
             </button>
           </li>
-          <li class="nav-item" role="presentation">
+          <li class="nav-item ak2k25-nav-item" role="presentation">
             <button
-              class="nav-link"
-              id="robotics-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#robotics"
+              class="nav-link ak2k25-nav-link"
+              id="crown-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#crown-coin"
               type="button"
               role="tab"
             >
-              Robotics
+              Crown Coin
             </button>
           </li>
-          <li class="nav-item" role="presentation">
+          <li class="nav-item ak2k25-nav-item" role="presentation">
             <button
-              class="nav-link"
-              id="coding-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#coding"
+              class="nav-link ak2k25-nav-link"
+              id="hustle-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#hustle"
               type="button"
               role="tab"
             >
-              Coding Challenge
+              Hustle
+            </button>
+          </li>
+          <li class="nav-item ak2k25-nav-item" role="presentation">
+            <button
+              class="nav-link ak2k25-nav-link"
+              id="technocratic-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#technocratic"
+              type="button"
+              role="tab"
+            >
+              Technocratic Entertainment
+            </button>
+          </li>
+          <li class="nav-item ak2k25-nav-item" role="presentation">
+            <button
+              class="nav-link ak2k25-nav-link"
+              id="kings-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#kings-court"
+              type="button"
+              role="tab"
+            >
+              King's Court
+            </button>
+          </li>
+          <li class="nav-item ak2k25-nav-item" role="presentation">
+            <button
+              class="nav-link ak2k25-nav-link"
+              id="fashion-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#fashion"
+              type="button"
+              role="tab"
+            >
+              Royal Ballet Fashion
+            </button>
+          </li>
+          <li class="nav-item ak2k25-nav-item" role="presentation">
+            <button
+              class="nav-link ak2k25-nav-link"
+              id="test-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#test"
+              type="button"
+              role="tab"
+            >
+              Inter College Test
             </button>
           </li>
         </ul>
 
-        <div class="tab-content" id="technicalTabsContent">
-          <div class="tab-pane fade show active" id="hackathon" role="tabpanel">
-            <div class="row">
-              <div class="col-lg-8">
-                <h3 class="mb-4">24-Hour Hackathon</h3>
-                <p class="lead">
-                  Build innovative solutions to real-world problems in this
-                  round-the-clock coding marathon.
-                </p>
-                <p>
-                  Participants will have 24 hours to design, develop, and
-                  present a working prototype of their solution. The theme will
-                  be announced at the start of the event.
-                </p>
+        <!-- Tab Content -->
+        <div class="tab-content" id="eventTabsContent">
+          <!-- Recruitoria Kingdom -->
+          <div
+            class="tab-pane fade show active"
+            id="recruitoria"
+            role="tabpanel"
+          >
+            <div class="ak2k25-event-content">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h3 class="mb-3">Recruitoria Kingdom</h3>
+                  <p class="fst-italic mb-4">Where talent meets opportunity</p>
+                  <p>
+                    Recruitoria Kingdom is a platform for students to showcase
+                    their skills to industry leaders and recruiters. This event
+                    simulates real-world recruitment processes and provides
+                    valuable feedback from professionals.
+                  </p>
 
-                <h4 class="mt-5 mb-4">Rules & Guidelines</h4>
-                <div class="accordion rules-accordion" id="hackathonRules">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#ruleOne"
+                  <h4 class="mt-4 mb-3">Rules</h4>
+                  <div
+                    class="accordion ak2k25-rules-accordion"
+                    id="recruitoriaRules"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button ak2k25-accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#ruleOne"
+                        >
+                          Eligibility & Team Composition
+                        </button>
+                      </h2>
+                      <div
+                        id="ruleOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#recruitoriaRules"
                       >
-                        Team Composition
-                      </button>
-                    </h2>
-                    <div
-                      id="ruleOne"
-                      class="accordion-collapse collapse show"
-                      data-bs-parent="#hackathonRules"
-                    >
-                      <div class="accordion-body">
-                        Teams must consist of 2-4 members. All members must be
-                        currently enrolled students with valid ID cards.
+                        <div class="accordion-body ak2k25-accordion-body">
+                          <p>
+                            Open to all college students. Individual
+                            participation only. Valid college ID required.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#ruleTwo"
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button ak2k25-accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#ruleTwo"
+                        >
+                          Competition Structure
+                        </button>
+                      </h2>
+                      <div
+                        id="ruleTwo"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#recruitoriaRules"
                       >
-                        Project Development
-                      </button>
-                    </h2>
-                    <div
-                      id="ruleTwo"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#hackathonRules"
-                    >
-                      <div class="accordion-body">
-                        All code must be written during the hackathon. You can
-                        use any programming language, framework, or library.
-                        Pre-built templates are allowed but must be declared.
+                        <div class="accordion-body ak2k25-accordion-body">
+                          <p>
+                            The event consists of three rounds: Resume
+                            screening, group discussion, and personal interview.
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#ruleThree"
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button ak2k25-accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#ruleThree"
+                        >
+                          Judging Criteria
+                        </button>
+                      </h2>
+                      <div
+                        id="ruleThree"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#recruitoriaRules"
                       >
-                        Submission Guidelines
-                      </button>
-                    </h2>
-                    <div
-                      id="ruleThree"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#hackathonRules"
-                    >
-                      <div class="accordion-body">
-                        Projects must be submitted via GitHub repository link
-                        along with a brief presentation (max 5 slides)
-                        explaining the problem and solution.
+                        <div class="accordion-body ak2k25-accordion-body">
+                          <p>
+                            Participants will be evaluated on communication
+                            skills, subject knowledge, problem-solving ability,
+                            and overall presentation.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Event Details</h5>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-calendar-alt me-2"></i>Date:</span>
-                      <span>Oct 15, 2025</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-clock me-2"></i>Time:</span>
-                      <span>9:00 AM - 9:00 AM</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span
-                        ><i class="fas fa-map-marker-alt me-2"></i>Venue:</span
-                      >
-                      <span>Main Auditorium</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-users me-2"></i>Team Size:</span>
-                      <span>2-4 Members</span>
-                    </div>
-                    <div class="d-flex justify-content-between py-2">
-                      <span><i class="fas fa-tag me-2"></i>Fee:</span>
-                      <span>₹500 per team</span>
-                    </div>
-                    <a href="#register" class="btn btn-techfest mt-3"
-                      >Register Now</a
-                    >
-                  </div>
+
+                <div class="col-lg-4">
+                  <h4 class="mt-4 mb-3">Coordinators</h4>
+                  <h5>Faculty Coordinators</h5>
+                  <ul class="ak2k25-coordinator-list">
+                    <li>
+                      <i class="fas fa-phone"></i> Prof. Smitha - +91 9876543210
+                    </li>
+                    <li>
+                      <i class="fas fa-phone"></i> Dr. Ramesh - +91 9876543211
+                    </li>
+                  </ul>
+
+                  <h5 class="mt-4">Student Coordinators</h5>
+                  <ul class="ak2k25-coordinator-list">
+                    <li><i class="fas fa-phone"></i> Rahul - +91 9876543212</li>
+                    <li><i class="fas fa-phone"></i> Priya - +91 9876543213</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="robotics" role="tabpanel">
-            <div class="row">
-              <div class="col-lg-8">
-                <h3 class="mb-4">Robotics Workshop & Competition</h3>
-                <p class="lead">
-                  Design, build and program robots to complete challenging tasks
-                  in this exciting competition.
-                </p>
-                <p>
-                  Participants will learn the basics of robotics in a workshop
-                  session and then compete in a robot race and obstacle course
-                  challenge.
-                </p>
+          <!-- Other event content would go here with similar structure -->
+          <!-- For brevity, I'm showing just one event detail -->
+        </div>
+      </div>
+    </section>
 
-                <h4 class="mt-5 mb-4">Rules & Guidelines</h4>
-                <div class="accordion rules-accordion" id="roboticsRules">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#roboticsRuleOne"
-                      >
-                        Robot Specifications
-                      </button>
-                    </h2>
-                    <div
-                      id="roboticsRuleOne"
-                      class="accordion-collapse collapse show"
-                      data-bs-parent="#roboticsRules"
-                    >
-                      <div class="accordion-body">
-                        Robots must fit within a 25cm x 25cm x 25cm dimension.
-                        Maximum weight limit is 3kg. Power source must be
-                        on-board.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#roboticsRuleTwo"
-                      >
-                        Competition Rounds
-                      </button>
-                    </h2>
-                    <div
-                      id="roboticsRuleTwo"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#roboticsRules"
-                    >
-                      <div class="accordion-body">
-                        The competition consists of three rounds: Line
-                        following, Obstacle avoidance, and Sumo wrestling. Teams
-                        must qualify each round to advance.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Event Details</h5>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-calendar-alt me-2"></i>Date:</span>
-                      <span>Oct 16, 2025</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-clock me-2"></i>Time:</span>
-                      <span>10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span
-                        ><i class="fas fa-map-marker-alt me-2"></i>Venue:</span
-                      >
-                      <span>Robotics Lab</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-users me-2"></i>Team Size:</span>
-                      <span>2-3 Members</span>
-                    </div>
-                    <div class="d-flex justify-content-between py-2">
-                      <span><i class="fas fa-tag me-2"></i>Fee:</span>
-                      <span>₹300 per team</span>
-                    </div>
-                    <a href="#register" class="btn btn-techfest mt-3"
-                      >Register Now</a
-                    >
-                  </div>
-                </div>
-              </div>
+    <!-- General Rules & Regulations -->
+    <section id="general-rules" class="ak2k25-general-rules">
+      <div class="container">
+        <h2 class="ak2k25-section-title">General Rules & Regulations</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <ul class="ak2k25-rules-list">
+              <li>
+                All participants must carry their college ID cards and the fest
+                registration receipt.
+              </li>
+              <li>
+                Participants should report at the venue 30 minutes prior to the
+                event timing.
+              </li>
+              <li>
+                The decision of judges and event organizers will be final and
+                binding.
+              </li>
+              <li>
+                Any form of indiscipline or misbehavior will lead to immediate
+                disqualification.
+              </li>
+              <li>
+                Teams must consist of members from the same institution (except
+                for open events).
+              </li>
+              <li>
+                The organizers reserve the right to change the rules or cancel
+                any event if necessary.
+              </li>
+              <li>
+                Electronic gadgets (calculators, smart watches, etc.) may be
+                restricted in certain events.
+              </li>
+              <li>
+                Outside help or references are not allowed unless explicitly
+                permitted.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule and Timings -->
+    <section id="schedule" class="ak2k25-schedule">
+      <div class="container">
+        <h2 class="ak2k25-section-title">Schedule & Timings</h2>
+        <div class="ak2k25-timeline">
+          <div class="ak2k25-timeline-item">
+            <div class="ak2k25-timeline-content">
+              <h5>Registration Deadline</h5>
+              <p class="text-primary">March 10, 2025</p>
+              <p>Last date to register for all events</p>
             </div>
           </div>
-
-          <div class="tab-pane fade" id="coding" role="tabpanel">
-            <div class="row">
-              <div class="col-lg-8">
-                <h3 class="mb-4">Code Sprint Challenge</h3>
-                <p class="lead">
-                  Test your coding skills in this intense algorithmic
-                  programming competition.
-                </p>
-                <p>
-                  Participants will solve a series of challenging programming
-                  problems within a limited time frame. Languages allowed: C,
-                  C++, Java, Python.
-                </p>
-
-                <h4 class="mt-5 mb-4">Rules & Guidelines</h4>
-                <div class="accordion rules-accordion" id="codingRules">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#codingRuleOne"
-                      >
-                        Competition Format
-                      </button>
-                    </h2>
-                    <div
-                      id="codingRuleOne"
-                      class="accordion-collapse collapse show"
-                      data-bs-parent="#codingRules"
-                    >
-                      <div class="accordion-body">
-                        The competition will consist of 5 problems of varying
-                        difficulty. Points are awarded based on successful
-                        solutions and time taken.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#codingRuleTwo"
-                      >
-                        Individual Participation
-                      </button>
-                    </h2>
-                    <div
-                      id="codingRuleTwo"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#codingRules"
-                    >
-                      <div class="accordion-body">
-                        This is an individual competition. No team participation
-                        allowed. Internet access will be restricted during the
-                        competition.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Event Details</h5>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-calendar-alt me-2"></i>Date:</span>
-                      <span>Oct 17, 2025</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span><i class="fas fa-clock me-2"></i>Time:</span>
-                      <span>2:00 PM - 5:00 PM</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span
-                        ><i class="fas fa-map-marker-alt me-2"></i>Venue:</span
-                      >
-                      <span>Computer Lab 3</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between border-bottom py-2"
-                    >
-                      <span
-                        ><i class="fas fa-users me-2"></i>Participation:</span
-                      >
-                      <span>Individual</span>
-                    </div>
-                    <div class="d-flex justify-content-between py-2">
-                      <span><i class="fas fa-tag me-2"></i>Fee:</span>
-                      <span>₹100 per person</span>
-                    </div>
-                    <a href="#register" class="btn btn-techfest mt-3"
-                      >Register Now</a
-                    >
-                  </div>
-                </div>
-              </div>
+          <div class="ak2k25-timeline-item">
+            <div class="ak2k25-timeline-content">
+              <h5>Day 1: Inauguration</h5>
+              <p class="text-primary">March 15, 2025 | 9:00 AM</p>
+              <p>Chief Guest: Dr. ABC, Renowned Industrialist</p>
+            </div>
+          </div>
+          <div class="ak2k25-timeline-item">
+            <div class="ak2k25-timeline-content">
+              <h5>Technical Events</h5>
+              <p class="text-primary">March 15, 2025 | 10:30 AM - 4:00 PM</p>
+              <p>Recruitoria Kingdom, Technocratic Entertainment</p>
+            </div>
+          </div>
+          <div class="ak2k25-timeline-item">
+            <div class="ak2k25-timeline-content">
+              <h5>Management Events</h5>
+              <p class="text-primary">March 16, 2025 | 9:30 AM - 1:00 PM</p>
+              <p>Crown Coin, Hustle</p>
+            </div>
+          </div>
+          <div class="ak2k25-timeline-item">
+            <div class="ak2k25-timeline-content">
+              <h5>Cultural Events</h5>
+              <p class="text-primary">March 16, 2025 | 2:00 PM - 5:00 PM</p>
+              <p>King's Court, Royal Ballet Fashion</p>
+            </div>
+          </div>
+          <div class="ak2k25-timeline-item">
+            <div class="ak2k25-timeline-content">
+              <h5>Academic Events & Valedictory</h5>
+              <p class="text-primary">March 17, 2025 | 10:00 AM - 3:00 PM</p>
+              <p>Inter College Test, Prize Distribution</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Registration Form -->
-    <section class="registration-form" id="register">
+    <!-- Facilities & Logistics -->
+    <section id="facilities" class="ak2k25-facilities">
       <div class="container">
-        <h2 class="section-title">
-          Event <span class="text-gradient">Registration</span>
-        </h2>
-        <p class="text-center lead mb-5">
-          Register for your preferred events and secure your spot
-        </p>
+        <h2 class="ak2k25-section-title">Facilities & Logistics</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-facility-card text-center p-4">
+              <div class="ak2k25-facility-icon">
+                <i class="fas fa-bed"></i>
+              </div>
+              <h5>Accommodation</h5>
+              <p>
+                Complimentary stay arrangement for outstation participants in
+                college hostels.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-facility-card text-center p-4">
+              <div class="ak2k25-facility-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h5>Food Court</h5>
+              <p>
+                Variety of food options available at the campus food court
+                throughout the event.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-facility-card text-center p-4">
+              <div class="ak2k25-facility-icon">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <h5>Wi-Fi Access</h5>
+              <p>
+                High-speed internet connectivity available across the campus for
+                participants.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-facility-card text-center p-4">
+              <div class="ak2k25-facility-icon">
+                <i class="fas fa-parking"></i>
+              </div>
+              <h5>Parking</h5>
+              <p>
+                Ample parking space available for participants and visitors with
+                security.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-facility-card text-center p-4">
+              <div class="ak2k25-facility-icon">
+                <i class="fas fa-first-aid"></i>
+              </div>
+              <h5>Medical Aid</h5>
+              <p>
+                First-aid facilities and emergency medical support available on
+                campus.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-facility-card text-center p-4">
+              <div class="ak2k25-facility-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h5>Navigation</h5>
+              <p>
+                Volunteers and signages available to help navigate the campus
+                easily.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="form-card">
-              <form id="eventRegistrationForm">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="fullName" class="form-label">Full Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="fullName"
-                        placeholder="Enter your full name"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="email" class="form-label"
-                        >Email Address</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
+    <!-- Contact & Support Section -->
+    <section id="contact" class="ak2k25-contact">
+      <div class="container">
+        <h2 class="ak2k25-section-title">Contact & Support</h2>
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="ak2k25-contact-card h-100">
+              <h4 class="mb-4">Event Queries</h4>
+              <h5>Faculty Coordinators</h5>
+              <ul class="ak2k25-coordinator-list">
+                <li>
+                  <i class="fas fa-user"></i> Dr. Rajesh Kumar - +91 9876543201
+                </li>
+                <li>
+                  <i class="fas fa-user"></i> Prof. Sunitha M - +91 9876543202
+                </li>
+                <li>
+                  <i class="fas fa-user"></i> Dr. Vikram Singh - +91 9876543203
+                </li>
+              </ul>
 
-                <div class="row mt-3">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="phone" class="form-label">Phone Number</label>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="phone"
-                        placeholder="Enter your phone number"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="college" class="form-label"
-                        >College Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="college"
-                        placeholder="Enter your college name"
-                        required
-                      />
-                    </div>
-                  </div>
+              <h5 class="mt-4">Student Coordinators</h5>
+              <ul class="ak2k25-coordinator-list">
+                <li><i class="fas fa-user"></i> Anjali - +91 9876543204</li>
+                <li><i class="fas fa-user"></i> Rohan - +91 9876543205</li>
+                <li><i class="fas fa-user"></i> Meera - +91 9876543206</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ak2k25-contact-card h-100">
+              <h4 class="mb-4">Get in Touch</h4>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control ak2k25-form-control"
+                    placeholder="Your Name"
+                  />
                 </div>
-
-                <div class="row mt-3">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="event" class="form-label">Select Event</label>
-                      <select class="form-control" id="event" required>
-                        <option value="">Choose an event</option>
-                        <option value="hackathon">24-Hour Hackathon</option>
-                        <option value="robotics">Robotics Workshop</option>
-                        <option value="coding">Code Sprint Challenge</option>
-                        <option value="gaming">BGMI Tournament</option>
-                        <option value="cultural">Dance Competition</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="teamSize" class="form-label">Team Size</label>
-                      <select class="form-control" id="teamSize">
-                        <option value="1">Individual (1)</option>
-                        <option value="2">2 Members</option>
-                        <option value="3">3 Members</option>
-                        <option value="4">4 Members</option>
-                      </select>
-                    </div>
-                  </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control ak2k25-form-control"
+                    placeholder="Your Email"
+                  />
                 </div>
-
-                <div
-                  class="row mt-3"
-                  id="teamMembersSection"
-                  style="display: none"
-                >
-                  <div class="col-12">
-                    <h5 class="mb-3">Team Members Details</h5>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="member1" class="form-label"
-                        >Member 2 Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="member1"
-                        placeholder="Enter team member name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="member1Email" class="form-label"
-                        >Member 2 Email</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="member1Email"
-                        placeholder="Enter team member email"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="member2" class="form-label"
-                        >Member 3 Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="member2"
-                        placeholder="Enter team member name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="member2Email" class="form-label"
-                        >Member 3 Email</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="member2Email"
-                        placeholder="Enter team member email"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="member3" class="form-label"
-                        >Member 4 Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="member3"
-                        placeholder="Enter team member name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="member3Email" class="form-label"
-                        >Member 4 Email</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="member3Email"
-                        placeholder="Enter team member email"
-                      />
-                    </div>
-                  </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control ak2k25-form-control"
+                    placeholder="Subject"
+                  />
                 </div>
-
-                <div class="form-group mt-4">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="terms"
-                      required
-                    />
-                    <label class="form-check-label" for="terms">
-                      I agree to the <a href="#">terms and conditions</a> and
-                      event rules
-                    </label>
-                  </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control ak2k25-form-control"
+                    rows="4"
+                    placeholder="Your Message"
+                  ></textarea>
                 </div>
-
-                <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-techfest btn-lg">
-                    Proceed to Payment
-                  </button>
-                </div>
+                <button type="submit" class="ak2k25-btn-techfest">
+                  Send Message
+                </button>
               </form>
             </div>
           </div>
@@ -1327,147 +1767,71 @@
       </div>
     </section>
 
-    <!-- Payment Options -->
-    <section class="payment-options">
+    <!-- Media Gallery -->
+    <section id="gallery" class="ak2k25-gallery">
       <div class="container">
-        <h2 class="section-title">
-          Payment <span class="text-gradient">Options</span>
-        </h2>
-        <p class="text-center lead mb-5">
-          Secure and convenient payment methods available
-        </p>
-
+        <h2 class="ak2k25-section-title">Past Events Gallery</h2>
         <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="payment-card">
-              <div class="payment-icon">
-                <i class="fas fa-credit-card"></i>
-              </div>
-              <h4>Online Payment</h4>
-              <p>
-                Pay securely using credit/debit cards or net banking through our
-                Razorpay integration.
-              </p>
-              <button class="btn btn-techfest">Pay Now</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <div class="payment-card">
-              <div class="payment-icon">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h4>UPI Payment</h4>
-              <p>
-                Use any UPI app like Google Pay, PhonePe, or Paytm to make
-                instant payments.
-              </p>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-gallery-item">
               <img
-                src="https://via.placeholder.com/150x150?text=UPI+QR"
-                alt="UPI QR Code"
-                class="qr-code"
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-gallery-img"
+                alt="Past Event 1"
               />
             </div>
           </div>
-
-          <div class="col-md-4 mb-4">
-            <div class="payment-card">
-              <div class="payment-icon">
-                <i class="fas fa-university"></i>
-              </div>
-              <h4>Bank Transfer</h4>
-              <p>
-                Transfer the amount directly to our bank account and share the
-                transaction details.
-              </p>
-              <button class="btn btn-techfest">View Bank Details</button>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-gallery-img"
+                alt="Past Event 2"
+              />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="results-section">
-      <div class="container">
-        <h2 class="section-title">
-          Previous <span class="text-gradient">Results</span>
-        </h2>
-        <p class="text-center lead mb-5">
-          Check out the winners from previous editions of TechFest
-        </p>
-
-        <div class="row mb-4">
-          <div class="col-md-6 mx-auto">
-            <div class="input-group">
-              <select class="form-select" id="yearFilter">
-                <option value="2025">AKANKSHA 2K25</option>
-                <option value="2024">TechFest 2024</option>
-                <option value="2023">TechFest 2023</option>
-              </select>
-              <select class="form-select" id="eventFilter">
-                <option value="all">All Events</option>
-                <option value="hackathon">Hackathon</option>
-                <option value="robotics">Robotics</option>
-                <option value="coding">Coding Challenge</option>
-                <option value="gaming">Gaming Tournament</option>
-              </select>
-              <button class="btn btn-techfest" type="button">
-                Filter Results
-              </button>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-gallery-img"
+                alt="Past Event 3"
+              />
             </div>
           </div>
-        </div>
-
-        <div class="table-responsive">
-          <table class="results-table">
-            <thead>
-              <tr>
-                <th>Event</th>
-                <th>First Prize</th>
-                <th>Second Prize</th>
-                <th>Third Prize</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Hackathon 2024</td>
-                <td>Team CodeBreakers (IIT Mumbai)</td>
-                <td>Team BitMasters (NIT Karnataka)</td>
-                <td>Team Debuggers (SV College)</td>
-              </tr>
-              <tr>
-                <td>Robotics 2024</td>
-                <td>Team RoboMasters (IIT Delhi)</td>
-                <td>Team Automatons (BITS Pilani)</td>
-                <td>Team CircuitBreakers (SV College)</td>
-              </tr>
-              <tr>
-                <td>Coding Challenge 2024</td>
-                <td>Rahul Sharma (IIT Mumbai)</td>
-                <td>Priya Patel (NIT Surathkal)</td>
-                <td>Arjun Kumar (SV College)</td>
-              </tr>
-              <tr>
-                <td>BGMI Tournament 2024</td>
-                <td>Team Elite Warriors</td>
-                <td>Team Phantom Assassins</td>
-                <td>Team Shadow Strikers</td>
-              </tr>
-              <tr>
-                <td>Dance Competition 2024</td>
-                <td>Neha & Group (St. Mary's College)</td>
-                <td>Ritvik & Group (SV College)</td>
-                <td>Ananya & Group (Women's College)</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-gallery-img"
+                alt="Past Event 4"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-gallery-img"
+                alt="Past Event 5"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ak2k25-gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1501281667305-0d4e0ab157b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="ak2k25-gallery-img"
+                alt="Past Event 6"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="techfest-footer">
+    <footer class="ak2k25-techfest-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
@@ -1476,7 +1840,7 @@
               Celebrating 20 years of innovation and technological excellence.
               Join us for the most exciting tech festival of the year!
             </p>
-            <div class="social-icons mt-4">
+            <div class="ak2k25-social-icons mt-4">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1484,7 +1848,7 @@
               <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ak2k25-footer-links">
             <h5>Quick Links</h5>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -1494,7 +1858,7 @@
               <li><a href="#">Results</a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ak2k25-footer-links">
             <h5>Events</h5>
             <ul>
               <li><a href="#">Akanksha</a></li>
@@ -1504,7 +1868,7 @@
               <li><a href="#">Exhibitions</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-4 footer-links">
+          <div class="col-lg-4 col-md-4 ak2k25-footer-links">
             <h5>Contact Us</h5>
             <ul>
               <li>
@@ -1534,7 +1898,7 @@
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" id="darkModeToggle">
+    <button class="ak2k25-dark-mode-toggle" id="ak2k25-darkModeToggle">
       <i class="fas fa-moon"></i>
     </button>
 
@@ -1544,38 +1908,63 @@
 
     <script>
       // Dark Mode Toggle
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      const body = document.body;
+      const ak2k25DarkModeToggle = document.getElementById(
+        "ak2k25-darkModeToggle"
+      );
+      const ak2k25Body = document.body;
 
       // Check for saved dark mode preference
-      if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      if (localStorage.getItem("ak2k25-darkMode") === "enabled") {
+        ak2k25Body.classList.add("ak2k25-dark-mode");
+        ak2k25DarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
 
-      darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+      ak2k25DarkModeToggle.addEventListener("click", () => {
+        ak2k25Body.classList.toggle("ak2k25-dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (ak2k25Body.classList.contains("ak2k25-dark-mode")) {
+          localStorage.setItem("ak2k25-darkMode", "enabled");
+          ak2k25DarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         } else {
-          localStorage.setItem("darkMode", "disabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          localStorage.setItem("ak2k25-darkMode", "disabled");
+          ak2k25DarkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
       });
 
       // Navbar scroll effect
       window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".techfest-navbar");
+        const ak2k25Navbar = document.querySelector(".ak2k25-techfest-navbar");
         if (window.scrollY > 50) {
-          navbar.style.padding = "10px 0";
-          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+          ak2k25Navbar.style.padding = "10px 0";
+          ak2k25Navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
         } else {
-          navbar.style.padding = "15px 0";
-          navbar.style.boxShadow = "none";
+          ak2k25Navbar.style.padding = "15px 0";
+          ak2k25Navbar.style.boxShadow = "none";
         }
       });
+
+      // Scroll animations
+      function ak2k25CheckVisibility() {
+        const ak2k25Elements = document.querySelectorAll(
+          ".ak2k25-category-card, .ak2k25-rules-list li, .ak2k25-timeline-item, .ak2k25-facility-card, .ak2k25-gallery-item, .ak2k25-about-section"
+        );
+
+        ak2k25Elements.forEach((element) => {
+          const position = element.getBoundingClientRect();
+
+          // Checking whether fully visible
+          if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.classList.add("ak2k25-visible");
+          }
+        });
+      }
+
+      // Check on load and scroll
+      window.addEventListener("load", ak2k25CheckVisibility);
+      window.addEventListener("scroll", ak2k25CheckVisibility);
+
+      // Initial check
+      ak2k25CheckVisibility();
 
       // Team members field toggle
       document
@@ -1615,4 +2004,3 @@
     </script>
   </body>
 </html>
-
