@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
       :root {
         --color-primary: #ffd700;
@@ -107,7 +109,7 @@
       /* Hero Section */
       .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+          url("images/bscclg.jpeg");
         background-size: cover;
         background-position: center;
         padding: 120px 0 100px;
@@ -159,6 +161,7 @@
       .countdown-item {
         margin: 0 10px;
         min-width: 80px;
+        perspective: 200px;
       }
 
       .countdown-value {
@@ -168,11 +171,31 @@
         padding: 15px;
         border-radius: 10px;
         margin-bottom: 5px;
+        transition: all 0.5s ease;
+        transform-style: preserve-3d;
+      }
+
+      .countdown-value.flip {
+        animation: flip 0.5s ease forwards;
+      }
+
+      @keyframes flip {
+        0% {
+          transform: rotateX(0deg);
+        }
+        100% {
+          transform: rotateX(360deg);
+        }
       }
 
       .countdown-label {
         font-size: 0.9rem;
         text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      .countdown-item:hover .countdown-label {
+        color: var(--color-primary);
       }
 
       /* Section Styling */
@@ -194,6 +217,11 @@
         );
         margin: 15px auto;
         border-radius: 2px;
+        transition: width 0.5s ease;
+      }
+
+      .section-title:hover:after {
+        width: 120px;
       }
 
       .dark-mode .section-title:after {
@@ -209,6 +237,7 @@
         transition: var(--transition);
         margin-bottom: 25px;
         height: 100%;
+        transform: translateY(0);
       }
 
       .event-card:hover {
@@ -219,12 +248,22 @@
       .event-img {
         height: 200px;
         object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .event-card:hover .event-img {
+        transform: scale(1.05);
       }
 
       .event-icon {
         font-size: 2rem;
         color: var(--color-primary);
         margin-bottom: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .event-card:hover .event-icon {
+        transform: rotate(15deg) scale(1.2);
       }
 
       .participant-count {
@@ -235,6 +274,12 @@
         font-size: 0.8rem;
         display: inline-block;
         margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .participant-count:hover {
+        transform: scale(1.05);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       }
 
       /* Fixed Timeline */
@@ -252,11 +297,36 @@
         bottom: 0;
         left: 50%;
         margin-left: -2px;
+        transition: background-color 0.5s ease;
+      }
+
+      .timeline:hover::before {
+        background: linear-gradient(
+          to bottom,
+          var(--color-primary),
+          var(--color-secondary)
+        );
       }
 
       .timeline-item {
         position: relative;
         margin-bottom: 40px;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 0.5s ease;
+      }
+
+      .timeline-item.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .timeline-item:nth-child(even) {
+        transform: translateX(50px);
+      }
+
+      .timeline-item:nth-child(even).visible {
+        transform: translateX(0);
       }
 
       .timeline-item:nth-child(odd) .timeline-content {
@@ -274,6 +344,12 @@
         background-color: var(--color-white);
         border-radius: 10px;
         box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       }
 
       .timeline-item:nth-child(odd) .timeline-content::after {
@@ -284,6 +360,7 @@
         border-color: transparent transparent transparent var(--color-white);
         right: -10px;
         top: 20px;
+        transition: border-color 0.3s ease;
       }
 
       .timeline-item:nth-child(even) .timeline-content::after {
@@ -294,6 +371,7 @@
         border-color: transparent var(--color-white) transparent transparent;
         left: -10px;
         top: 20px;
+        transition: border-color 0.3s ease;
       }
 
       .timeline-dot {
@@ -307,6 +385,12 @@
         left: 50%;
         margin-left: -10px;
         z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-dot:hover {
+        transform: scale(1.5);
+        background-color: var(--color-primary);
       }
 
       .dark-mode .timeline-content {
@@ -336,6 +420,7 @@
 
       .sponsor-img:hover {
         filter: grayscale(0%);
+        transform: scale(1.1);
       }
 
       /* Footer */
@@ -354,6 +439,12 @@
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links h5:hover {
+        padding-bottom: 15px;
+        border-bottom-width: 3px;
       }
 
       .footer-links ul {
@@ -363,6 +454,11 @@
 
       .footer-links li {
         margin-bottom: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .footer-links li:hover {
+        transform: translateX(5px);
       }
 
       .footer-links a {
@@ -392,7 +488,7 @@
       .social-icons a:hover {
         background: var(--color-primary);
         color: var(--color-accent);
-        transform: translateY(-5px);
+        transform: translateY(-5px) rotate(5deg);
       }
 
       /* Dark Mode Toggle */
@@ -416,7 +512,7 @@
       }
 
       .dark-mode-toggle:hover {
-        transform: rotate(30deg);
+        transform: rotate(30deg) scale(1.1);
       }
 
       /* Enhanced Contact Section */
@@ -450,12 +546,22 @@
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        transition: transform 0.5s ease;
+      }
+
+      .contact-card:hover .contact-icon {
+        transform: rotate(15deg) scale(1.2);
       }
 
       .contact-detail {
         display: flex;
         align-items: flex-start;
         margin-bottom: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .contact-detail:hover {
+        transform: translateX(5px);
       }
 
       .contact-detail-icon {
@@ -463,6 +569,30 @@
         color: var(--color-primary);
         margin-right: 15px;
         min-width: 20px;
+        transition: color 0.3s ease;
+      }
+
+      .contact-detail:hover .contact-detail-icon {
+        color: var(--color-secondary);
+      }
+
+      /* Map Section */
+      .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        height: 400px;
+      }
+
+      .map-container:hover {
+        box-shadow: var(--shadow-hover);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
 
       /* Mobile Responsive Adjustments */
@@ -503,6 +633,10 @@
         .timeline-content::after {
           display: none;
         }
+
+        .event-card:hover {
+          transform: translateY(-5px);
+        }
       }
 
       /* Button Styles */
@@ -519,6 +653,28 @@
         font-weight: 600;
         transition: var(--transition);
         box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-techfest::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: all 0.6s ease;
+      }
+
+      .btn-techfest:hover::before {
+        left: 100%;
       }
 
       .btn-techfest:hover {
@@ -546,6 +702,105 @@
       .dark-mode .bg-cream {
         background-color: #1e1e1e;
       }
+
+      /* Animation Classes */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .zoom-in {
+        transform: scale(0.9);
+        opacity: 0;
+        transition: all 0.6s ease;
+      }
+
+      .zoom-in.visible {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .slide-in-left {
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: all 0.6s ease;
+      }
+
+      .slide-in-left.visible {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .slide-in-right {
+        transform: translateX(50px);
+        opacity: 0;
+        transition: all 0.6s ease;
+      }
+
+      .slide-in-right.visible {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      /* Banner Content Styles */
+      .banner-content {
+        padding: 60px 0;
+      }
+
+      .banner-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .banner-image:hover {
+        transform: scale(1.02);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .highlight-box {
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        height: 100%;
+      }
+
+      .dark-mode .highlight-box {
+        background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+      }
+
+      .highlight-box:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .highlight-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        background: linear-gradient(
+          135deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Smaller image for about section */
+      .about-image {
+        max-width: 85%;
+        margin: 0 auto;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -554,7 +809,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
-            src="logobsc.png"
+            src="images/logobsc.png"
             alt="College Logo"
             class="college-logo"
           />
@@ -627,12 +882,20 @@
           <div class="anniversary-badge">
             <i class="fas fa-medal me-2"></i>State Level Management & Tech Fest
           </div>
-          <h1 class="display-3 fw-bold mb-3">
+          <h1
+            class="display-3 fw-bold mb-3"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             AAKANKSHA <span class="text-gradient">2K25</span>
           </h1>
-          <p class="lead mb-4">
-            Dare for Knowledge... Version 8.0 | Empire of Innovation: Lead the
-            Change, Rule the Market
+          <p
+            class="lead mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            Version 8.0 | Desire for Knowledge
           </p>
           <div class="countdown-container">
             <div class="countdown-item">
@@ -652,7 +915,12 @@
               <div class="countdown-label">Seconds</div>
             </div>
           </div>
-          <div class="hero-buttons">
+          <div
+            class="hero-buttons"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <a href="#" class="btn btn-techfest btn-lg me-2 mb-2"
               >Register Now</a
             >
@@ -664,54 +932,77 @@
       </div>
     </section>
 
-    <!-- 20 Years Celebration Section -->
-    <section class="py-5 bg-cream">
-      <div class="container py-5">
-        <h2 class="section-title">
-          About <span class="text-gradient">AAKANKSHA</span>
+    <!-- Banner Content Section -->
+    <section class="banner-content py-5 bg-cream">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          About <span class="text-gradient">AAKANKSHA 2K25</span>
         </h2>
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="celebration-content">
-              <div class="badge bg-secondary mb-3">Version 8.0</div>
-              <h3 class="mb-4">State Level Management and Tech Fest</h3>
-              <p class="lead">
-                Join us for AAKANKSHA 2K25, where innovation meets competition
-                in this state-level management and tech fest.
-              </p>
-              <p>
-                On <strong>19th and 20th September 2025</strong>, at the Sree
-                Guru Shivayogi Bakkeshwara Mahaswamy Kalyana Mantapa, S
-                Nijalingappa Layout, Davanagere – 577004.
-              </p>
-              <div class="mt-4">
-                <div class="d-flex mb-3">
-                  <div class="me-4">
-                    <h4 class="text-gradient mb-0">7+</h4>
-                    <span>Events</span>
-                  </div>
-                  <div class="me-4">
-                    <h4 class="text-gradient mb-0">2</h4>
-                    <span>Days</span>
-                  </div>
-                  <div>
-                    <h4 class="text-gradient mb-0">State</h4>
-                    <span>Level</span>
-                  </div>
-                </div>
-              </div>
+
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="banner-image text-center">
+              <img
+                src="images/bscclg.jpeg"
+                alt="AAKANKSHA 2K25"
+                class="img-fluid rounded about-image"
+              />
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="position-relative">
-              <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Tech Fest"
-                class="img-fluid rounded shadow"
-              />
-              <div class="position-absolute top-0 start-0 mt-3 ms-3">
-                <span class="badge bg-primary p-2">Sept 19-20, 2025</span>
+          <div class="col-lg-6" data-aos="fade-left">
+            <h3 class="mb-4">The Premier Management & Tech Fest</h3>
+            <p class="lead">
+              AAKANKSHA 2K25 is a state-level management and tech fest that
+              brings together the brightest minds to compete, innovate, and
+              celebrate knowledge.
+            </p>
+            <p>
+              Organized by B.S. Channabasappa First Grade College, this event
+              features a diverse range of competitions, workshops, and
+              exhibitions that challenge participants to push their boundaries
+              and showcase their talents.
+            </p>
+            <div class="mt-4">
+              <a href="#" class="btn btn-techfest">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="highlight-box text-center">
+              <div class="highlight-icon">
+                <i class="fas fa-trophy"></i>
               </div>
+              <h4>Prestigious Competitions</h4>
+              <p>
+                Participate in 7+ exciting events across management and
+                technology domains with attractive prizes.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="highlight-box text-center">
+              <div class="highlight-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>Networking Opportunities</h4>
+              <p>
+                Connect with industry experts, professionals, and like-minded
+                peers from across the state.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="highlight-box text-center">
+              <div class="highlight-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h4>Innovation Showcase</h4>
+              <p>
+                Display your innovative projects and ideas to a wider audience
+                and receive valuable feedback.
+              </p>
             </div>
           </div>
         </div>
@@ -721,19 +1012,27 @@
     <!-- Events Highlights -->
     <section class="py-5">
       <div class="container py-5">
-        <h2 class="section-title">
+        <h2 class="section-title" data-aos="fade-up">
           Featured <span class="text-gradient">Events</span>
         </h2>
-        <p class="text-center lead mb-5">
+        <p
+          class="text-center lead mb-5"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Explore our exciting lineup of management and technical events
         </p>
 
         <div class="row">
           <!-- Empire of Innovation -->
-          <div class="col-md-6 col-lg-4 mb-4">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div class="event-card card h-100">
               <img
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="images/empire.jpg"
                 class="event-img card-img-top"
                 alt="Empire of Innovation"
               />
@@ -752,34 +1051,15 @@
             </div>
           </div>
 
-          <!-- Recruitoria Kingdom -->
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="event-card card h-100">
-              <img
-                src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
-                alt="Recruitoria Kingdom"
-              />
-              <div class="card-body">
-                <div class="event-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <h5 class="card-title">Recruitoria Kingdom</h5>
-                <p class="card-text">
-                  Empires are built on Strong Teams. Test your HR and
-                  recruitment skills in this team-based challenge.
-                </p>
-                <div class="participant-count">Team of 2 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
-              </div>
-            </div>
-          </div>
-
           <!-- Crown Coin -->
-          <div class="col-md-6 col-lg-4 mb-4">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="event-card card h-100">
               <img
-                src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="images/crown-coin.jpg"
                 class="event-img card-img-top"
                 alt="Crown Coin"
               />
@@ -798,31 +1078,12 @@
             </div>
           </div>
 
-          <!-- Hustle -->
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="event-card card h-100">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="event-img card-img-top"
-                alt="Hustle"
-              />
-              <div class="card-body">
-                <div class="event-icon">
-                  <i class="fas fa-bolt"></i>
-                </div>
-                <h5 class="card-title">Hustle</h5>
-                <p class="card-text">
-                  Distinctively Digital. A fast-paced digital marketing
-                  challenge that tests your online business skills.
-                </p>
-                <div class="participant-count">Team of 2 Participants</div>
-                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
-              </div>
-            </div>
-          </div>
-
           <!-- Technocratic Entertainment -->
-          <div class="col-md-6 col-lg-4 mb-4">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="event-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
@@ -844,8 +1105,66 @@
             </div>
           </div>
 
+          <!-- Hustle -->
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="Hustle"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h5 class="card-title">Human Rights HUSTLE</h5>
+                <p class="card-text">
+                  Distinctively Digital. A fast-paced digital marketing
+                  challenge that tests your online business skills.
+                </p>
+                <div class="participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
           <!-- King's Court -->
-          <div class="col-md-6 col-lg-4 mb-4">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="event-card card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="event-img card-img-top"
+                alt="King's Court"
+              />
+              <div class="card-body">
+                <div class="event-icon">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <h5 class="card-title">King's Court</h5>
+                <p class="card-text">
+                  Crown of Knowledge Awaits. A quiz competition that tests your
+                  general knowledge and quick thinking abilities.
+                </p>
+                <div class="participant-count">Team of 2 Participants</div>
+                <a href="#" class="btn btn-techfest mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- King's Court -->
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="event-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
@@ -868,10 +1187,14 @@
           </div>
 
           <!-- Royal Ballet Fashion -->
-          <div class="col-md-6 col-lg-4 mb-4 mx-auto">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="event-card card h-100">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1599669454699-248893623464?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 class="event-img card-img-top"
                 alt="Royal Ballet Fashion"
               />
@@ -882,7 +1205,7 @@
                 <h5 class="card-title">Royal Ballet Fashion</h5>
                 <p class="card-text">
                   Dance as Universal Expression of Joy. A fusion of fashion and
-                  performance that celebrates creative expression.
+                  dance that celebrates creativity and cultural expression.
                 </p>
                 <div class="participant-count">4-8 Participants</div>
                 <a href="#" class="btn btn-techfest mt-3">Learn More</a>
@@ -890,20 +1213,20 @@
             </div>
           </div>
         </div>
-
-        <div class="text-center mt-4">
-          <a href="#" class="btn btn-techfest btn-lg">View All Events</a>
-        </div>
       </div>
     </section>
 
     <!-- Fixed Timeline Section -->
     <section class="py-5 bg-cream">
       <div class="container py-5">
-        <h2 class="section-title">
+        <h2 class="section-title" data-aos="fade-up">
           Event <span class="text-gradient">Schedule</span>
         </h2>
-        <p class="text-center lead mb-5">
+        <p
+          class="text-center lead mb-5"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Mark your calendars for September 19-20, 2025
         </p>
 
@@ -918,15 +1241,15 @@
                   <ul>
                     <li>09:00 AM - Inauguration Ceremony</li>
                     <li>10:30 AM - Empire of Innovation Begins</li>
-                    <li>11:00 AM - Recruitoria Kingdom Prelims</li>
+                    <li>11:00 AM - Crown Coin Competition</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <h5>Afternoon Session</h5>
                   <ul>
-                    <li>01:30 PM - Crown Coin Competition</li>
-                    <li>03:00 PM - Hustle Digital Challenge</li>
-                    <li>04:30 PM - Technocratic Entertainment</li>
+                    <li>01:30 PM - Technocratic Entertainment</li>
+                    <li>03:00 PM - Human Rights HUSTLE</li>
+                    <li>04:30 PM - King's Court Prelims</li>
                   </ul>
                 </div>
               </div>
@@ -941,16 +1264,16 @@
                 <div class="col-md-6">
                   <h5>Morning Session</h5>
                   <ul>
-                    <li>09:30 AM - King's Court Quiz</li>
+                    <li>09:30 AM - King's Court Finals</li>
                     <li>10:45 AM - Empire of Innovation Finals</li>
-                    <li>11:30 AM - Recruitoria Kingdom Finals</li>
+                    <li>11:30 AM - Royal Ballet Fashion Rehearsal</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <h5>Afternoon Session</h5>
                   <ul>
-                    <li>01:00 PM - Hustle Final Round</li>
-                    <li>02:30 PM - Royal Ballet Fashion Prep</li>
+                    <li>01:00 PM - Human Rights HUSTLE Final Round</li>
+                    <li>02:30 PM - Royal Ballet Fashion Preparation</li>
                     <li>04:00 PM - Royal Ballet Fashion Show</li>
                     <li>06:00 PM - Valedictory Ceremony</li>
                   </ul>
@@ -962,18 +1285,112 @@
       </div>
     </section>
 
-    <!-- Enhanced Contact Section -->
+    <!-- Location Map Section -->
     <section class="py-5">
       <div class="container py-5">
-        <h2 class="section-title">
+        <h2 class="section-title" data-aos="fade-up">
+          Event <span class="text-gradient">Location</span>
+        </h2>
+        <p
+          class="text-center lead mb-5"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Join us at the prestigious venue in Davanagere
+        </p>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.112981100659!2d75.9183143148705!3d14.454812986942015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzE3LjMiTiA3NcKwNTUnMTQuNiJF!5e1!3m2!1sen!2sin!4v1624961302688!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="contact-card card h-100">
+              <div class="card-body p-4">
+                <h3 class="card-title mb-4">Venue Details</h3>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Sree Guru Shivayogi Bakkeshwara</h5>
+                    <p class="mb-0">Mahaswamy Kalyana Mantapa</p>
+                    <p class="mb-0">
+                      S Nijalingappa Layout, Davanagere – 577004
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Event Dates</h5>
+                    <p class="mb-0">September 19-20, 2025</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Timings</h5>
+                    <p class="mb-0">9:00 AM to 6:00 PM</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-info-circle"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">Additional Information</h5>
+                    <p class="mb-0">Ample parking space available</p>
+                    <p class="mb-0">Food stalls and refreshments on site</p>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <a href="#" class="btn btn-techfest me-2">Get Directions</a>
+                  <a href="#" class="btn btn-outline-secondary"
+                    >Download Brochure</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section class="py-5 bg-cream">
+      <div class="container py-5">
+        <h2 class="section-title" data-aos="fade-up">
           Contact <span class="text-gradient">Information</span>
         </h2>
-        <p class="text-center lead mb-5">
+        <p
+          class="text-center lead mb-5"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Get in touch with us for any queries or information
         </p>
 
         <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div class="contact-card card h-100">
               <div class="card-body text-center p-4">
                 <div class="contact-icon">
@@ -1016,50 +1433,57 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4">
+          <div
+            class="col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="contact-card card h-100">
               <div class="card-body text-center p-4">
                 <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fas fa-users"></i>
                 </div>
-                <h4 class="card-title">Venue</h4>
-                <p class="text-muted">Event Location</p>
+                <h4 class="card-title">Event Coordinators</h4>
+                <p class="text-muted">AAKANKSHA 2K25 Team</p>
 
                 <div class="contact-detail">
                   <div class="contact-detail-icon">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-user"></i>
                   </div>
                   <div>
-                    <h6 class="mb-0">Sree Guru Shivayogi Bakkeshwara</h6>
-                    <p class="mb-0">Mahaswamy Kalyana Mantapa</p>
-                  </div>
-                </div>
-
-                <div class="contact-detail">
-                  <div class="contact-detail-icon">
-                    <i class="fas fa-location-arrow"></i>
-                  </div>
-                  <div>
-                    <h6 class="mb-0">Address</h6>
-                    <p class="mb-0">S Nijalingappa Layout</p>
-                    <p class="mb-0">Davanagere – 577004</p>
+                    <h6 class="mb-0">Prof. Shankar</h6>
+                    <p class="mb-0">+91 9845123456</p>
                   </div>
                 </div>
 
                 <div class="contact-detail">
                   <div class="contact-detail-icon">
-                    <i class="fas fa-calendar-alt"></i>
+                    <i class="fas fa-user"></i>
                   </div>
                   <div>
-                    <h6 class="mb-0">Event Dates</h6>
-                    <p class="mb-0">September 19-20, 2025</p>
+                    <h6 class="mb-0">Dr. Nandini</h6>
+                    <p class="mb-0">+91 9876543210</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">aakanksha2k25@bscfgc.com</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4 mx-auto">
+          <div
+            class="col-md-6 col-lg-4 mb-4 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div class="contact-card card h-100">
               <div class="card-body text-center p-4">
                 <div class="contact-icon">
@@ -1138,9 +1562,9 @@
             <h5>Events</h5>
             <ul>
               <li><a href="#">Empire of Innovation</a></li>
-              <li><a href="#">Recruitoria Kingdom</a></li>
               <li><a href="#">Crown Coin</a></li>
-              <li><a href="#">Hustle</a></li>
+              <li><a href="#">Technocratic Entertainment</a></li>
+              <li><a href="#">Human Rights HUSTLE</a></li>
               <li><a href="#">View All</a></li>
             </ul>
           </div>
@@ -1179,11 +1603,20 @@
     <!-- Bootstrap & jQuery JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-      // Countdown Timer
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+
+      // Countdown Timer (set to September 19, 2025 at 10:00 AM)
       function updateCountdown() {
-        const festDate = new Date("September 19, 2025 00:00:00").getTime();
+        const festDate = new Date("September 19, 2025 10:00:00").getTime();
         const now = new Date().getTime();
         const distance = festDate - now;
 
@@ -1194,18 +1627,43 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerText = days
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("hours").innerText = hours
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("minutes").innerText = minutes
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("seconds").innerText = seconds
-          .toString()
-          .padStart(2, "0");
+        // Add flip animation when values change
+        const daysElem = document.getElementById("days");
+        const hoursElem = document.getElementById("hours");
+        const minutesElem = document.getElementById("minutes");
+        const secondsElem = document.getElementById("seconds");
+
+        if (daysElem.innerText !== days.toString().padStart(2, "0")) {
+          daysElem.classList.add("flip");
+          setTimeout(() => {
+            daysElem.innerText = days.toString().padStart(2, "0");
+            daysElem.classList.remove("flip");
+          }, 250);
+        }
+
+        if (hoursElem.innerText !== hours.toString().padStart(2, "0")) {
+          hoursElem.classList.add("flip");
+          setTimeout(() => {
+            hoursElem.innerText = hours.toString().padStart(2, "0");
+            hoursElem.classList.remove("flip");
+          }, 250);
+        }
+
+        if (minutesElem.innerText !== minutes.toString().padStart(2, "0")) {
+          minutesElem.classList.add("flip");
+          setTimeout(() => {
+            minutesElem.innerText = minutes.toString().padStart(2, "0");
+            minutesElem.classList.remove("flip");
+          }, 250);
+        }
+
+        if (secondsElem.innerText !== seconds.toString().padStart(2, "0")) {
+          secondsElem.classList.add("flip");
+          setTimeout(() => {
+            secondsElem.innerText = seconds.toString().padStart(2, "0");
+            secondsElem.classList.remove("flip");
+          }, 250);
+        }
       }
 
       setInterval(updateCountdown, 1000);
@@ -1244,7 +1702,24 @@
           navbar.style.boxShadow = "none";
         }
       });
+
+      // Timeline animation on scroll
+      const timelineItems = document.querySelectorAll(".timeline-item");
+
+      function checkTimelineItems() {
+        const triggerBottom = window.innerHeight * 0.8;
+
+        timelineItems.forEach((item) => {
+          const itemTop = item.getBoundingClientRect().top;
+
+          if (itemTop < triggerBottom) {
+            item.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkTimelineItems);
+      checkTimelineItems(); // Check on initial load
     </script>
   </body>
 </html>
-
