@@ -166,6 +166,235 @@
         box-shadow: var(--shadow-hover);
       }
 
+      /* Chairman Section */
+      .chairman-section {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .dark-mode .chairman-section {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      }
+
+      .chairman-section::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: var(--color-primary);
+        opacity: 0.1;
+        border-radius: 50%;
+        animation: pulse 6s infinite ease-in-out;
+      }
+
+      .chairman-section::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: var(--color-secondary);
+        opacity: 0.1;
+        border-radius: 50%;
+        animation: pulse 8s infinite ease-in-out;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.1;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.15;
+        }
+      }
+
+      .chairman-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .chairman-img-container {
+        position: relative;
+        display: inline-block;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transform: perspective(1000px) rotateY(0deg);
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
+      }
+
+      .chairman-img-container:hover {
+        transform: perspective(1000px) rotateY(5deg);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .chairman-img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        border-radius: 20px;
+        transition: transform 0.5s ease;
+      }
+
+      .chairman-img-container:hover .chairman-img {
+        transform: scale(1.03);
+      }
+
+      .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          transparent 70%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .chairman-img-container:hover .img-overlay {
+        opacity: 1;
+      }
+
+      .chairman-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: var(--color-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text);
+        font-size: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: all 0.5s ease 0.2s;
+      }
+
+      .chairman-img-container:hover .chairman-badge {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .chairman-message-card {
+        background: var(--color-white);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+      }
+
+      .dark-mode .chairman-message-card {
+        background: #2a2a2a;
+      }
+
+      .chairman-message-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .message-header {
+        position: relative;
+        margin-bottom: 25px;
+      }
+
+      .quote-icon {
+        position: absolute;
+        font-size: 3rem;
+        color: var(--color-primary);
+        opacity: 0.2;
+      }
+
+      .quote-icon.start {
+        top: -20px;
+        left: -10px;
+      }
+
+      .quote-icon.end {
+        bottom: -30px;
+        right: -10px;
+      }
+
+      .message-body {
+        position: relative;
+        z-index: 2;
+      }
+
+      .message-body p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        transition: color 0.3s ease;
+      }
+
+      .message-signature {
+        text-align: right;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px dashed rgba(0, 0, 0, 0.1);
+      }
+
+      .dark-mode .message-signature {
+        border-top: 1px dashed rgba(255, 255, 255, 0.1);
+      }
+
+      .signature-img {
+        height: 40px;
+        margin-bottom: 10px;
+        opacity: 0.9;
+      }
+
+      /* Animation for text appearance */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .chairman-message-card .message-body p {
+        animation: fadeInUp 0.6s forwards;
+        opacity: 0;
+      }
+
+      .chairman-message-card .message-body p:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .chairman-message-card .message-body p:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .chairman-message-card .message-body p:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .chairman-message-card .message-body p:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .chairman-message-card .message-body p:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
       /* Principal Section */
       .principal-section {
         padding: 80px 0;
@@ -420,17 +649,42 @@
           height: 220px;
           margin-bottom: 25px;
         }
+
+        .chairman-section::before,
+        .chairman-section::after {
+          display: none;
+        }
+
+        .chairman-img {
+          max-width: 280px;
+        }
+
+        .message-signature {
+          text-align: center;
+        }
+
+        .chairman-message-card {
+          padding: 30px 25px;
+        }
+
+        .quote-icon {
+          font-size: 2.5rem;
+        }
+
+        .quote-icon.start {
+          top: -15px;
+          left: -5px;
+        }
       }
     </style>
   </head>
   <body>
     <!-- Navigation -->
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
-            src="logobsc.png"
+            src="images/logobsc.png"
             alt="College Logo"
             class="college-logo"
           />
@@ -495,6 +749,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="about-hero">
       <div class="container">
@@ -520,7 +775,7 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-6">
             <img
-              src="bscclg.jpeg"
+              src="images/bscclg.jpeg"
               alt="B.S. Channabasappa First Grade College Campus"
               class="img-fluid rounded shadow history-img"
             />
@@ -584,6 +839,80 @@
                   Engaging in various community development programs and social
                   initiatives.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chairman Message Section -->
+    <section class="chairman-section">
+      <div class="container">
+        <h2 class="section-title">
+          Chairman's <span class="text-gradient">Message</span>
+        </h2>
+
+        <div class="row align-items-center chairman-content">
+          <div class="col-lg-5 text-center mb-5 mb-lg-0">
+            <div class="chairman-img-container">
+              <img
+                src="images/Shivkumar.jpg"
+                alt="Chairman Sri B.S. Channabasappa"
+                class="chairman-img img-fluid"
+              />
+              <div class="img-overlay"></div>
+              <div class="chairman-badge">
+                <i class="fas fa-award"></i>
+              </div>
+            </div>
+            <h4 class="mt-4">Sri B.C.Shivakumar</h4>
+            <p class="text-muted">Chairman, Sri Vinayaka Educational Trust</p>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="chairman-message-card">
+              <div class="message-header">
+                <div class="quote-icon start">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="quote-icon end">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+              </div>
+
+              <div class="message-body">
+                <p class="lead">
+                  Dear Students, Faculty, and Distinguished Guests,
+                </p>
+
+                <p>
+                  It is with immense pride and pleasure that I welcome you to
+                  <strong>AAKANKSHA 2K25</strong>, the State Level Management
+                  and Tech Fest organized by B.S. Channabasappa First Grade
+                  College.
+                </p>
+
+                <p>
+                  Sri B.C.Shivakumar is a rare combination of different good
+                  qualities. He is a philanthropist; polite, prudent, simple
+                  educationalist, donor and business magnet. He is an
+                  encouraging force behind every activity in the college. He
+                  dreams of elevating the standard of the students in order to
+                  enable them to be well accomplished citizens. His vision for
+                  the development of the college exceptionally appropriates the
+                  missions he advocates. His encouragement and guidance surely
+                  helps the institution to achieve its excellent academic
+                  performance.
+                </p>
+                <p class="mb-0">
+                  Let the spirit of innovation and competition thrive!
+                </p>
+              </div>
+
+              <div class="message-signature">
+                <img src="" alt="Signature" class="signature-img" />
+                <p class="mb-0">Sri B.C.Shivakumar</p>
               </div>
             </div>
           </div>
@@ -674,7 +1003,7 @@
           </div>
           <div class="col-lg-6">
             <img
-              src="shiva.jpeg"
+              src="images/shiva.jpeg"
               alt="College History"
               class="img-fluid rounded shadow history-img"
             />
@@ -939,6 +1268,26 @@
         } else {
           navbar.style.padding = "15px 0";
           navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Add intersection observer for scroll animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const chairmanSection = document.querySelector(".chairman-section");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                chairmanSection.classList.add("animated");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        if (chairmanSection) {
+          observer.observe(chairmanSection);
         }
       });
     </script>
