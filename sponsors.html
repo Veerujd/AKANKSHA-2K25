@@ -21,31 +21,31 @@
     />
     <style>
       :root {
-        --color-primary: #ffd700;
-        --color-secondary: #d32f2f;
-        --color-accent: #1e3a8a;
-        --color-bg: #faf3e0;
-        --color-text: #212529;
-        --color-white: #ffffff;
-        --color-dark: #121212;
-        --font-heading: "Poppins", sans-serif;
-        --font-body: "Roboto", sans-serif;
-        --transition: all 0.3s ease;
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        --sp-color-primary: #ffd700;
+        --sp-color-secondary: #d32f2f;
+        --sp-color-accent: #1e3a8a;
+        --sp-color-bg: #faf3e0;
+        --sp-color-text: #212529;
+        --sp-color-white: #ffffff;
+        --sp-color-dark: #121212;
+        --sp-font-heading: "Poppins", sans-serif;
+        --sp-font-body: "Roboto", sans-serif;
+        --sp-transition: all 0.3s ease;
+        --sp-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --sp-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
 
       body {
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background-color: var(--color-white);
+        font-family: var(--sp-font-body);
+        color: var(--sp-color-text);
+        background-color: var(--sp-color-white);
         overflow-x: hidden;
         transition: background-color 0.3s ease;
       }
 
-      body.dark-mode {
-        background-color: var(--color-dark);
-        color: var(--color-white);
+      body.sp-dark-mode {
+        background-color: var(--sp-color-dark);
+        color: var(--sp-color-white);
       }
 
       h1,
@@ -54,209 +54,212 @@
       h4,
       h5,
       h6 {
-        font-family: var(--font-heading);
+        font-family: var(--sp-font-heading);
         font-weight: 700;
       }
 
       /* Header & Navigation */
-      .techfest-navbar {
-        background-color: var(--color-white);
-        box-shadow: var(--shadow);
+      .sp-navbar {
+        background-color: var(--sp-color-white);
+        box-shadow: var(--sp-shadow);
         padding: 15px 0;
-        transition: var(--transition);
+        transition: var(--sp-transition);
       }
 
-      .dark-mode .techfest-navbar {
+      .sp-dark-mode .sp-navbar {
         background-color: #1a1a1a;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .navbar-brand {
+      .sp-navbar-brand {
         display: flex;
         align-items: center;
       }
 
-      .college-logo {
+      .sp-logo {
         height: 50px;
         margin-right: 15px;
       }
 
-      .nav-item {
+      .sp-nav-item {
         margin: 0 5px;
       }
 
-      .nav-link {
+      .sp-nav-link {
         font-weight: 500;
-        color: var(--color-text);
-        transition: var(--transition);
+        color: var(--sp-color-text);
+        transition: var(--sp-transition);
+        text-decoration: none;
       }
 
-      .dark-mode .nav-link {
-        color: var(--color-white);
+      .sp-dark-mode .sp-nav-link {
+        color: var(--sp-color-white);
       }
 
-      .nav-link:hover {
-        color: var(--color-secondary);
+      .sp-nav-link:hover {
+        color: var(--sp-color-secondary);
       }
 
-      .navbar-toggler {
+      .sp-navbar-toggler {
         border: none;
         font-size: 1.5rem;
       }
 
       /* Hero Section */
-      .sponsors-hero {
+      .sp-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
           url("https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
         background-size: cover;
         background-position: center;
         padding: 120px 0 80px;
-        color: var(--color-white);
+        color: var(--sp-color-white);
         text-align: center;
         position: relative;
       }
 
       /* Section Styling */
-      .section-title {
+      .sp-section-title {
         position: relative;
         margin-bottom: 40px;
         text-align: center;
       }
 
-      .section-title:after {
+      .sp-section-title:after {
         content: "";
         display: block;
         width: 80px;
         height: 4px;
         background: linear-gradient(
           to right,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--sp-color-primary),
+          var(--sp-color-secondary)
         );
         margin: 15px auto;
         border-radius: 2px;
+        transition: var(--sp-transition);
       }
 
-      .dark-mode .section-title:after {
-        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      .sp-dark-mode .sp-section-title:after {
+        background: linear-gradient(to right, var(--sp-color-primary), #aa2c25);
       }
 
       /* Sponsorship Tiers */
-      .sponsorship-tiers {
+      .sp-tiers {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--sp-color-white);
       }
 
-      .dark-mode .sponsorship-tiers {
+      .sp-dark-mode .sp-tiers {
         background-color: #1a1a1a;
       }
 
-      .tier-card {
+      .sp-tier-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--sp-shadow);
+        transition: var(--sp-transition);
         margin-bottom: 25px;
         text-align: center;
         height: 100%;
       }
 
-      .tier-card:hover {
+      .sp-tier-card:hover {
         transform: translateY(-10px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--sp-shadow-hover);
       }
 
-      .tier-header {
+      .sp-tier-header {
         padding: 25px 20px;
-        color: var(--color-white);
+        color: var(--sp-color-white);
       }
 
-      .tier-platinum .tier-header {
+      .sp-tier-platinum .sp-tier-header {
         background: linear-gradient(45deg, #e5e4e2, #c0c0c0);
-        color: var(--color-text);
+        color: var(--sp-color-text);
       }
 
-      .tier-gold .tier-header {
+      .sp-tier-gold .sp-tier-header {
         background: linear-gradient(45deg, #ffd700, #daa520);
       }
 
-      .tier-silver .tier-header {
+      .sp-tier-silver .sp-tier-header {
         background: linear-gradient(45deg, #c0c0c0, #a8a8a8);
       }
 
-      .tier-bronze .tier-header {
+      .sp-tier-bronze .sp-tier-header {
         background: linear-gradient(45deg, #cd7f32, #8c6b46);
       }
 
-      .tier-icon {
+      .sp-tier-icon {
         font-size: 2.5rem;
         margin-bottom: 15px;
       }
 
-      .tier-features {
+      .sp-tier-features {
         padding: 0;
         list-style: none;
       }
 
-      .tier-features li {
+      .sp-tier-features li {
         padding: 10px 20px;
         border-bottom: 1px solid #eee;
+        transition: var(--sp-transition);
       }
 
-      .dark-mode .tier-features li {
+      .sp-dark-mode .sp-tier-features li {
         border-color: #444;
       }
 
-      .tier-features li:last-child {
+      .sp-tier-features li:last-child {
         border-bottom: none;
       }
 
       /* Current Sponsors */
-      .current-sponsors {
+      .sp-current {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--sp-color-bg);
       }
 
-      .dark-mode .current-sponsors {
+      .sp-dark-mode .sp-current {
         background-color: #1e1e1e;
       }
 
-      .sponsor-card {
+      .sp-sponsor-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--sp-shadow);
+        transition: var(--sp-transition);
         margin-bottom: 25px;
         text-align: center;
-        background-color: var(--color-white);
+        background-color: var(--sp-color-white);
         padding: 20px;
         height: 100%;
       }
 
-      .dark-mode .sponsor-card {
+      .sp-dark-mode .sp-sponsor-card {
         background-color: #2a2a2a;
       }
 
-      .sponsor-card:hover {
+      .sp-sponsor-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--sp-shadow-hover);
       }
 
-      .sponsor-logo {
+      .sp-sponsor-logo {
         max-height: 120px;
         max-width: 100%;
         margin: 0 auto 20px;
         filter: grayscale(0%);
-        transition: var(--transition);
+        transition: var(--sp-transition);
       }
 
-      .sponsor-card:hover .sponsor-logo {
+      .sp-sponsor-card:hover .sp-sponsor-logo {
         filter: grayscale(0%);
       }
 
-      .sponsor-tier {
+      .sp-sponsor-tier {
         display: inline-block;
         padding: 5px 15px;
         border-radius: 20px;
@@ -265,130 +268,131 @@
         margin-bottom: 15px;
       }
 
-      .tier-platinum-badge {
+      .sp-tier-platinum-badge {
         background-color: #e5e4e2;
         color: #333;
       }
 
-      .tier-gold-badge {
+      .sp-tier-gold-badge {
         background-color: #ffd700;
         color: #333;
       }
 
-      .tier-silver-badge {
+      .sp-tier-silver-badge {
         background-color: #c0c0c0;
         color: #333;
       }
 
-      .tier-bronze-badge {
+      .sp-tier-bronze-badge {
         background-color: #cd7f32;
-        color: var(--color-white);
+        color: var(--sp-color-white);
       }
 
       /* Past Sponsors */
-      .past-sponsors {
+      .sp-past {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--sp-color-white);
       }
 
-      .dark-mode .past-sponsors {
+      .sp-dark-mode .sp-past {
         background-color: #1a1a1a;
       }
 
-      .past-sponsor-logo {
+      .sp-past-logo {
         max-height: 80px;
         max-width: 100%;
         margin: 15px auto;
         filter: grayscale(100%);
-        transition: var(--transition);
+        transition: var(--sp-transition);
         opacity: 0.7;
       }
 
-      .past-sponsor-logo:hover {
+      .sp-past-logo:hover {
         filter: grayscale(0%);
         opacity: 1;
       }
 
       /* Become Sponsor */
-      .become-sponsor {
+      .sp-become {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--sp-color-bg);
       }
 
-      .dark-mode .become-sponsor {
+      .sp-dark-mode .sp-become {
         background-color: #1e1e1e;
       }
 
-      .sponsor-form {
+      .sp-form {
         border-radius: 15px;
         border: none;
-        box-shadow: var(--shadow);
+        box-shadow: var(--sp-shadow);
         padding: 30px;
-        background-color: var(--color-white);
+        background-color: var(--sp-color-white);
       }
 
-      .dark-mode .sponsor-form {
+      .sp-dark-mode .sp-form {
         background-color: #2a2a2a;
       }
 
-      .form-control {
+      .sp-form-control {
         padding: 12px 15px;
         border: 2px solid #e1e1e1;
         border-radius: 10px;
         margin-bottom: 20px;
-        transition: var(--transition);
+        transition: var(--sp-transition);
       }
 
-      .dark-mode .form-control {
+      .sp-dark-mode .sp-form-control {
         background-color: #1a1a1a;
         border-color: #444;
-        color: var(--color-white);
+        color: var(--sp-color-white);
       }
 
-      .form-control:focus {
-        border-color: var(--color-primary);
+      .sp-form-control:focus {
+        border-color: var(--sp-color-primary);
         box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
       }
 
       /* Footer */
-      .techfest-footer {
-        background-color: var(--color-accent);
-        color: var(--color-white);
+      .sp-footer {
+        background-color: var(--sp-color-accent);
+        color: var(--sp-color-white);
         padding: 60px 0 30px;
       }
 
-      .dark-mode .techfest-footer {
+      .sp-dark-mode .sp-footer {
         background-color: #152555;
+        color: var(--sp-color-white);
       }
 
-      .footer-links h5 {
-        border-bottom: 2px solid var(--color-primary);
+      .sp-footer-links h5 {
+        border-bottom: 2px solid var(--sp-color-primary);
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
       }
 
-      .footer-links ul {
+      .sp-footer-links ul {
         list-style: none;
         padding: 0;
       }
 
-      .footer-links li {
+      .sp-footer-links li {
         margin-bottom: 10px;
       }
 
-      .footer-links a {
+      .sp-footer-links a {
         color: rgba(255, 255, 255, 0.8);
-        transition: var(--transition);
+        transition: var(--sp-transition);
         text-decoration: none;
       }
 
-      .footer-links a:hover {
-        color: var(--color-primary);
+      .sp-footer-links a:hover {
+        color: var(--sp-color-primary);
         padding-left: 5px;
       }
 
-      .social-icons a {
+      .sp-social-icons a {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -397,18 +401,18 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         margin-right: 10px;
-        color: var(--color-white);
-        transition: var(--transition);
+        color: var(--sp-color-white);
+        transition: var(--sp-transition);
       }
 
-      .social-icons a:hover {
-        background: var(--color-primary);
-        color: var(--color-accent);
+      .sp-social-icons a:hover {
+        background: var(--sp-color-primary);
+        color: var(--sp-color-accent);
         transform: translateY(-5px);
       }
 
       /* Dark Mode Toggle */
-      .dark-mode-toggle {
+      .sp-dark-mode-toggle {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -416,74 +420,76 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--sp-color-primary);
+        color: var(--sp-color-text);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--sp-shadow);
+        transition: var(--sp-transition);
         border: none;
       }
 
-      .dark-mode-toggle:hover {
+      .sp-dark-mode-toggle:hover {
         transform: rotate(30deg);
       }
 
       /* Button Styles */
-      .btn-techfest {
+      .sp-btn-techfest {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--sp-color-primary),
+          var(--sp-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--sp-color-white);
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 600;
-        transition: var(--transition);
-        box-shadow: var(--shadow);
+        transition: var(--sp-transition);
+        box-shadow: var(--sp-shadow);
+        text-decoration: none;
+        display: inline-block;
       }
 
-      .btn-techfest:hover {
+      .sp-btn-techfest:hover {
         transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-        color: var(--color-white);
+        box-shadow: var(--sp-shadow-hover);
+        color: var(--sp-color-white);
       }
 
       /* Text Gradient */
-      .text-gradient {
+      .sp-text-gradient {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--sp-color-primary),
+          var(--sp-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
       }
 
-      .bg-cream {
-        background-color: var(--color-bg);
+      .sp-bg-cream {
+        background-color: var(--sp-color-bg);
       }
 
-      .dark-mode .bg-cream {
+      .sp-dark-mode .sp-bg-cream {
         background-color: #1e1e1e;
       }
 
       /* Mobile Responsive Adjustments */
       @media (max-width: 768px) {
-        .sponsors-hero {
+        .sp-hero {
           padding: 100px 0 60px;
         }
 
-        .tier-card {
+        .sp-tier-card {
           margin-bottom: 25px;
         }
 
-        .sponsor-form {
+        .sp-form {
           padding: 20px;
         }
       }
@@ -491,21 +497,20 @@
   </head>
   <body>
     <!-- Navigation -->
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg sp-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand sp-navbar-brand" href="#">
           <img
             src="logobsc.png"
             alt="College Logo"
-            class="college-logo"
+            class="sp-logo"
           />
           <span class="fw-bold"
-            >AKANKSHA <span class="text-gradient">2K25</span></span
+            >AKANKSHA <span class="sp-text-gradient">2K25</span></span
           >
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler sp-navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
@@ -514,15 +519,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item sp-nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link sp-nav-link dropdown-toggle"
                 href="events.html"
                 id="eventsDropdown"
                 role="button"
@@ -540,20 +545,20 @@
                 <li><a class="dropdown-item" href="#">Past Events</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="schedule.html">Schedule</a>
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link" href="schedule.html">Schedule</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link active" href="sponsors.html">Sponsors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-techfest ms-2" href="#"
+            <li class="nav-item sp-nav-item">
+              <a class="nav-link sp-nav-link sp-btn-techfest ms-2" href="#"
                 >Register Now</a
               >
             </li>
@@ -561,12 +566,13 @@
         </div>
       </div>
     </nav>
+
     <!-- Hero Section -->
-    <section class="sponsors-hero">
+    <section class="sp-hero">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <div class="anniversary-badge">
+            <div class="sp-anniversary-badge">
               <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
             </div>
             <h1 class="display-4 fw-bold mb-3">Our Sponsors & Partners</h1>
@@ -580,10 +586,10 @@
     </section>
 
     <!-- Sponsorship Tiers -->
-    <section class="sponsorship-tiers">
+    <section class="sp-tiers">
       <div class="container">
-        <h2 class="section-title">
-          Sponsorship <span class="text-gradient">Opportunities</span>
+        <h2 class="sp-section-title">
+          Sponsorship <span class="sp-text-gradient">Opportunities</span>
         </h2>
         <p class="text-center lead mb-5">
           Join us as a sponsor and be part of our 20-year celebration
@@ -591,16 +597,16 @@
 
         <div class="row">
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="tier-card tier-platinum">
-              <div class="tier-header">
-                <div class="tier-icon">
+            <div class="sp-tier-card sp-tier-platinum">
+              <div class="sp-tier-header">
+                <div class="sp-tier-icon">
                   <i class="fas fa-crown"></i>
                 </div>
                 <h3>Platinum</h3>
                 <h4>₹5,00,000+</h4>
               </div>
               <div class="card-body">
-                <ul class="tier-features">
+                <ul class="sp-tier-features">
                   <li>Prime logo placement on all materials</li>
                   <li>Keynote speaking opportunity</li>
                   <li>Exclusive branding in main auditorium</li>
@@ -608,7 +614,7 @@
                   <li>20 complimentary passes</li>
                   <li>Dedicated exhibition space</li>
                 </ul>
-                <a href="#become-sponsor" class="btn btn-techfest w-100"
+                <a href="#sp-become" class="sp-btn-techfest w-100"
                   >Become a Sponsor</a
                 >
               </div>
@@ -616,16 +622,16 @@
           </div>
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="tier-card tier-gold">
-              <div class="tier-header">
-                <div class="tier-icon">
+            <div class="sp-tier-card sp-tier-gold">
+              <div class="sp-tier-header">
+                <div class="sp-tier-icon">
                   <i class="fas fa-medal"></i>
                 </div>
                 <h3>Gold</h3>
                 <h4>₹2,50,000+</h4>
               </div>
               <div class="card-body">
-                <ul class="tier-features">
+                <ul class="sp-tier-features">
                   <li>Prominent logo placement</li>
                   <li>Speaking opportunity at events</li>
                   <li>Branding in secondary venues</li>
@@ -633,7 +639,7 @@
                   <li>10 complimentary passes</li>
                   <li>Exhibition space</li>
                 </ul>
-                <a href="#become-sponsor" class="btn btn-techfest w-100"
+                <a href="#sp-become" class="sp-btn-techfest w-100"
                   >Become a Sponsor</a
                 >
               </div>
@@ -641,16 +647,16 @@
           </div>
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="tier-card tier-silver">
-              <div class="tier-header">
-                <div class="tier-icon">
+            <div class="sp-tier-card sp-tier-silver">
+              <div class="sp-tier-header">
+                <div class="sp-tier-icon">
                   <i class="fas fa-star"></i>
                 </div>
                 <h3>Silver</h3>
                 <h4>₹1,00,000+</h4>
               </div>
               <div class="card-body">
-                <ul class="tier-features">
+                <ul class="sp-tier-features">
                   <li>Logo on website and materials</li>
                   <li>Branding in specific event venues</li>
                   <li>Quarter-page ad in event booklet</li>
@@ -658,7 +664,7 @@
                   <li>Social media recognition</li>
                   <li>Exhibition space (shared)</li>
                 </ul>
-                <a href="#become-sponsor" class="btn btn-techfest w-100"
+                <a href="#sp-become" class="sp-btn-techfest w-100"
                   >Become a Sponsor</a
                 >
               </div>
@@ -666,16 +672,16 @@
           </div>
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="tier-card tier-bronze">
-              <div class="tier-header">
-                <div class="tier-icon">
+            <div class="sp-tier-card sp-tier-bronze">
+              <div class="sp-tier-header">
+                <div class="sp-tier-icon">
                   <i class="fas fa-award"></i>
                 </div>
                 <h3>Bronze</h3>
                 <h4>₹50,000+</h4>
               </div>
               <div class="card-body">
-                <ul class="tier-features">
+                <ul class="sp-tier-features">
                   <li>Logo on website and event banners</li>
                   <li>Listing in event booklet</li>
                   <li>2 complimentary passes</li>
@@ -683,7 +689,7 @@
                   <li>Networking opportunities</li>
                   <li>Certificate of appreciation</li>
                 </ul>
-                <a href="#become-sponsor" class="btn btn-techfest w-100"
+                <a href="#sp-become" class="sp-btn-techfest w-100"
                   >Become a Sponsor</a
                 >
               </div>
@@ -694,10 +700,10 @@
     </section>
 
     <!-- Current Sponsors -->
-    <section class="current-sponsors">
+    <section class="sp-current">
       <div class="container">
-        <h2 class="section-title">
-          Our <span class="text-gradient">2025 Sponsors</span>
+        <h2 class="sp-section-title">
+          Our <span class="sp-text-gradient">2025 Sponsors</span>
         </h2>
         <p class="text-center lead mb-5">
           Proudly supported by these industry leaders
@@ -708,13 +714,13 @@
             <h3 class="text-center mb-4">Platinum Partners</h3>
             <div class="row">
               <div class="col-md-6 col-lg-4 mx-auto mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/300x150?text=Platinum+Sponsor+1"
                     alt="Platinum Sponsor 1"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-platinum-badge">Platinum</span>
+                  <span class="sp-sponsor-tier sp-tier-platinum-badge">Platinum</span>
                   <h5>TechVision Industries</h5>
                   <p>
                     Leading the way in technological innovation for over two
@@ -732,13 +738,13 @@
             <h3 class="text-center mb-4">Gold Partners</h3>
             <div class="row">
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/250x120?text=Gold+Sponsor+1"
                     alt="Gold Sponsor 1"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-gold-badge">Gold</span>
+                  <span class="sp-sponsor-tier sp-tier-gold-badge">Gold</span>
                   <h5>DataDynamo Solutions</h5>
                   <p>
                     Transforming businesses through data-driven insights and
@@ -750,13 +756,13 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/250x120?text=Gold+Sponsor+2"
                     alt="Gold Sponsor 2"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-gold-badge">Gold</span>
+                  <span class="sp-sponsor-tier sp-tier-gold-badge">Gold</span>
                   <h5>CodeCraft Technologies</h5>
                   <p>
                     Building the future through innovative software solutions.
@@ -767,13 +773,13 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/250x120?text=Gold+Sponsor+3"
                     alt="Gold Sponsor 3"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-gold-badge">Gold</span>
+                  <span class="sp-sponsor-tier sp-tier-gold-badge">Gold</span>
                   <h5>FutureNet Communications</h5>
                   <p>
                     Connecting the world with cutting-edge network solutions.
@@ -790,13 +796,13 @@
             <h3 class="text-center mb-4">Silver Partners</h3>
             <div class="row">
               <div class="col-md-6 col-lg-3 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/200x100?text=Silver+Sponsor+1"
                     alt="Silver Sponsor 1"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-silver-badge">Silver</span>
+                  <span class="sp-sponsor-tier sp-tier-silver-badge">Silver</span>
                   <h5>RoboWorks Inc.</h5>
                   <a href="#" class="btn btn-outline-primary btn-sm"
                     >Visit Website</a
@@ -804,13 +810,13 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-3 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/200x100?text=Silver+Sponsor+2"
                     alt="Silver Sponsor 2"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-silver-badge">Silver</span>
+                  <span class="sp-sponsor-tier sp-tier-silver-badge">Silver</span>
                   <h5>AppVenture Studios</h5>
                   <a href="#" class="btn btn-outline-primary btn-sm"
                     >Visit Website</a
@@ -818,13 +824,13 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-3 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/200x100?text=Silver+Sponsor+3"
                     alt="Silver Sponsor 3"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-silver-badge">Silver</span>
+                  <span class="sp-sponsor-tier sp-tier-silver-badge">Silver</span>
                   <h5>CloudScape Technologies</h5>
                   <a href="#" class="btn btn-outline-primary btn-sm"
                     >Visit Website</a
@@ -832,13 +838,13 @@
                 </div>
               </div>
               <div class="col-md-6 col-lg-3 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/200x100?text=Silver+Sponsor+4"
                     alt="Silver Sponsor 4"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-silver-badge">Silver</span>
+                  <span class="sp-sponsor-tier sp-tier-silver-badge">Silver</span>
                   <h5>InnoTech Solutions</h5>
                   <a href="#" class="btn btn-outline-primary btn-sm"
                     >Visit Website</a
@@ -852,63 +858,63 @@
             <h3 class="text-center mb-4">Bronze Partners</h3>
             <div class="row">
               <div class="col-6 col-md-3 col-lg-2 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/150x80?text=Bronze+1"
                     alt="Bronze Sponsor 1"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-bronze-badge">Bronze</span>
+                  <span class="sp-sponsor-tier sp-tier-bronze-badge">Bronze</span>
                 </div>
               </div>
               <div class="col-6 col-md-3 col-lg-2 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/150x80?text=Bronze+2"
                     alt="Bronze Sponsor 2"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-bronze-badge">Bronze</span>
+                  <span class="sp-sponsor-tier sp-tier-bronze-badge">Bronze</span>
                 </div>
               </div>
               <div class="col-6 col-md-3 col-lg-2 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/150x80?text=Bronze+3"
                     alt="Bronze Sponsor 3"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-bronze-badge">Bronze</span>
+                  <span class="sp-sponsor-tier sp-tier-bronze-badge">Bronze</span>
                 </div>
               </div>
               <div class="col-6 col-md-3 col-lg-2 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/150x80?text=Bronze+4"
                     alt="Bronze Sponsor 4"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-bronze-badge">Bronze</span>
+                  <span class="sp-sponsor-tier sp-tier-bronze-badge">Bronze</span>
                 </div>
               </div>
               <div class="col-6 col-md-3 col-lg-2 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/150x80?text=Bronze+5"
                     alt="Bronze Sponsor 5"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-bronze-badge">Bronze</span>
+                  <span class="sp-sponsor-tier sp-tier-bronze-badge">Bronze</span>
                 </div>
               </div>
               <div class="col-6 col-md-3 col-lg-2 mb-4">
-                <div class="sponsor-card">
+                <div class="sp-sponsor-card">
                   <img
                     src="https://via.placeholder.com/150x80?text=Bronze+6"
                     alt="Bronze Sponsor 6"
-                    class="sponsor-logo"
+                    class="sp-sponsor-logo"
                   />
-                  <span class="sponsor-tier tier-bronze-badge">Bronze</span>
+                  <span class="sp-sponsor-tier sp-tier-bronze-badge">Bronze</span>
                 </div>
               </div>
             </div>
@@ -918,10 +924,10 @@
     </section>
 
     <!-- Past Sponsors -->
-    <section class="past-sponsors">
+    <section class="sp-past">
       <div class="container">
-        <h2 class="section-title">
-          Past <span class="text-gradient">Sponsors</span>
+        <h2 class="sp-section-title">
+          Past <span class="sp-text-gradient">Sponsors</span>
         </h2>
         <p class="text-center lead mb-5">
           We gratefully acknowledge our previous sponsors
@@ -935,42 +941,42 @@
                 <img
                   src="https://via.placeholder.com/150x80?text=2024+Sponsor+1"
                   alt="2024 Sponsor 1"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2024+Sponsor+2"
                   alt="2024 Sponsor 2"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2024+Sponsor+3"
                   alt="2024 Sponsor 3"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2024+Sponsor+4"
                   alt="2024 Sponsor 4"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2024+Sponsor+5"
                   alt="2024 Sponsor 5"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2024+Sponsor+6"
                   alt="2024 Sponsor 6"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
             </div>
@@ -983,42 +989,42 @@
                 <img
                   src="https://via.placeholder.com/150x80?text=2023+Sponsor+1"
                   alt="2023 Sponsor 1"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2023+Sponsor+2"
                   alt="2023 Sponsor 2"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2023+Sponsor+3"
                   alt="2023 Sponsor 3"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2023+Sponsor+4"
                   alt="2023 Sponsor 4"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2023+Sponsor+5"
                   alt="2023 Sponsor 5"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
               <div class="col-4 col-md-2 mb-4">
                 <img
                   src="https://via.placeholder.com/150x80?text=2023+Sponsor+6"
                   alt="2023 Sponsor 6"
-                  class="past-sponsor-logo"
+                  class="sp-past-logo"
                 />
               </div>
             </div>
@@ -1028,10 +1034,10 @@
     </section>
 
     <!-- Become Sponsor -->
-    <section class="become-sponsor" id="become-sponsor">
+    <section class="sp-become" id="sp-become">
       <div class="container">
-        <h2 class="section-title">
-          Become a <span class="text-gradient">Sponsor</span>
+        <h2 class="sp-section-title">
+          Become a <span class="sp-text-gradient">Sponsor</span>
         </h2>
         <p class="text-center lead mb-5">
           Join us in celebrating 20 years of innovation and excellence
@@ -1039,24 +1045,24 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="sponsor-form">
+            <div class="sp-form">
               <h3 class="mb-4">Interested in sponsoring AKANKSHA 2K25?</h3>
               <p class="mb-4">
                 Fill out the form below and our team will contact you with more
                 information about sponsorship opportunities.
               </p>
 
-              <form id="sponsorInterestForm">
+              <form id="sp-sponsorInterestForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="companyName" class="form-label"
+                      <label for="sp-companyName" class="form-label"
                         >Company Name</label
                       >
                       <input
                         type="text"
-                        class="form-control"
-                        id="companyName"
+                        class="form-control sp-form-control"
+                        id="sp-companyName"
                         placeholder="Enter your company name"
                         required
                       />
@@ -1064,13 +1070,13 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="contactName" class="form-label"
+                      <label for="sp-contactName" class="form-label"
                         >Contact Person</label
                       >
                       <input
                         type="text"
-                        class="form-control"
-                        id="contactName"
+                        class="form-control sp-form-control"
+                        id="sp-contactName"
                         placeholder="Enter your name"
                         required
                       />
@@ -1081,13 +1087,13 @@
                 <div class="row mt-3">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="email" class="form-label"
+                      <label for="sp-email" class="form-label"
                         >Email Address</label
                       >
                       <input
                         type="email"
-                        class="form-control"
-                        id="email"
+                        class="form-control sp-form-control"
+                        id="sp-email"
                         placeholder="Enter your email"
                         required
                       />
@@ -1095,11 +1101,11 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="phone" class="form-label">Phone Number</label>
+                      <label for="sp-phone" class="form-label">Phone Number</label>
                       <input
                         type="tel"
-                        class="form-control"
-                        id="phone"
+                        class="form-control sp-form-control"
+                        id="sp-phone"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -1107,10 +1113,10 @@
                 </div>
 
                 <div class="form-group mt-3">
-                  <label for="interestLevel" class="form-label"
+                  <label for="sp-interestLevel" class="form-label"
                     >Interest Level</label
                   >
-                  <select class="form-control" id="interestLevel" required>
+                  <select class="form-control sp-form-control" id="sp-interestLevel" required>
                     <option value="">Select sponsorship tier</option>
                     <option value="platinum">Platinum (₹5,00,000+)</option>
                     <option value="gold">Gold (₹2,50,000+)</option>
@@ -1121,10 +1127,10 @@
                 </div>
 
                 <div class="form-group mt-3">
-                  <label for="message" class="form-label">Message</label>
+                  <label for="sp-message" class="form-label">Message</label>
                   <textarea
-                    class="form-control"
-                    id="message"
+                    class="form-control sp-form-control"
+                    id="sp-message"
                     rows="4"
                     placeholder="Tell us about your interest in sponsoring TechFest"
                   ></textarea>
@@ -1135,17 +1141,17 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      id="newsletter"
+                      id="sp-newsletter"
                       checked
                     />
-                    <label class="form-check-label" for="newsletter">
+                    <label class="form-check-label" for="sp-newsletter">
                       I would like to receive updates about AKANKSHA 2K25
                     </label>
                   </div>
                 </div>
 
                 <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-techfest btn-lg">
+                  <button type="submit" class="sp-btn-techfest btn-lg">
                     Submit Interest
                   </button>
                 </div>
@@ -1157,7 +1163,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="techfest-footer">
+    <footer class="sp-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
@@ -1166,7 +1172,7 @@
               Celebrating 20 years of innovation and technological excellence.
               Join us for the most exciting tech festival of the year!
             </p>
-            <div class="social-icons mt-4">
+            <div class="sp-social-icons mt-4">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1174,7 +1180,7 @@
               <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 sp-footer-links">
             <h5>Quick Links</h5>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -1184,7 +1190,7 @@
               <li><a href="results.html">Results</a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 sp-footer-links">
             <h5>Events</h5>
             <ul>
               <li><a href="#">Akanksha</a></li>
@@ -1194,7 +1200,7 @@
               <li><a href="#">Exhibitions</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-4 footer-links">
+          <div class="col-lg-4 col-md-4 sp-footer-links">
             <h5>Contact Us</h5>
             <ul>
               <li>
@@ -1227,7 +1233,7 @@
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" id="darkModeToggle">
+    <button class="sp-dark-mode-toggle" id="spDarkModeToggle">
       <i class="fas fa-moon"></i>
     </button>
 
@@ -1237,42 +1243,42 @@
 
     <script>
       // Dark Mode Toggle
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      const body = document.body;
+      const spDarkModeToggle = document.getElementById("spDarkModeToggle");
+      const spBody = document.body;
 
       // Check for saved dark mode preference
-      if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      if (localStorage.getItem("spDarkMode") === "enabled") {
+        spBody.classList.add("sp-dark-mode");
+        spDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
 
-      darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+      spDarkModeToggle.addEventListener("click", () => {
+        spBody.classList.toggle("sp-dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (spBody.classList.contains("sp-dark-mode")) {
+          localStorage.setItem("spDarkMode", "enabled");
+          spDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         } else {
-          localStorage.setItem("darkMode", "disabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          localStorage.setItem("spDarkMode", "disabled");
+          spDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
       });
 
       // Navbar scroll effect
       window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".techfest-navbar");
+        const spNavbar = document.querySelector(".sp-navbar");
         if (window.scrollY > 50) {
-          navbar.style.padding = "10px 0";
-          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+          spNavbar.style.padding = "10px 0";
+          spNavbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
         } else {
-          navbar.style.padding = "15px 0";
-          navbar.style.boxShadow = "none";
+          spNavbar.style.padding = "15px 0";
+          spNavbar.style.boxShadow = "none";
         }
       });
 
       // Form submission
       document
-        .getElementById("sponsorInterestForm")
+        .getElementById("sp-sponsorInterestForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
           alert(
