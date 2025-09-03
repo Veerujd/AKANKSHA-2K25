@@ -21,31 +21,31 @@
     />
     <style>
       :root {
-        --color-primary: #ffd700;
-        --color-secondary: #d32f2f;
-        --color-accent: #1e3a8a;
-        --color-bg: #faf3e0;
-        --color-text: #212529;
-        --color-white: #ffffff;
-        --color-dark: #121212;
-        --font-heading: "Poppins", sans-serif;
-        --font-body: "Roboto", sans-serif;
-        --transition: all 0.3s ease;
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        --cnot-color-primary: #ffd700;
+        --cnot-color-secondary: #d32f2f;
+        --cnot-color-accent: #1e3a8a;
+        --cnot-color-bg: #faf3e0;
+        --cnot-color-text: #212529;
+        --cnot-color-white: #ffffff;
+        --cnot-color-dark: #121212;
+        --cnot-font-heading: "Poppins", sans-serif;
+        --cnot-font-body: "Roboto", sans-serif;
+        --cnot-transition: all 0.3s ease;
+        --cnot-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --cnot-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
 
       body {
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background-color: var(--color-white);
+        font-family: var(--cnot-font-body);
+        color: var(--cnot-color-text);
+        background-color: var(--cnot-color-white);
         overflow-x: hidden;
         transition: background-color 0.3s ease;
       }
 
-      body.dark-mode {
-        background-color: var(--color-dark);
-        color: var(--color-white);
+      body.cnot-dark-mode {
+        background-color: var(--cnot-color-dark);
+        color: var(--cnot-color-white);
       }
 
       h1,
@@ -54,288 +54,288 @@
       h4,
       h5,
       h6 {
-        font-family: var(--font-heading);
+        font-family: var(--cnot-font-heading);
         font-weight: 700;
       }
 
       /* Header & Navigation */
-      .techfest-navbar {
-        background-color: var(--color-white);
-        box-shadow: var(--shadow);
+      .cnot-techfest-navbar {
+        background-color: var(--cnot-color-white);
+        box-shadow: var(--cnot-shadow);
         padding: 15px 0;
-        transition: var(--transition);
+        transition: var(--cnot-transition);
       }
 
-      .dark-mode .techfest-navbar {
+      .cnot-dark-mode .cnot-techfest-navbar {
         background-color: #1a1a1a;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .navbar-brand {
+      .cnot-navbar-brand {
         display: flex;
         align-items: center;
       }
 
-      .college-logo {
+      .cnot-college-logo {
         height: 50px;
         margin-right: 15px;
       }
 
-      .nav-item {
+      .cnot-nav-item {
         margin: 0 5px;
       }
 
-      .nav-link {
+      .cnot-nav-link {
         font-weight: 500;
-        color: var(--color-text);
-        transition: var(--transition);
+        color: var(--cnot-color-text);
+        transition: var(--cnot-transition);
       }
 
-      .dark-mode .nav-link {
-        color: var(--color-white);
+      .cnot-dark-mode .cnot-nav-link {
+        color: var(--cnot-color-white);
       }
 
-      .nav-link:hover {
-        color: var(--color-secondary);
+      .cnot-nav-link:hover {
+        color: var(--cnot-color-secondary);
       }
 
-      .navbar-toggler {
+      .cnot-navbar-toggler {
         border: none;
         font-size: 1.5rem;
       }
 
       /* Hero Section */
-      .contact-hero {
+      .cnot-contact-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
           url("bscclg.jpeg");
         background-size: cover;
         background-position: center;
         padding: 120px 0 80px;
-        color: var(--color-white);
+        color: var(--cnot-color-white);
         text-align: center;
         position: relative;
       }
 
       /* Section Styling */
-      .section-title {
+      .cnot-section-title {
         position: relative;
         margin-bottom: 40px;
         text-align: center;
       }
 
-      .section-title:after {
+      .cnot-section-title:after {
         content: "";
         display: block;
         width: 80px;
         height: 4px;
         background: linear-gradient(
           to right,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--cnot-color-primary),
+          var(--cnot-color-secondary)
         );
         margin: 15px auto;
         border-radius: 2px;
       }
 
-      .dark-mode .section-title:after {
-        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      .cnot-dark-mode .cnot-section-title:after {
+        background: linear-gradient(to right, var(--cnot-color-primary), #aa2c25);
       }
 
       /* Contact Form */
-      .contact-form-section {
+      .cnot-contact-form-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--cnot-color-white);
       }
 
-      .dark-mode .contact-form-section {
+      .cnot-dark-mode .cnot-contact-form-section {
         background-color: #1a1a1a;
       }
 
-      .form-card {
+      .cnot-form-card {
         border-radius: 15px;
         border: none;
-        box-shadow: var(--shadow);
+        box-shadow: var(--cnot-shadow);
         padding: 30px;
-        background-color: var(--color-white);
+        background-color: var(--cnot-color-white);
       }
 
-      .dark-mode .form-card {
+      .cnot-dark-mode .cnot-form-card {
         background-color: #2a2a2a;
       }
 
-      .form-control {
+      .cnot-form-control {
         padding: 12px 15px;
         border: 2px solid #e1e1e1;
         border-radius: 10px;
         margin-bottom: 20px;
-        transition: var(--transition);
+        transition: var(--cnot-transition);
       }
 
-      .dark-mode .form-control {
+      .cnot-dark-mode .cnot-form-control {
         background-color: #1a1a1a;
         border-color: #444;
-        color: var(--color-white);
+        color: var(--cnot-color-white);
       }
 
-      .form-control:focus {
-        border-color: var(--color-primary);
+      .cnot-form-control:focus {
+        border-color: var(--cnot-color-primary);
         box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
       }
 
       /* Contact Info */
-      .contact-info {
+      .cnot-contact-info {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--cnot-color-bg);
       }
 
-      .dark-mode .contact-info {
+      .cnot-dark-mode .cnot-contact-info {
         background-color: #1e1e1e;
       }
 
-      .info-card {
+      .cnot-info-card {
         border-radius: 15px;
         border: none;
-        box-shadow: var(--shadow);
+        box-shadow: var(--cnot-shadow);
         padding: 25px;
         text-align: center;
         margin-bottom: 25px;
-        background-color: var(--color-white);
-        transition: var(--transition);
+        background-color: var(--cnot-color-white);
+        transition: var(--cnot-transition);
         height: 100%;
       }
 
-      .dark-mode .info-card {
+      .cnot-dark-mode .cnot-info-card {
         background-color: #2a2a2a;
       }
 
-      .info-card:hover {
+      .cnot-info-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--cnot-shadow-hover);
       }
 
-      .info-icon {
+      .cnot-info-icon {
         font-size: 2.5rem;
-        color: var(--color-primary);
+        color: var(--cnot-color-primary);
         margin-bottom: 15px;
       }
 
       /* Committee Contacts */
-      .committee-section {
+      .cnot-committee-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--cnot-color-white);
       }
 
-      .dark-mode .committee-section {
+      .cnot-dark-mode .cnot-committee-section {
         background-color: #1a1a1a;
       }
 
-      .committee-card {
+      .cnot-committee-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--cnot-shadow);
+        transition: var(--cnot-transition);
         margin-bottom: 25px;
         text-align: center;
-        background-color: var(--color-white);
+        background-color: var(--cnot-color-white);
       }
 
-      .dark-mode .committee-card {
+      .cnot-dark-mode .cnot-committee-card {
         background-color: #2a2a2a;
       }
 
-      .committee-card:hover {
+      .cnot-committee-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--cnot-shadow-hover);
       }
 
-      .committee-img {
+      .cnot-committee-img {
         height: 180px;
         object-fit: cover;
       }
 
-      .committee-social {
+      .cnot-committee-social {
         margin-top: 15px;
       }
 
-      .committee-social a {
+      .cnot-committee-social a {
         display: inline-block;
         width: 36px;
         height: 36px;
         line-height: 36px;
         text-align: center;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--cnot-color-primary);
+        color: var(--cnot-color-text);
         border-radius: 50%;
         margin: 0 5px;
-        transition: var(--transition);
+        transition: var(--cnot-transition);
       }
 
-      .committee-social a:hover {
-        background: var(--color-secondary);
-        color: var(--color-white);
+      .cnot-committee-social a:hover {
+        background: var(--cnot-color-secondary);
+        color: var(--cnot-color-white);
         transform: translateY(-3px);
       }
 
       /* Map Section */
-      .map-section {
+      .cnot-map-section {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--cnot-color-bg);
       }
 
-      .dark-mode .map-section {
+      .cnot-dark-mode .cnot-map-section {
         background-color: #1e1e1e;
       }
 
-      .map-container {
+      .cnot-map-container {
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: var(--shadow);
+        box-shadow: var(--cnot-shadow);
         height: 400px;
       }
 
       /* FAQ Section */
-      .faq-section {
+      .cnot-faq-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--cnot-color-white);
       }
 
-      .dark-mode .faq-section {
+      .cnot-dark-mode .cnot-faq-section {
         background-color: #1a1a1a;
       }
 
-      .accordion-button {
+      .cnot-accordion-button {
         font-weight: 600;
         padding: 15px 20px;
-        background-color: var(--color-white);
-        color: var(--color-text);
+        background-color: var(--cnot-color-white);
+        color: var(--cnot-color-text);
       }
 
-      .dark-mode .accordion-button {
+      .cnot-dark-mode .cnot-accordion-button {
         background-color: #2a2a2a;
-        color: var(--color-white);
+        color: var(--cnot-color-white);
       }
 
-      .accordion-button:not(.collapsed) {
+      .cnot-accordion-button:not(.collapsed) {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--cnot-color-primary),
+          var(--cnot-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--cnot-color-white);
       }
 
-      .accordion-body {
-        background-color: var(--color-white);
+      .cnot-accordion-body {
+        background-color: var(--cnot-color-white);
       }
 
-      .dark-mode .accordion-body {
+      .cnot-dark-mode .cnot-accordion-body {
         background-color: #2a2a2a;
-        color: var(--color-white);
+        color: var(--cnot-color-white);
       }
 
       /* WhatsApp Button */
-      .whatsapp-button {
+      .cnot-whatsapp-button {
         position: fixed;
         bottom: 100px;
         right: 30px;
@@ -344,59 +344,59 @@
         height: 60px;
         border-radius: 50%;
         background: #25d366;
-        color: var(--color-white);
+        color: var(--cnot-color-white);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--cnot-shadow);
+        transition: var(--cnot-transition);
         border: none;
       }
 
-      .whatsapp-button:hover {
+      .cnot-whatsapp-button:hover {
         transform: scale(1.1);
       }
 
       /* Footer */
-      .techfest-footer {
-        background-color: var(--color-accent);
-        color: var(--color-white);
+      .cnot-techfest-footer {
+        background-color: var(--cnot-color-accent);
+        color: var(--cnot-color-white);
         padding: 60px 0 30px;
       }
 
-      .dark-mode .techfest-footer {
+      .cnot-dark-mode .cnot-techfest-footer {
         background-color: #152555;
       }
 
-      .footer-links h5 {
-        border-bottom: 2px solid var(--color-primary);
+      .cnot-footer-links h5 {
+        border-bottom: 2px solid var(--cnot-color-primary);
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
       }
 
-      .footer-links ul {
+      .cnot-footer-links ul {
         list-style: none;
         padding: 0;
       }
 
-      .footer-links li {
+      .cnot-footer-links li {
         margin-bottom: 10px;
       }
 
-      .footer-links a {
+      .cnot-footer-links a {
         color: rgba(255, 255, 255, 0.8);
-        transition: var(--transition);
+        transition: var(--cnot-transition);
         text-decoration: none;
       }
 
-      .footer-links a:hover {
-        color: var(--color-primary);
+      .cnot-footer-links a:hover {
+        color: var(--cnot-color-primary);
         padding-left: 5px;
       }
 
-      .social-icons a {
+      .cnot-social-icons a {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -405,18 +405,18 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         margin-right: 10px;
-        color: var(--color-white);
-        transition: var(--transition);
+        color: var(--cnot-color-white);
+        transition: var(--cnot-transition);
       }
 
-      .social-icons a:hover {
-        background: var(--color-primary);
-        color: var(--color-accent);
+      .cnot-social-icons a:hover {
+        background: var(--cnot-color-primary);
+        color: var(--cnot-color-accent);
         transform: translateY(-5px);
       }
 
       /* Dark Mode Toggle */
-      .dark-mode-toggle {
+      .cnot-dark-mode-toggle {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -424,82 +424,82 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--cnot-color-primary);
+        color: var(--cnot-color-text);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--cnot-shadow);
+        transition: var(--cnot-transition);
         border: none;
       }
 
-      .dark-mode-toggle:hover {
+      .cnot-dark-mode-toggle:hover {
         transform: rotate(30deg);
       }
 
       /* Button Styles */
-      .btn-techfest {
+      .cnot-btn-techfest {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--cnot-color-primary),
+          var(--cnot-color-secondary)
         );
-        color: var(--color-white);
+        color: var(--cnot-color-white);
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 600;
-        transition: var(--transition);
-        box-shadow: var(--shadow);
+        transition: var(--cnot-transition);
+        box-shadow: var(--cnot-shadow);
       }
 
-      .btn-techfest:hover {
+      .cnot-btn-techfest:hover {
         transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-        color: var(--color-white);
+        box-shadow: var(--cnot-shadow-hover);
+        color: var(--cnot-color-white);
       }
 
       /* Text Gradient */
-      .text-gradient {
+      .cnot-text-gradient {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--cnot-color-primary),
+          var(--cnot-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
       }
 
-      .bg-cream {
-        background-color: var(--color-bg);
+      .cnot-bg-cream {
+        background-color: var(--cnot-color-bg);
       }
 
-      .dark-mode .bg-cream {
+      .cnot-dark-mode .cnot-bg-cream {
         background-color: #1e1e1e;
       }
 
       /* Mobile Responsive Adjustments */
       @media (max-width: 768px) {
-        .contact-hero {
+        .cnot-contact-hero {
           padding: 100px 0 60px;
         }
 
-        .form-card {
+        .cnot-form-card {
           padding: 20px;
         }
 
-        .committee-img {
+        .cnot-committee-img {
           height: 150px;
         }
 
-        .map-container {
+        .cnot-map-container {
           height: 300px;
         }
 
-        .whatsapp-button {
+        .cnot-whatsapp-button {
           bottom: 90px;
           right: 20px;
           width: 50px;
@@ -510,40 +510,39 @@
   </head>
   <body>
     <!-- Navigation -->
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg cnot-techfest-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand cnot-navbar-brand" href="#">
           <img
             src="logobsc.png"
             alt="College Logo"
-            class="college-logo"
+            class="cnot-college-logo"
           />
           <span class="fw-bold"
-            >AKANKSHA <span class="text-gradient">2K25</span></span
+            >AKANKSHA <span class="cnot-text-gradient">2K25</span></span
           >
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler cnot-navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
+          data-bs-target="#cnot-navbarContent"
         >
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="collapse navbar-collapse" id="cnot-navbarContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link active" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item cnot-nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link cnot-nav-link dropdown-toggle"
                 href="events.html"
-                id="eventsDropdown"
+                id="cnot-eventsDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
               >
@@ -559,20 +558,20 @@
                 <li><a class="dropdown-item" href="#">Past Events</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="schedule.html">Schedule</a>
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link" href="schedule.html">Schedule</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link" href="sponsors.html">Sponsors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-techfest ms-2" href="#"
+            <li class="nav-item cnot-nav-item">
+              <a class="nav-link cnot-nav-link cnot-btn-techfest ms-2" href="#"
                 >Register Now</a
               >
             </li>
@@ -581,11 +580,11 @@
       </div>
     </nav>
     <!-- Hero Section -->
-    <section class="contact-hero">
+    <section class="cnot-contact-hero">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <div class="anniversary-badge">
+            <div class="cnot-anniversary-badge">
               <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
             </div>
             <h1 class="display-4 fw-bold mb-3">Get In Touch</h1>
@@ -598,10 +597,10 @@
     </section>
 
     <!-- Contact Form -->
-    <section class="contact-form-section">
+    <section class="cnot-contact-form-section">
       <div class="container">
-        <h2 class="section-title">
-          Send Us a <span class="text-gradient">Message</span>
+        <h2 class="cnot-section-title">
+          Send Us a <span class="cnot-text-gradient">Message</span>
         </h2>
         <p class="text-center lead mb-5">
           We'll get back to you as soon as possible
@@ -609,16 +608,16 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="form-card">
-              <form id="contactForm">
+            <div class="cnot-form-card">
+              <form id="cnot-contactForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="name" class="form-label">Full Name</label>
+                      <label for="cnot-name" class="form-label">Full Name</label>
                       <input
                         type="text"
-                        class="form-control"
-                        id="name"
+                        class="form-control cnot-form-control"
+                        id="cnot-name"
                         placeholder="Enter your full name"
                         required
                       />
@@ -626,13 +625,13 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="email" class="form-label"
+                      <label for="cnot-email" class="form-label"
                         >Email Address</label
                       >
                       <input
                         type="email"
-                        class="form-control"
-                        id="email"
+                        class="form-control cnot-form-control"
+                        id="cnot-email"
                         placeholder="Enter your email"
                         required
                       />
@@ -643,19 +642,19 @@
                 <div class="row mt-3">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="phone" class="form-label">Phone Number</label>
+                      <label for="cnot-phone" class="form-label">Phone Number</label>
                       <input
                         type="tel"
-                        class="form-control"
-                        id="phone"
+                        class="form-control cnot-form-control"
+                        id="cnot-phone"
                         placeholder="Enter your phone number"
                       />
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="subject" class="form-label">Subject</label>
-                      <select class="form-control" id="subject" required>
+                      <label for="cnot-subject" class="form-label">Subject</label>
+                      <select class="form-control cnot-form-control" id="cnot-subject" required>
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
                         <option value="registration">Registration Help</option>
@@ -671,10 +670,10 @@
                 </div>
 
                 <div class="form-group mt-3">
-                  <label for="message" class="form-label">Message</label>
+                  <label for="cnot-message" class="form-label">Message</label>
                   <textarea
-                    class="form-control"
-                    id="message"
+                    class="form-control cnot-form-control"
+                    id="cnot-message"
                     rows="5"
                     placeholder="Type your message here..."
                     required
@@ -686,17 +685,17 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      id="newsletter"
+                      id="cnot-newsletter"
                       checked
                     />
-                    <label class="form-check-label" for="newsletter">
+                    <label class="form-check-label" for="cnot-newsletter">
                       I would like to receive updates about AKANKSHA 2K25
                     </label>
                   </div>
                 </div>
 
                 <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-techfest btn-lg">
+                  <button type="submit" class="cnot-btn-techfest cnot-btn-techfest btn-lg">
                     Send Message
                   </button>
                 </div>
@@ -708,10 +707,10 @@
     </section>
 
     <!-- Contact Info -->
-    <section class="contact-info">
+    <section class="cnot-contact-info">
       <div class="container">
-        <h2 class="section-title">
-          Contact <span class="text-gradient">Information</span>
+        <h2 class="cnot-section-title">
+          Contact <span class="cnot-text-gradient">Information</span>
         </h2>
         <p class="text-center lead mb-5">
           Reach out to us through any of these channels
@@ -719,8 +718,8 @@
 
         <div class="row">
           <div class="col-md-4 mb-4">
-            <div class="info-card">
-              <div class="info-icon">
+            <div class="cnot-info-card">
+              <div class="cnot-info-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <h4>Address</h4>
@@ -733,8 +732,8 @@
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="info-card">
-              <div class="info-icon">
+            <div class="cnot-info-card">
+              <div class="cnot-info-icon">
                 <i class="fas fa-phone"></i>
               </div>
               <h4>Phone</h4>
@@ -743,7 +742,7 @@
                 +91 9123456789
               </p>
               <p class="mt-3">
-                <a href="tel:+919876543210" class="btn btn-techfest btn-sm">
+                <a href="tel:+919876543210" class="cnot-btn-techfest cnot-btn-techfest btn-sm">
                   <i class="fas fa-phone me-2"></i>Call Now
                 </a>
               </p>
@@ -751,8 +750,8 @@
           </div>
 
           <div class="col-md-4 mb-4">
-            <div class="info-card">
-              <div class="info-icon">
+            <div class="cnot-info-card">
+              <div class="cnot-info-icon">
                 <i class="fas fa-envelope"></i>
               </div>
               <h4>Email</h4>
@@ -763,7 +762,7 @@
               <p class="mt-3">
                 <a
                   href="mailto:info@techfest2025.com"
-                  class="btn btn-techfest btn-sm"
+                  class="cnot-btn-techfest cnot-btn-techfest btn-sm"
                 >
                   <i class="fas fa-envelope me-2"></i>Email Us
                 </a>
@@ -775,26 +774,26 @@
     </section>
 
     <!-- Committee Contacts -->
-    <section class="committee-section">
+    <section class="cnot-committee-section">
       <div class="container">
-        <h2 class="section-title">
-          Organizing <span class="text-gradient">Committee</span>
+        <h2 class="cnot-section-title">
+          Organizing <span class="cnot-text-gradient">Committee</span>
         </h2>
         <p class="text-center lead mb-5">Get in touch with our team members</p>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="committee-card card h-100">
+            <div class="cnot-committee-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                class="committee-img card-img-top"
+                class="cnot-committee-img card-img-top"
                 alt="Faculty Coordinator"
               />
               <div class="card-body">
                 <h5 class="card-title">Prof. Sanjay Verma</h5>
                 <p class="card-text">Faculty Coordinator</p>
                 <p class="card-text"><small>+91 9876543210</small></p>
-                <div class="committee-social">
+                <div class="cnot-committee-social">
                   <a href="#"><i class="fas fa-envelope"></i></a>
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -803,17 +802,17 @@
           </div>
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="committee-card card h-100">
+            <div class="cnot-committee-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                class="committee-img card-img-top"
+                class="cnot-committee-img card-img-top"
                 alt="Student Coordinator"
               />
               <div class="card-body">
                 <h5 class="card-title">Priya Sharma</h5>
                 <p class="card-text">Student Coordinator</p>
                 <p class="card-text"><small>+91 9123456789</small></p>
-                <div class="committee-social">
+                <div class="cnot-committee-social">
                   <a href="#"><i class="fas fa-envelope"></i></a>
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -822,17 +821,17 @@
           </div>
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="committee-card card h-100">
+            <div class="cnot-committee-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                class="committee-img card-img-top"
+                class="cnot-committee-img card-img-top"
                 alt="Technical Head"
               />
               <div class="card-body">
                 <h5 class="card-title">Rahul Patel</h5>
                 <p class="card-text">Technical Head</p>
                 <p class="card-text"><small>+91 9234567890</small></p>
-                <div class="committee-social">
+                <div class="cnot-committee-social">
                   <a href="#"><i class="fas fa-envelope"></i></a>
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -841,17 +840,17 @@
           </div>
 
           <div class="col-md-6 col-lg-3 mb-4">
-            <div class="committee-card card h-100">
+            <div class="cnot-committee-card card h-100">
               <img
                 src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                class="committee-img card-img-top"
+                class="cnot-committee-img card-img-top"
                 alt="Events Head"
               />
               <div class="card-body">
                 <h5 class="card-title">Neha Gupta</h5>
                 <p class="card-text">Events Head</p>
                 <p class="card-text"><small>+91 9345678901</small></p>
-                <div class="committee-social">
+                <div class="cnot-committee-social">
                   <a href="#"><i class="fas fa-envelope"></i></a>
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -863,14 +862,14 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="cnot-map-section">
       <div class="container">
-        <h2 class="section-title">
-          Our <span class="text-gradient">Location</span>
+        <h2 class="cnot-section-title">
+          Our <span class="cnot-text-gradient">Location</span>
         </h2>
         <p class="text-center lead mb-5">Find us at the college campus</p>
 
-        <div class="map-container">
+        <div class="cnot-map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9864428369683!2d77.5943141750782!3d12.908915987406032!2m3!1f0!2f0!3f0!4f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae151f9a97c4c7%3A0x2e9c8916aebe6b1!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1684831541233!5m2!1sen!2sin"
             width="100%"
@@ -890,7 +889,7 @@
               The nearest metro station is just 1km away, and multiple bus
               routes stop at the campus entrance.
             </p>
-            <a href="#" class="btn btn-techfest mt-3">
+            <a href="#" class="cnot-btn-techfest cnot-btn-techfest mt-3">
               <i class="fas fa-directions me-2"></i>Get Directions
             </a>
           </div>
@@ -899,33 +898,33 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="cnot-faq-section">
       <div class="container">
-        <h2 class="section-title">
-          Frequently Asked <span class="text-gradient">Questions</span>
+        <h2 class="cnot-section-title">
+          Frequently Asked <span class="cnot-text-gradient">Questions</span>
         </h2>
         <p class="text-center lead mb-5">
           Find answers to common questions about TechFest
         </p>
 
-        <div class="accordion" id="faqAccordion">
+        <div class="accordion" id="cnot-faqAccordion">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button"
+                class="accordion-button cnot-accordion-button"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#faqOne"
+                data-bs-target="#cnot-faqOne"
               >
                 How can I register for TechFest events?
               </button>
             </h2>
             <div
-              id="faqOne"
+              id="cnot-faqOne"
               class="accordion-collapse collapse show"
-              data-bs-parent="#faqAccordion"
+              data-bs-parent="#cnot-faqAccordion"
             >
-              <div class="accordion-body">
+              <div class="accordion-body cnot-accordion-body">
                 You can register for TechFest events through our website. Visit
                 the Events page, select the events you're interested in, and
                 complete the registration form. Payment can be made online
@@ -936,20 +935,20 @@
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button cnot-accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#faqTwo"
+                data-bs-target="#cnot-faqTwo"
               >
                 Can students from other colleges participate?
               </button>
             </h2>
             <div
-              id="faqTwo"
+              id="cnot-faqTwo"
               class="accordion-collapse collapse"
-              data-bs-parent="#faqAccordion"
+              data-bs-parent="#cnot-faqAccordion"
             >
-              <div class="accordion-body">
+              <div class="accordion-body cnot-accordion-body">
                 Yes, TechFest is open to students from all colleges. We
                 encourage participation from institutions across the country to
                 promote knowledge sharing and healthy competition.
@@ -959,21 +958,21 @@
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button cnot-accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#faqThree"
+                data-bs-target="#cnot-faqThree"
               >
                 What are the accommodation arrangements for outstation
                 participants?
               </button>
             </h2>
             <div
-              id="faqThree"
+              id="cnot-faqThree"
               class="accordion-collapse collapse"
-              data-bs-parent="#faqAccordion"
+              data-bs-parent="#cnot-faqAccordion"
             >
-              <div class="accordion-body">
+              <div class="accordion-body cnot-accordion-body">
                 We provide accommodation facilities for outstation participants
                 at reasonable rates. You can request accommodation during the
                 registration process. Please contact us in advance for
@@ -984,20 +983,20 @@
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button cnot-accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#faqFour"
+                data-bs-target="#cnot-faqFour"
               >
                 How can I become a sponsor for TechFest?
               </button>
             </h2>
             <div
-              id="faqFour"
+              id="cnot-faqFour"
               class="accordion-collapse collapse"
-              data-bs-parent="#faqAccordion"
+              data-bs-parent="#cnot-faqAccordion"
             >
-              <div class="accordion-body">
+              <div class="accordion-body cnot-accordion-body">
                 We welcome sponsorships from organizations interested in
                 supporting our event. Please visit our Sponsors page for
                 detailed information about sponsorship tiers and benefits, or
@@ -1008,20 +1007,20 @@
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button cnot-accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#faqFive"
+                data-bs-target="#cnot-faqFive"
               >
                 Will there be workshops as part of TechFest?
               </button>
             </h2>
             <div
-              id="faqFive"
+              id="cnot-faqFive"
               class="accordion-collapse collapse"
-              data-bs-parent="#faqAccordion"
+              data-bs-parent="#cnot-faqAccordion"
             >
-              <div class="accordion-body">
+              <div class="accordion-body cnot-accordion-body">
                 Yes, TechFest includes several workshops on emerging
                 technologies conducted by industry experts. Check the Events
                 page for workshop details, schedules, and registration
@@ -1034,7 +1033,7 @@
         <div class="text-center mt-5">
           <p>
             Have more questions?
-            <a href="#contactForm" class="text-gradient">Contact us directly</a>
+            <a href="#cnot-contactForm" class="cnot-text-gradient">Contact us directly</a>
           </p>
         </div>
       </div>
@@ -1043,14 +1042,14 @@
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/919876543210?text=Hi,%20I%20have%20a%20question%20about%20TechFest%202025"
-      class="whatsapp-button"
+      class="cnot-whatsapp-button"
       target="_blank"
     >
       <i class="fab fa-whatsapp fa-2x"></i>
     </a>
 
     <!-- Footer -->
-    <footer class="techfest-footer">
+    <footer class="cnot-techfest-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
@@ -1059,7 +1058,7 @@
               Celebrating 20 years of innovation and technological excellence.
               Join us for the most exciting tech festival of the year!
             </p>
-            <div class="social-icons mt-4">
+            <div class="cnot-social-icons mt-4">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1067,7 +1066,7 @@
               <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 cnot-footer-links">
             <h5>Quick Links</h5>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -1077,7 +1076,7 @@
               <li><a href="results.html">Results</a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 cnot-footer-links">
             <h5>Events</h5>
             <ul>
               <li><a href="#">Akanksha</a></li>
@@ -1087,7 +1086,7 @@
               <li><a href="#">Exhibitions</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-4 footer-links">
+          <div class="col-lg-4 col-md-4 cnot-footer-links">
             <h5>Contact Us</h5>
             <ul>
               <li>
@@ -1120,7 +1119,7 @@
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" id="darkModeToggle">
+    <button class="cnot-dark-mode-toggle" id="cnot-darkModeToggle">
       <i class="fas fa-moon"></i>
     </button>
 
@@ -1130,42 +1129,42 @@
 
     <script>
       // Dark Mode Toggle
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      const body = document.body;
+      const cnotDarkModeToggle = document.getElementById("cnot-darkModeToggle");
+      const cnotBody = document.body;
 
       // Check for saved dark mode preference
-      if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      if (localStorage.getItem("cnot-darkMode") === "enabled") {
+        cnotBody.classList.add("cnot-dark-mode");
+        cnotDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
 
-      darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+      cnotDarkModeToggle.addEventListener("click", () => {
+        cnotBody.classList.toggle("cnot-dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (cnotBody.classList.contains("cnot-dark-mode")) {
+          localStorage.setItem("cnot-darkMode", "enabled");
+          cnotDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         } else {
-          localStorage.setItem("darkMode", "disabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          localStorage.setItem("cnot-darkMode", "disabled");
+          cnotDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
       });
 
       // Navbar scroll effect
       window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".techfest-navbar");
+        const cnotNavbar = document.querySelector(".cnot-techfest-navbar");
         if (window.scrollY > 50) {
-          navbar.style.padding = "10px 0";
-          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+          cnotNavbar.style.padding = "10px 0";
+          cnotNavbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
         } else {
-          navbar.style.padding = "15px 0";
-          navbar.style.boxShadow = "none";
+          cnotNavbar.style.padding = "15px 0";
+          cnotNavbar.style.boxShadow = "none";
         }
       });
 
       // Form submission
       document
-        .getElementById("contactForm")
+        .getElementById("cnot-contactForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
           alert("Thank you for your message! We will get back to you soon.");
