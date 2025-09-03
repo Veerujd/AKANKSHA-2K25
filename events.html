@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events - AKANKSHA 2K25</title>
+    <title>Events - AAKANKSHA 2K25</title>
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <!-- Google Fonts -->
-    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -22,31 +21,31 @@
     />
     <style>
       :root {
-        --ak2k25-color-primary: #ffd700;
-        --ak2k25-color-secondary: #d32f2f;
-        --ak2k25-color-accent: #1e3a8a;
-        --ak2k25-color-bg: #faf3e0;
-        --ak2k25-color-text: #212529;
-        --ak2k25-color-white: #ffffff;
-        --ak2k25-color-dark: #121212;
-        --ak2k25-font-heading: "Playfair Display", serif;
-        --ak2k25-font-body: "Lato", sans-serif;
-        --ak2k25-transition: all 0.3s ease;
-        --ak2k25-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        --ak2k25-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        --aakansha-color-primary: #ffd700;
+        --aakansha-color-secondary: #d32f2f;
+        --aakansha-color-accent: #1e3a8a;
+        --aakansha-color-bg: #faf3e0;
+        --aakansha-color-text: #212529;
+        --aakansha-color-white: #ffffff;
+        --aakansha-color-dark: #121212;
+        --aakansha-font-heading: "Playfair Display", serif;
+        --aakansha-font-body: "Lato", sans-serif;
+        --aakansha-transition: all 0.3s ease;
+        --aakansha-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --aakansha-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
 
       body {
-        font-family: var(--ak2k25-font-body);
-        color: var(--ak2k25-color-text);
-        background-color: var(--ak2k25-color-white);
+        font-family: var(--aakansha-font-body);
+        color: var(--aakansha-color-text);
+        background-color: var(--aakansha-color-white);
         overflow-x: hidden;
         transition: background-color 0.3s ease;
       }
 
-      body.ak2k25-dark-mode {
-        background-color: var(--ak2k25-color-dark);
-        color: var(--ak2k25-color-white);
+      body.aakansha-dark-mode {
+        background-color: var(--aakansha-color-dark);
+        color: var(--aakansha-color-white);
       }
 
       h1,
@@ -55,83 +54,83 @@
       h4,
       h5,
       h6 {
-        font-family: var(--ak2k25-font-heading);
+        font-family: var(--aakansha-font-heading);
         font-weight: 700;
       }
 
       /* Header & Navigation */
-      .ak2k25-techfest-navbar {
-        background-color: var(--ak2k25-color-white);
-        box-shadow: var(--ak2k25-shadow);
+      .aakansha-navbar {
+        background-color: var(--aakansha-color-white);
+        box-shadow: var(--aakansha-shadow);
         padding: 15px 0;
-        transition: var(--ak2k25-transition);
+        transition: var(--aakansha-transition);
       }
 
-      .ak2k25-dark-mode .ak2k25-techfest-navbar {
+      .aakansha-dark-mode .aakansha-navbar {
         background-color: #1a1a1a;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .ak2k25-navbar-brand {
+      .aakansha-navbar-brand {
         display: flex;
         align-items: center;
       }
 
-      .ak2k25-college-logo {
+      .aakansha-college-logo {
         height: 50px;
         margin-right: 15px;
       }
 
-      .ak2k25-nav-item {
+      .aakansha-nav-item {
         margin: 0 5px;
       }
 
-      .ak2k25-nav-link {
+      .aakansha-nav-link {
         font-weight: 500;
-        color: var(--ak2k25-color-text);
-        transition: var(--ak2k25-transition);
+        color: var(--aakansha-color-text);
+        transition: var(--aakansha-transition);
       }
 
-      .ak2k25-dark-mode .ak2k25-nav-link {
-        color: var(--ak2k25-color-white);
+      .aakansha-dark-mode .aakansha-nav-link {
+        color: var(--aakansha-color-white);
       }
 
-      .ak2k25-nav-link:hover {
-        color: var(--ak2k25-color-secondary);
+      .aakansha-nav-link:hover {
+        color: var(--aakansha-color-secondary);
       }
 
-      .ak2k25-navbar-toggler {
+      .aakansha-navbar-toggler {
         border: none;
         font-size: 1.5rem;
       }
 
       /* Hero Section */
-      .ak2k25-events-hero {
+      .aakansha-events-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
           url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
         background-size: cover;
         background-position: center;
         padding: 120px 0 80px;
-        color: var(--ak2k25-color-white);
+        color: var(--aakansha-color-white);
         text-align: center;
         position: relative;
       }
 
-      .ak2k25-anniversary-badge {
+      .aakansha-anniversary-badge {
         display: inline-block;
         background: linear-gradient(
           45deg,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
+          var(--aakansha-color-primary),
+          var(--aakansha-color-secondary)
         );
         padding: 8px 20px;
         border-radius: 30px;
         font-weight: 600;
         margin-bottom: 20px;
-        animation: ak2k25-pulse 2s infinite;
+        animation: aakansha-pulse 2s infinite;
       }
 
-      @keyframes ak2k25-pulse {
+      @keyframes aakansha-pulse {
         0% {
           transform: scale(1);
         }
@@ -144,265 +143,152 @@
       }
 
       /* Section Styling */
-      .ak2k25-section-title {
+      .aakansha-section-title {
         position: relative;
         margin-bottom: 40px;
         text-align: center;
       }
 
-      .ak2k25-section-title:after {
+      .aakansha-section-title:after {
         content: "";
         display: block;
         width: 80px;
         height: 4px;
         background: linear-gradient(
           to right,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
+          var(--aakansha-color-primary),
+          var(--aakansha-color-secondary)
         );
         margin: 15px auto;
         border-radius: 2px;
       }
 
-      .ak2k25-dark-mode .ak2k25-section-title:after {
+      .aakansha-dark-mode .aakansha-section-title:after {
         background: linear-gradient(
           to right,
-          var(--ak2k25-color-primary),
+          var(--aakansha-color-primary),
           #aa2c25
         );
       }
 
-      /* About Sections */
-      .ak2k25-about-section {
+      /* Events Section */
+      .aakansha-events-section {
         padding: 80px 0;
-        background-color: var(--ak2k25-color-white);
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 1s ease, transform 1s ease;
+        background-color: var(--aakansha-color-white);
       }
 
-      .ak2k25-about-section.ak2k25-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .ak2k25-dark-mode .ak2k25-about-section {
+      .aakansha-dark-mode .aakansha-events-section {
         background-color: #1a1a1a;
       }
 
-      .ak2k25-college-image {
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: var(--ak2k25-shadow);
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-college-image:hover {
-        transform: scale(1.02);
-        box-shadow: var(--ak2k25-shadow-hover);
-      }
-
-      /* Event Categories */
-      .ak2k25-events-categories {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-bg);
-      }
-
-      .ak2k25-dark-mode .ak2k25-events-categories {
-        background-color: #1e1e1e;
-      }
-
-      .ak2k25-category-card {
+      .aakansha-event-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--ak2k25-shadow);
-        transition: var(--ak2k25-transition);
-        margin-bottom: 25px;
+        box-shadow: var(--aakansha-shadow);
+        transition: var(--aakansha-transition);
+        margin-bottom: 30px;
         height: 100%;
-        position: relative;
         opacity: 0;
         transform: translateY(30px);
       }
 
-      .ak2k25-category-card.ak2k25-visible {
+      .aakansha-event-card.aakansha-visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-      .ak2k25-category-card:hover {
+      .aakansha-event-card:hover {
         transform: translateY(-10px);
-        box-shadow: var(--ak2k25-shadow-hover);
+        box-shadow: var(--aakansha-shadow-hover);
       }
 
-      .ak2k25-category-img {
+      .aakansha-event-img {
         height: 200px;
         object-fit: cover;
       }
 
-      .ak2k25-category-badge {
+      .aakansha-event-badge {
         position: absolute;
         top: 15px;
         right: 15px;
-        background: var(--ak2k25-color-primary);
-        color: var(--ak2k25-color-text);
+        background: var(--aakansha-color-primary);
+        color: var(--aakansha-color-text);
         padding: 5px 15px;
         border-radius: 30px;
         font-weight: 600;
         font-size: 0.9rem;
       }
 
-      .ak2k25-category-icon {
+      .aakansha-event-icon {
         font-size: 2rem;
-        color: var(--ak2k25-color-primary);
+        color: var(--aakansha-color-primary);
         margin-bottom: 15px;
       }
 
-      /* Event Details */
-      .ak2k25-event-details {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-event-details {
-        background-color: #1a1a1a;
-      }
-
-      .ak2k25-event-tabs {
-        margin-bottom: 30px;
-      }
-
-      .ak2k25-event-tabs .ak2k25-nav-link {
-        border: none;
-        padding: 15px 25px;
-        font-weight: 600;
-        color: var(--ak2k25-color-text);
-        border-radius: 10px 10px 0 0;
-        margin-right: 5px;
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-dark-mode .ak2k25-event-tabs .ak2k25-nav-link {
-        color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-event-tabs .ak2k25-nav-link.ak2k25-active {
-        background: linear-gradient(
-          45deg,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
-        );
-        color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-event-content {
-        padding: 30px;
-        background-color: var(--ak2k25-color-bg);
-        border-radius: 0 0 15px 15px;
-        box-shadow: var(--ak2k25-shadow);
-      }
-
-      .ak2k25-dark-mode .ak2k25-event-content {
-        background-color: #2a2a2a;
-      }
-
-      .ak2k25-rules-accordion .ak2k25-accordion-button {
-        font-weight: 600;
-        padding: 15px 20px;
-        background-color: var(--ak2k25-color-white);
-        color: var(--ak2k25-color-text);
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-dark-mode .ak2k25-rules-accordion .ak2k25-accordion-button {
-        background-color: #2a2a2a;
-        color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-rules-accordion .ak2k25-accordion-button:not(.ak2k25-collapsed) {
-        background: linear-gradient(
-          45deg,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
-        );
-        color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-rules-accordion .ak2k25-accordion-body {
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-rules-accordion .ak2k25-accordion-body {
-        background-color: #2a2a2a;
-        color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-coordinator-list {
+      .aakansha-coordinator-list {
         list-style: none;
         padding: 0;
       }
 
-      .ak2k25-coordinator-list li {
+      .aakansha-coordinator-list li {
         padding: 10px 0;
         border-bottom: 1px solid #eee;
         display: flex;
         align-items: center;
       }
 
-      .ak2k25-dark-mode .ak2k25-coordinator-list li {
+      .aakansha-dark-mode .aakansha-coordinator-list li {
         border-color: #444;
       }
 
-      .ak2k25-coordinator-list i {
+      .aakansha-coordinator-list i {
         margin-right: 10px;
-        color: var(--ak2k25-color-primary);
+        color: var(--aakansha-color-primary);
       }
 
-      /* General Rules */
-      .ak2k25-general-rules {
+      /* Rules Section */
+      .aakansha-rules-section {
         padding: 80px 0;
-        background-color: var(--ak2k25-color-bg);
+        background-color: var(--aakansha-color-bg);
       }
 
-      .ak2k25-dark-mode .ak2k25-general-rules {
+      .aakansha-dark-mode .aakansha-rules-section {
         background-color: #1e1e1e;
       }
 
-      .ak2k25-rules-list {
+      .aakansha-rules-list {
         list-style-type: none;
         padding: 0;
       }
 
-      .ak2k25-rules-list li {
+      .aakansha-rules-list li {
         padding: 15px;
         margin-bottom: 15px;
-        background-color: var(--ak2k25-color-white);
+        background-color: var(--aakansha-color-white);
         border-radius: 10px;
-        box-shadow: var(--ak2k25-shadow);
+        box-shadow: var(--aakansha-shadow);
         position: relative;
         padding-left: 60px;
-        transition: var(--ak2k25-transition);
+        transition: var(--aakansha-transition);
         opacity: 0;
         transform: translateX(-30px);
-        /* Added to fix animation */
-        animation-duration: 0.8s;
-        animation-fill-mode: both;
       }
 
-      .ak2k25-rules-list li.ak2k25-visible {
+      .aakansha-rules-list li.aakansha-visible {
         opacity: 1;
         transform: translateX(0);
       }
 
-      .ak2k25-dark-mode .ak2k25-rules-list li {
+      .aakansha-dark-mode .aakansha-rules-list li {
         background-color: #2a2a2a;
       }
 
-      .ak2k25-rules-list li:hover {
+      .aakansha-rules-list li:hover {
         transform: translateX(5px);
       }
 
-      .ak2k25-rules-list li:before {
+      .aakansha-rules-list li:before {
         content: "!";
         position: absolute;
         left: 20px;
@@ -410,8 +296,8 @@
         transform: translateY(-50%);
         width: 30px;
         height: 30px;
-        background: var(--ak2k25-color-primary);
-        color: var(--ak2k25-color-text);
+        background: var(--aakansha-color-primary);
+        color: var(--aakansha-color-text);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -419,386 +305,46 @@
         font-weight: bold;
       }
 
-      /* Schedule Section */
-      .ak2k25-schedule {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-schedule {
-        background-color: #1a1a1a;
-      }
-
-      .ak2k25-timeline {
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .ak2k25-timeline:after {
-        content: "";
-        position: absolute;
-        width: 6px;
-        background-color: var(--ak2k25-color-primary);
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -3px;
-      }
-
-      .ak2k25-timeline-item {
-        padding: 10px 40px;
-        position: relative;
-        width: 50%;
-        box-sizing: border-box;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-      }
-
-      .ak2k25-timeline-item.ak2k25-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .ak2k25-timeline-item:nth-child(odd) {
-        left: 0;
-      }
-
-      .ak2k25-timeline-item:nth-child(even) {
-        left: 50%;
-      }
-
-      .ak2k25-timeline-item:after {
-        content: "";
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        background-color: var(--ak2k25-color-white);
-        border: 4px solid var(--ak2k25-color-primary);
-        top: 15px;
-        border-radius: 50%;
-        z-index: 1;
-      }
-
-      .ak2k25-timeline-item:nth-child(odd):after {
-        right: -13px;
-      }
-
-      .ak2k25-timeline-item:nth-child(even):after {
-        left: -13px;
-      }
-
-      .ak2k25-timeline-content {
-        padding: 20px;
-        background-color: var(--ak2k25-color-bg);
-        position: relative;
-        border-radius: 6px;
-        box-shadow: var(--ak2k25-shadow);
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-dark-mode .ak2k25-timeline-content {
-        background-color: #2a2a2a;
-      }
-
-      .ak2k25-timeline-content:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--ak2k25-shadow-hover);
-      }
-
-      /* Facilities Section */
-      .ak2k25-facilities {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-bg);
-      }
-
-      .ak2k25-dark-mode .ak2k25-facilities {
-        background-color: #1e1e1e;
-      }
-
-      .ak2k25-facility-card {
-        border-radius: 15px;
-        overflow: hidden;
-        border: none;
-        box-shadow: var(--ak2k25-shadow);
-        transition: var(--ak2k25-transition);
-        margin-bottom: 25px;
-        height: 100%;
-        background-color: var(--ak2k25-color-white);
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      .ak2k25-facility-card.ak2k25-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .ak2k25-dark-mode .ak2k25-facility-card {
-        background-color: #2a2a2a;
-      }
-
-      .ak2k25-facility-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--ak2k25-shadow-hover);
-      }
-
-      .ak2k25-facility-icon {
-        font-size: 3rem;
-        color: var(--ak2k25-color-primary);
-        margin-bottom: 15px;
-      }
-
-      /* Contact Section */
-      .ak2k25-contact {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-contact {
-        background-color: #1a1a1a;
-      }
-
-      .ak2k25-contact-card {
-        border-radius: 15px;
-        border: none;
-        box-shadow: var(--ak2k25-shadow);
-        padding: 30px;
-        background-color: var(--ak2k25-color-bg);
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-dark-mode .ak2k25-contact-card {
-        background-color: #2a2a2a;
-      }
-
-      .ak2k25-contact-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--ak2k25-shadow-hover);
-      }
-
-      /* Gallery Section */
-      .ak2k25-gallery {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-bg);
-      }
-
-      .ak2k25-dark-mode .ak2k25-gallery {
-        background-color: #1e1e1e;
-      }
-
-      .ak2k25-gallery-item {
-        border-radius: 15px;
-        overflow: hidden;
-        margin-bottom: 25px;
-        box-shadow: var(--ak2k25-shadow);
-        transition: var(--ak2k25-transition);
-        opacity: 0;
-        transform: scale(0.9);
-      }
-
-      .ak2k25-gallery-item.ak2k25-visible {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      .ak2k25-gallery-item:hover {
-        transform: scale(1.05);
-        box-shadow: var(--ak2k25-shadow-hover);
-      }
-
-      .ak2k25-gallery-img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-gallery-item:hover .ak2k25-gallery-img {
-        transform: scale(1.1);
-      }
-
-      /* Registration Form */
-      .ak2k25-registration-form {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-registration-form {
-        background-color: #1a1a1a;
-      }
-
-      .ak2k25-form-card {
-        border-radius: 15px;
-        border: none;
-        box-shadow: var(--ak2k25-shadow);
-        padding: 30px;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-form-card {
-        background-color: #2a2a2a;
-      }
-
-      .ak2k25-form-control {
-        padding: 12px 15px;
-        border: 2px solid #e1e1e1;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-dark-mode .ak2k25-form-control {
-        background-color: #1a1a1a;
-        border-color: #444;
-        color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-form-control:focus {
-        border-color: var(--ak2k25-color-primary);
-        box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
-      }
-
-      /* Payment Options */
-      .ak2k25-payment-options {
-        padding: 40px 0;
-        background-color: var(--ak2k25-color-bg);
-      }
-
-      .ak2k25-dark-mode .ak2k25-payment-options {
-        background-color: #1e1e1e;
-      }
-
-      .ak2k25-payment-card {
-        border-radius: 15px;
-        border: none;
-        box-shadow: var(--ak2k25-shadow);
-        padding: 25px;
-        text-align: center;
-        margin-bottom: 25px;
-        background-color: var(--ak2k25-color-white);
-        transition: var(--ak2k25-transition);
-      }
-
-      .ak2k25-dark-mode .ak2k25-payment-card {
-        background-color: #2a2a2a;
-      }
-
-      .ak2k25-payment-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--ak2k25-shadow-hover);
-      }
-
-      .ak2k25-payment-icon {
-        font-size: 3rem;
-        color: var(--ak2k25-color-primary);
-        margin-bottom: 15px;
-      }
-
-      .ak2k25-qr-code {
-        max-width: 200px;
-        margin: 15px auto;
-        display: block;
-      }
-
-      /* Results Section */
-      .ak2k25-results-section {
-        padding: 80px 0;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-results-section {
-        background-color: #1a1a1a;
-      }
-
-      .ak2k25-results-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 1rem;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: var(--ak2k25-shadow);
-      }
-
-      .ak2k25-results-table thead tr {
-        background: linear-gradient(
-          45deg,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
-        );
-        color: var(--ak2k25-color-white);
-        text-align: left;
-      }
-
-      .ak2k25-results-table th,
-      .ak2k25-results-table td {
-        padding: 15px 20px;
-      }
-
-      .ak2k25-results-table tbody tr {
-        border-bottom: 1px solid #dddddd;
-        background-color: var(--ak2k25-color-white);
-      }
-
-      .ak2k25-dark-mode .ak2k25-results-table tbody tr {
-        background-color: #2a2a2a;
-        border-color: #444;
-      }
-
-      .ak2k25-results-table tbody tr:nth-of-type(even) {
-        background-color: #f8f9fa;
-      }
-
-      .ak2k25-dark-mode .ak2k25-results-table tbody tr:nth-of-type(even) {
-        background-color: #333;
-      }
-
-      .ak2k25-results-table tbody tr:last-of-type {
-        border-bottom: 2px solid var(--ak2k25-color-primary);
-      }
-
       /* Footer */
-      .ak2k25-techfest-footer {
-        background-color: var(--ak2k25-color-accent);
-        color: var(--ak2k25-color-white);
+      .aakansha-footer {
+        background-color: var(--aakansha-color-accent);
+        color: var(--aakansha-color-white);
         padding: 60px 0 30px;
       }
 
-      .ak2k25-dark-mode .ak2k25-techfest-footer {
+      .aakansha-dark-mode .aakansha-footer {
         background-color: #152555;
       }
 
-      .ak2k25-footer-links h5 {
-        border-bottom: 2px solid var(--ak2k25-color-primary);
+      .aakansha-footer-links h5 {
+        border-bottom: 2px solid var(--aakansha-color-primary);
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
-        color: var(--ak2k25-color-white);
+        color: var(--aakansha-color-white);
       }
 
-      .ak2k25-footer-links ul {
+      .aakansha-footer-links ul {
         list-style: none;
         padding: 0;
       }
 
-      .ak2k25-footer-links li {
+      .aakansha-footer-links li {
         margin-bottom: 10px;
       }
 
-      .ak2k25-footer-links a {
+      .aakansha-footer-links a {
         color: rgba(255, 255, 255, 0.8);
-        transition: var(--ak2k25-transition);
+        transition: var(--aakansha-transition);
         text-decoration: none;
       }
 
-      .ak2k25-footer-links a:hover {
-        color: var(--ak2k25-color-primary);
+      .aakansha-footer-links a:hover {
+        color: var(--aakansha-color-primary);
         padding-left: 5px;
       }
 
-      .ak2k25-social-icons a {
+      .aakansha-social-icons a {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -807,18 +353,18 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         margin-right: 10px;
-        color: var(--ak2k25-color-white);
-        transition: var(--ak2k25-transition);
+        color: var(--aakansha-color-white);
+        transition: var(--aakansha-transition);
       }
 
-      .ak2k25-social-icons a:hover {
-        background: var(--ak2k25-color-primary);
-        color: var(--ak2k25-color-accent);
+      .aakansha-social-icons a:hover {
+        background: var(--aakansha-color-primary);
+        color: var(--aakansha-color-accent);
         transform: translateY(-5px);
       }
 
       /* Dark Mode Toggle */
-      .ak2k25-dark-mode-toggle {
+      .aakansha-dark-mode-toggle {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -826,139 +372,103 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--ak2k25-color-primary);
-        color: var(--ak2k25-color-text);
+        background: var(--aakansha-color-primary);
+        color: var(--aakansha-color-text);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--ak2k25-shadow);
-        transition: var(--ak2k25-transition);
+        box-shadow: var(--aakansha-shadow);
+        transition: var(--aakansha-transition);
         border: none;
       }
 
-      .ak2k25-dark-mode-toggle:hover {
+      .aakansha-dark-mode-toggle:hover {
         transform: rotate(30deg);
       }
 
       /* Button Styles */
-      .ak2k25-btn-techfest {
+      .aakansha-btn {
         background: linear-gradient(
           45deg,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
+          var(--aakansha-color-primary),
+          var(--aakansha-color-secondary)
         );
-        color: var(--ak2k25-color-white);
+        color: var(--aakansha-color-white);
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 600;
-        transition: var(--ak2k25-transition);
-        box-shadow: var(--ak2k25-shadow);
+        transition: var(--aakansha-transition);
+        box-shadow: var(--aakansha-shadow);
       }
 
-      .ak2k25-btn-techfest:hover {
+      .aakansha-btn:hover {
         transform: translateY(-3px);
-        box-shadow: var(--ak2k25-shadow-hover);
-        color: var(--ak2k25-color-white);
+        box-shadow: var(--aakansha-shadow-hover);
+        color: var(--aakansha-color-white);
       }
 
       /* Text Gradient */
-      .ak2k25-text-gradient {
+      .aakansha-text-gradient {
         background: linear-gradient(
           45deg,
-          var(--ak2k25-color-primary),
-          var(--ak2k25-color-secondary)
+          var(--aakansha-color-primary),
+          var(--aakansha-color-secondary)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
       }
 
-      .ak2k25-bg-cream {
-        background-color: var(--ak2k25-color-bg);
+      .aakansha-bg-cream {
+        background-color: var(--aakansha-color-bg);
       }
 
-      .ak2k25-dark-mode .ak2k25-bg-cream {
+      .aakansha-dark-mode .aakansha-bg-cream {
         background-color: #1e1e1e;
       }
 
       /* Animation Classes */
-      .ak2k25-fade-in {
+      .aakansha-fade-in {
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.8s ease, transform 0.8s ease;
       }
 
-      .ak2k25-fade-in.ak2k25-visible {
+      .aakansha-fade-in.aakansha-visible {
         opacity: 1;
         transform: translateY(0);
       }
 
       /* Mobile Responsive Adjustments */
       @media (max-width: 768px) {
-        .ak2k25-events-hero {
+        .aakansha-events-hero {
           padding: 100px 0 60px;
         }
 
-        .ak2k25-event-tabs .ak2k25-nav-link {
-          padding: 10px 15px;
-          font-size: 0.9rem;
-        }
-
-        .ak2k25-form-card {
-          padding: 20px;
-        }
-
-        .ak2k25-timeline:after {
-          left: 31px;
-        }
-
-        .ak2k25-timeline-item {
-          width: 100%;
-          padding-left: 70px;
-          padding-right: 25px;
-        }
-
-        .ak2k25-timeline-item:nth-child(even) {
-          left: 0;
-        }
-
-        .ak2k25-timeline-item:after {
-          left: 18px;
-        }
-
-        .ak2k25-timeline-item:nth-child(odd):after {
-          right: auto;
-        }
-
-        .ak2k25-results-table {
-          font-size: 0.9rem;
-        }
-
-        .ak2k25-results-table th,
-        .ak2k25-results-table td {
-          padding: 10px 15px;
+        .aakansha-event-card {
+          margin-bottom: 20px;
         }
       }
     </style>
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg ak2k25-techfest-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg aakansha-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand ak2k25-navbar-brand" href="#">
+        <a class="navbar-brand aakansha-navbar-brand" href="#">
           <img
             src="logobsc.png"
             alt="College Logo"
-            class="ak2k25-college-logo"
+            class="aakansha-college-logo"
           />
           <span class="fw-bold"
-            >AKANKSHA <span class="ak2k25-text-gradient">2K25</span></span
+            >AAKANKSHA <span class="aakansha-text-gradient">2K25</span></span
           >
         </a>
         <button
-          class="navbar-toggler ak2k25-navbar-toggler"
+          class="navbar-toggler aakansha-navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
@@ -967,57 +477,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item ak2k25-nav-item">
-              <a class="nav-link ak2k25-nav-link active" href="index.html"
-                >Home</a
-              >
+            <li class="nav-item aakansha-nav-item">
+              <a class="nav-link aakansha-nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item ak2k25-nav-item">
-              <a class="nav-link ak2k25-nav-link" href="about.html">About</a>
+            <li class="nav-item aakansha-nav-item">
+              <a class="nav-link aakansha-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item ak2k25-nav-item dropdown">
-              <a
-                class="nav-link ak2k25-nav-link dropdown-toggle"
-                href="events.html"
-                id="eventsDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Events
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
-                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Past Events</a></li>
-              </ul>
+            <li class="nav-item aakansha-nav-item">
+              <a class="nav-link aakansha-nav-link active" href="events.html">Events</a>
             </li>
-            <li class="nav-item ak2k25-nav-item">
-              <a class="nav-link ak2k25-nav-link" href="schedule.html"
+            <li class="nav-item aakansha-nav-item">
+              <a class="nav-link aakansha-nav-link" href="schedule.html"
                 >Schedule</a
               >
             </li>
-            <li class="nav-item ak2k25-nav-item">
-              <a class="nav-link ak2k25-nav-link" href="gallery.html"
-                >Gallery</a
-              >
-            </li>
-            <li class="nav-item ak2k25-nav-item">
-              <a class="nav-link ak2k25-nav-link" href="sponsors.html"
-                >Sponsors</a
-              >
-            </li>
-            <li class="nav-item ak2k25-nav-item">
-              <a class="nav-link ak2k25-nav-link" href="contact.html"
+            <li class="nav-item aakansha-nav-item">
+              <a class="nav-link aakansha-nav-link" href="contact.html"
                 >Contact</a
               >
             </li>
-            <li class="nav-item ak2k25-nav-item">
+            <li class="nav-item aakansha-nav-item">
               <a
-                class="nav-link ak2k25-nav-link ak2k25-btn-techfest ms-2"
+                class="nav-link aakansha-nav-link aakansha-btn ms-2"
                 href="#"
                 >Register Now</a
               >
@@ -1028,264 +509,212 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="ak2k25-events-hero">
+    <section class="aakansha-events-hero">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="ak2k25-anniversary-badge">
-              <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
-            </div>
-            <h1 class="display-4 fw-bold mb-3">AAKANKSHA 2K25</h1>
-            <p class="lead mb-4">
-              Empire of Innovation – Lead the Change, Rule the Market
-            </p>
-            <p class="mb-4">
-              <i class="fas fa-calendar-alt me-2"></i>March 15-17, 2025 |
-              <i class="fas fa-map-marker-alt me-2"></i>B.S. Channabasappa First
-              Grade College
-            </p>
-            <a href="#registration" class="ak2k25-btn-techfest btn-lg"
-              >Register Now</a
-            >
-          </div>
-        </div>
+        <div class="aakansha-anniversary-badge">8th Edition</div>
+        <h1 class="display-3 fw-bold mb-4">AAKANKSHA 2K25 Events</h1>
+        <p class="lead mb-4">Empire of Innovation - Lead the Change, Rule the Market</p>
+        <a href="#events" class="aakansha-btn">Explore Events</a>
       </div>
     </section>
 
-    <!-- About the College Section -->
-    <section id="about-college" class="ak2k25-about-section">
+    <!-- Events Section -->
+    <section id="events" class="aakansha-events-section">
       <div class="container">
-        <h2 class="ak2k25-section-title">About Our College</h2>
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="ak2k25-college-image">
-              <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="College Campus"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="mb-3">B.S. Channabasappa First Grade College</h3>
-            <p>
-              Established with a vision to provide quality education and foster
-              holistic development, B.S. Channabasappa First Grade College has
-              been a beacon of knowledge since its inception.
-            </p>
-            <p>
-              Affiliated with the renowned University of Mysore, our institution
-              has consistently produced outstanding alumni who have excelled in
-              diverse fields including technology, business, arts, and public
-              service.
-            </p>
-            <p>
-              Our mission is to empower students with knowledge, skills, and
-              ethical values to become future leaders and responsible global
-              citizens.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About AAKANKSHA Fest Section -->
-    <section id="about-fest" class="ak2k25-about-section ak2k25-bg-cream">
-      <div class="container">
-        <h2 class="ak2k25-section-title">About AAKANKSHA</h2>
+        <h2 class="aakansha-section-title">Competitions</h2>
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p>
-              AAKANKSHA, our annual techno-cultural fest, began in 2007-08 with
-              a vision to create a platform for students to showcase their
-              talents beyond academics. Over the years, it has grown into one of
-              the most anticipated college events in the region.
-            </p>
-            <p>
-              This year, as we celebrate our 20th anniversary, AAKANKSHA 2K25
-              promises to be bigger and better with the theme "Empire of
-              Innovation". The fest aims to foster innovative thinking and
-              develop managerial and technical skills among participants.
-            </p>
-            <p>
-              Last year, we hosted over 2,000 participants from 50+ colleges
-              across the state. This year, we're expanding further with more
-              events, workshops, and opportunities for students to learn,
-              compete, and grow.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Events Overview Panel -->
-    <section id="events-overview" class="ak2k25-events-categories">
-      <div class="container">
-        <h2 class="ak2k25-section-title">Events Overview</h2>
-        <div class="row">
-          <!-- Event 1 -->
+          <!-- Event 1: Empire of Innovation -->
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-category-card">
+            <div class="card aakansha-event-card">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
+                alt="Empire of Innovation"
+              />
+              <div class="aakansha-event-badge">4 Participants</div>
+              <div class="card-body">
+                <h5 class="card-title">Empire of Innovation</h5>
+                <p class="card-text">A competition to showcase innovative ideas and business models.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Sri. Dhananjay N S - 99455 58448</li>
+                  <li><i class="fas fa-user-tie"></i> Sri. Vinayaka S S - 98809 51668</li>
+                  <li><i class="fas fa-user-tie"></i> Smt. Jayalakshmi J P - 77953 13990</li>
+                </ul>
+                
+                <h6>Student Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-graduate"></i> Gnaneshwara - 96638 06421</li>
+                  <li><i class="fas fa-user-graduate"></i> Sanjana S - 89516 68037</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: Recruitoria Kingdom -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card aakansha-event-card">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
                 alt="Recruitoria Kingdom"
               />
-              <span class="ak2k25-category-badge">Technical</span>
+              <div class="aakansha-event-badge">2 Participants</div>
               <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
                 <h5 class="card-title">Recruitoria Kingdom</h5>
-                <p class="card-text">
-                  Where talent meets opportunity. Showcase your skills to
-                  industry leaders.
-                </p>
-                <a href="#recruitoria" class="ak2k25-btn-techfest"
-                  >Learn More</a
-                >
+                <p class="card-text">HR and recruitment simulation competition.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Smt. Anusha S H - 83108 18638</li>
+                  <li><i class="fas fa-user-tie"></i> Sri Tejas M S - 98445 56166</li>
+                  <li><i class="fas fa-user-tie"></i> Smt. Jyothi H - 81235 66919</li>
+                </ul>
+                
+                <h6>Student Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-graduate"></i> Shivalingeshwar - 93539 97139</li>
+                  <li><i class="fas fa-user-graduate"></i> Suhani P S - 95914 88230</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Event 2 -->
+          <!-- Event 3: Crown Coin -->
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-category-card">
+            <div class="card aakansha-event-card">
               <img
-                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
                 alt="Crown Coin"
               />
-              <span class="ak2k25-category-badge">Business</span>
+              <div class="aakansha-event-badge">2 Participants</div>
               <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-coins"></i>
-                </div>
                 <h5 class="card-title">Crown Coin</h5>
-                <p class="card-text">
-                  Test your business acumen in this exciting stock market
-                  simulation game.
-                </p>
-                <a href="#crown-coin" class="ak2k25-btn-techfest">Learn More</a>
+                <p class="card-text">Finance and investment strategy competition.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Smt. Rekha H G - 98442 85188</li>
+                  <li><i class="fas fa-user-tie"></i> Sri Santosh MS - 63611 15194</li>
+                  <li><i class="fas fa-user-tie"></i> Sri Manjunath B - 99647 56302</li>
+                </ul>
+                
+                <h6>Student Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-graduate"></i> Hemanthraj K S - 79757 45279</li>
+                  <li><i class="fas fa-user-graduate"></i> Shraddha VS - 74835 91865</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Event 3 -->
+          <!-- Event 4: Hustle -->
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-category-card">
+            <div class="card aakansha-event-card">
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
                 alt="Hustle"
               />
-              <span class="ak2k25-category-badge">Management</span>
+              <div class="aakansha-event-badge">2 Participants</div>
               <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-bullhorn"></i>
-                </div>
                 <h5 class="card-title">Hustle</h5>
-                <p class="card-text">
-                  Marketing challenge where creativity meets strategy. Pitch
-                  your ideas to win.
-                </p>
-                <a href="#hustle" class="ak2k25-btn-techfest">Learn More</a>
+                <p class="card-text">Entrepreneurship and startup challenge.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Sri Praveen Kumar K - 97417 26679</li>
+                  <li><i class="fas fa-user-tie"></i> Smt. Akshata P K - 86183 79003</li>
+                  <li><i class="fas fa-user-tie"></i> Miss. Shwetha Angadi - 84969 34371</li>
+                </ul>
+                
+                <h6>Student Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-graduate"></i> Vaibhav S P - 74837 95944</li>
+                  <li><i class="fas fa-user-graduate"></i> Harshitha MK - 91089 95833</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Event 4 -->
+          <!-- Event 5: Technocratic Entertainment -->
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-category-card">
+            <div class="card aakansha-event-card">
               <img
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
                 alt="Technocratic Entertainment"
               />
-              <span class="ak2k25-category-badge">Technical</span>
+              <div class="aakansha-event-badge">4 Participants</div>
               <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-gamepad"></i>
-                </div>
                 <h5 class="card-title">Technocratic Entertainment</h5>
-                <p class="card-text">
-                  Gaming arena where tech meets entertainment. Compete in
-                  various gaming challenges.
-                </p>
-                <a href="#technocratic" class="ak2k25-btn-techfest"
-                  >Learn More</a
-                >
+                <p class="card-text">Technology and entertainment fusion competition.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Smt. Latha M - 98442 19466</li>
+                  <li><i class="fas fa-user-tie"></i> Smt. Sheela M S - 94492 82697</li>
+                  <li><i class="fas fa-user-tie"></i> Miss. Sahana A B - N/A</li>
+                </ul>
+                
+                <h6>Student Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-graduate"></i> Sudhir - 63600 61370</li>
+                  <li><i class="fas fa-user-graduate"></i> Vijayashree - 97413 97905</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Event 5 -->
+          <!-- Event 6: Kings Court -->
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-category-card">
+            <div class="card aakansha-event-card">
               <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
-                alt="King's Court"
+                src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
+                alt="Kings Court"
               />
-              <span class="ak2k25-category-badge">Cultural</span>
+              <div class="aakansha-event-badge">2 Participants</div>
               <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-gavel"></i>
-                </div>
-                <h5 class="card-title">King's Court</h5>
-                <p class="card-text">
-                  Debate and discussion platform to voice your opinions on
-                  contemporary issues.
-                </p>
-                <a href="#kings-court" class="ak2k25-btn-techfest"
-                  >Learn More</a
-                >
+                <h5 class="card-title">Kings Court</h5>
+                <p class="card-text">Debate and discussion competition.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Smt. Kiran M B - 86608 39099</li>
+                  <li><i class="fas fa-user-tie"></i> Miss. Mamatha S H - 91481 26794</li>
+                  <li><i class="fas fa-user-tie"></i> Miss. Sindhu S R - 70227 81610</li>
+                </ul>
+                
+                <h6>Student Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-graduate"></i> Akasha CR - 95351 39924</li>
+                  <li><i class="fas fa-user-graduate"></i> Priyanka S - 84314 19268</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- Event 6 -->
+          <!-- Event 7: Royal Ballet Fashion -->
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-category-card">
+            <div class="card aakansha-event-card">
               <img
-                src="https://images.unsplash.com/photo-1532453288672-adaa20c37c41?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
+                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top aakansha-event-img"
                 alt="Royal Ballet Fashion"
               />
-              <span class="ak2k25-category-badge">Cultural</span>
+              <div class="aakansha-event-badge">4-8 Participants</div>
               <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-tshirt"></i>
-                </div>
                 <h5 class="card-title">Royal Ballet Fashion</h5>
-                <p class="card-text">
-                  Fashion show with a twist of ballet. Showcase your creativity
-                  on the runway.
-                </p>
-                <a href="#fashion" class="ak2k25-btn-techfest">Learn More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Event 7 -->
-          <div class="col-lg-4 col-md-6 mb-4 mx-auto">
-            <div class="ak2k25-category-card">
-              <img
-                src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-category-img card-img-top"
-                alt="Inter College Test"
-              />
-              <span class="ak2k25-category-badge">Academic</span>
-              <div class="card-body">
-                <div class="ak2k25-category-icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h5 class="card-title">Inter College Test</h5>
-                <p class="card-text">
-                  Test your knowledge across various subjects. Prove your
-                  academic excellence.
-                </p>
-                <a href="#test" class="ak2k25-btn-techfest">Learn More</a>
+                <p class="card-text">Fashion show and cultural performance event.</p>
+                
+                <h6 class="mt-4">Faculty Coordinators:</h6>
+                <ul class="aakansha-coordinator-list">
+                  <li><i class="fas fa-user-tie"></i> Sri Annesh P - 98803 04338</li>
+                  <li><i class="fas fa-user-tie"></i> Smt. Kavitha V - 74111 57189</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1293,554 +722,46 @@
       </div>
     </section>
 
-    <!-- Detailed Event Sections -->
-    <section id="event-details" class="ak2k25-event-details">
+    <!-- Rules Section -->
+    <section class="aakansha-rules-section">
       <div class="container">
-        <h2 class="ak2k25-section-title">Event Details</h2>
-
-        <!-- Event Tabs -->
-        <ul
-          class="nav nav-pills ak2k25-event-tabs justify-content-center"
-          id="eventTabs"
-          role="tablist"
-        >
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link ak2k25-active"
-              id="recruitoria-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#recruitoria"
-              type="button"
-              role="tab"
-            >
-              Recruitoria Kingdom
-            </button>
-          </li>
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link"
-              id="crown-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#crown-coin"
-              type="button"
-              role="tab"
-            >
-              Crown Coin
-            </button>
-          </li>
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link"
-              id="hustle-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#hustle"
-              type="button"
-              role="tab"
-            >
-              Hustle
-            </button>
-          </li>
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link"
-              id="technocratic-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#technocratic"
-              type="button"
-              role="tab"
-            >
-              Technocratic Entertainment
-            </button>
-          </li>
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link"
-              id="kings-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#kings-court"
-              type="button"
-              role="tab"
-            >
-              King's Court
-            </button>
-          </li>
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link"
-              id="fashion-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#fashion"
-              type="button"
-              role="tab"
-            >
-              Royal Ballet Fashion
-            </button>
-          </li>
-          <li class="nav-item ak2k25-nav-item" role="presentation">
-            <button
-              class="nav-link ak2k25-nav-link"
-              id="test-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#test"
-              type="button"
-              role="tab"
-            >
-              Inter College Test
-            </button>
-          </li>
-        </ul>
-
-        <!-- Tab Content -->
-        <div class="tab-content" id="eventTabsContent">
-          <!-- Recruitoria Kingdom -->
-          <div
-            class="tab-pane fade show active"
-            id="recruitoria"
-            role="tabpanel"
-          >
-            <div class="ak2k25-event-content">
-              <div class="row">
-                <div class="col-lg-8">
-                  <h3 class="mb-3">Recruitoria Kingdom</h3>
-                  <p class="fst-italic mb-4">Where talent meets opportunity</p>
-                  <p>
-                    Recruitoria Kingdom is a platform for students to showcase
-                    their skills to industry leaders and recruiters. This event
-                    simulates real-world recruitment processes and provides
-                    valuable feedback from professionals.
-                  </p>
-
-                  <h4 class="mt-4 mb-3">Rules</h4>
-                  <div
-                    class="accordion ak2k25-rules-accordion"
-                    id="recruitoriaRules"
-                  >
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button ak2k25-accordion-button"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#ruleOne"
-                        >
-                          Eligibility & Team Composition
-                        </button>
-                      </h2>
-                      <div
-                        id="ruleOne"
-                        class="accordion-collapse collapse show"
-                        data-bs-parent="#recruitoriaRules"
-                      >
-                        <div class="accordion-body ak2k25-accordion-body">
-                          <p>
-                            Open to all college students. Individual
-                            participation only. Valid college ID required.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button ak2k25-accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#ruleTwo"
-                        >
-                          Competition Structure
-                        </button>
-                      </h2>
-                      <div
-                        id="ruleTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#recruitoriaRules"
-                      >
-                        <div class="accordion-body ak2k25-accordion-body">
-                          <p>
-                            The event consists of three rounds: Resume
-                            screening, group discussion, and personal interview.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button
-                          class="accordion-button ak2k25-accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#ruleThree"
-                        >
-                          Judging Criteria
-                        </button>
-                      </h2>
-                      <div
-                        id="ruleThree"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#recruitoriaRules"
-                      >
-                        <div class="accordion-body ak2k25-accordion-body">
-                          <p>
-                            Participants will be evaluated on communication
-                            skills, subject knowledge, problem-solving ability,
-                            and overall presentation.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4">
-                  <h4 class="mt-4 mb-3">Coordinators</h4>
-                  <h5>Faculty Coordinators</h5>
-                  <ul class="ak2k25-coordinator-list">
-                    <li>
-                      <i class="fas fa-phone"></i> Prof. Smitha - +91 9876543210
-                    </li>
-                    <li>
-                      <i class="fas fa-phone"></i> Dr. Ramesh - +91 9876543211
-                    </li>
-                  </ul>
-
-                  <h5 class="mt-4">Student Coordinators</h5>
-                  <ul class="ak2k25-coordinator-list">
-                    <li><i class="fas fa-phone"></i> Rahul - +91 9876543212</li>
-                    <li><i class="fas fa-phone"></i> Priya - +91 9876543213</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Other event content would go here with similar structure -->
-          <!-- For brevity, I'm showing just one event detail -->
-        </div>
-      </div>
-    </section>
-
-    <!-- General Rules & Regulations -->
-    <section id="general-rules" class="ak2k25-general-rules">
-      <div class="container">
-        <h2 class="ak2k25-section-title">General Rules & Regulations</h2>
+        <h2 class="aakansha-section-title">Rules & Regulations</h2>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <ul class="ak2k25-rules-list">
-              <li>
-                All participants must carry their college ID cards and the fest
-                registration receipt.
-              </li>
-              <li>
-                Participants should report at the venue 30 minutes prior to the
-                event timing.
-              </li>
-              <li>
-                The decision of judges and event organizers will be final and
-                binding.
-              </li>
-              <li>
-                Any form of indiscipline or misbehavior will lead to immediate
-                disqualification.
-              </li>
-              <li>
-                Teams must consist of members from the same institution (except
-                for open events).
-              </li>
-              <li>
-                The organizers reserve the right to change the rules or cancel
-                any event if necessary.
-              </li>
-              <li>
-                Electronic gadgets (calculators, smart watches, etc.) may be
-                restricted in certain events.
-              </li>
-              <li>
-                Outside help or references are not allowed unless explicitly
-                permitted.
-              </li>
+            <ul class="aakansha-rules-list">
+              <li>Registration Fee: ₹800 per team</li>
+              <li>Maximum of 2 teams per college</li>
+              <li>Eligible Courses: B.Com, B.B.A., B.C.A., B.Sc. (CS)</li>
+              <li>Participants must carry their own laptops and Wi-Fi hotspots</li>
+              <li>One faculty member must accompany each team</li>
+              <li>2 Passport size photos with names on backside required</li>
+              <li>Student ID and Principal Approval Letter are mandatory</li>
+              <li>Lunch will be provided for participating teams</li>
+              <li>Accommodation available for outstation teams</li>
+              <li>Registration deadline: September 10, 2025</li>
+              <li>No spot registration allowed</li>
+              <li>Organizers are not responsible for personal belongings</li>
+              <li>Judges' decision is final</li>
+              <li>Breaching rules will lead to disqualification</li>
+              <li>Reporting time on September 19, 2025 is 8:30 am</li>
+              <li>Event rounds start at 9:00 am on September 19, 2025</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Schedule and Timings -->
-    <section id="schedule" class="ak2k25-schedule">
-      <div class="container">
-        <h2 class="ak2k25-section-title">Schedule & Timings</h2>
-        <div class="ak2k25-timeline">
-          <div class="ak2k25-timeline-item">
-            <div class="ak2k25-timeline-content">
-              <h5>Registration Deadline</h5>
-              <p class="text-primary">March 10, 2025</p>
-              <p>Last date to register for all events</p>
-            </div>
-          </div>
-          <div class="ak2k25-timeline-item">
-            <div class="ak2k25-timeline-content">
-              <h5>Day 1: Inauguration</h5>
-              <p class="text-primary">March 15, 2025 | 9:00 AM</p>
-              <p>Chief Guest: Dr. ABC, Renowned Industrialist</p>
-            </div>
-          </div>
-          <div class="ak2k25-timeline-item">
-            <div class="ak2k25-timeline-content">
-              <h5>Technical Events</h5>
-              <p class="text-primary">March 15, 2025 | 10:30 AM - 4:00 PM</p>
-              <p>Recruitoria Kingdom, Technocratic Entertainment</p>
-            </div>
-          </div>
-          <div class="ak2k25-timeline-item">
-            <div class="ak2k25-timeline-content">
-              <h5>Management Events</h5>
-              <p class="text-primary">March 16, 2025 | 9:30 AM - 1:00 PM</p>
-              <p>Crown Coin, Hustle</p>
-            </div>
-          </div>
-          <div class="ak2k25-timeline-item">
-            <div class="ak2k25-timeline-content">
-              <h5>Cultural Events</h5>
-              <p class="text-primary">March 16, 2025 | 2:00 PM - 5:00 PM</p>
-              <p>King's Court, Royal Ballet Fashion</p>
-            </div>
-          </div>
-          <div class="ak2k25-timeline-item">
-            <div class="ak2k25-timeline-content">
-              <h5>Academic Events & Valedictory</h5>
-              <p class="text-primary">March 17, 2025 | 10:00 AM - 3:00 PM</p>
-              <p>Inter College Test, Prize Distribution</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Facilities & Logistics -->
-    <section id="facilities" class="ak2k25-facilities">
-      <div class="container">
-        <h2 class="ak2k25-section-title">Facilities & Logistics</h2>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-facility-card text-center p-4">
-              <div class="ak2k25-facility-icon">
-                <i class="fas fa-bed"></i>
-              </div>
-              <h5>Accommodation</h5>
-              <p>
-                Complimentary stay arrangement for outstation participants in
-                college hostels.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-facility-card text-center p-4">
-              <div class="ak2k25-facility-icon">
-                <i class="fas fa-utensils"></i>
-              </div>
-              <h5>Food Court</h5>
-              <p>
-                Variety of food options available at the campus food court
-                throughout the event.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-facility-card text-center p-4">
-              <div class="ak2k25-facility-icon">
-                <i class="fas fa-wifi"></i>
-              </div>
-              <h5>Wi-Fi Access</h5>
-              <p>
-                High-speed internet connectivity available across the campus for
-                participants.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-facility-card text-center p-4">
-              <div class="ak2k25-facility-icon">
-                <i class="fas fa-parking"></i>
-              </div>
-              <h5>Parking</h5>
-              <p>
-                Ample parking space available for participants and visitors with
-                security.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-facility-card text-center p-4">
-              <div class="ak2k25-facility-icon">
-                <i class="fas fa-first-aid"></i>
-              </div>
-              <h5>Medical Aid</h5>
-              <p>
-                First-aid facilities and emergency medical support available on
-                campus.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-facility-card text-center p-4">
-              <div class="ak2k25-facility-icon">
-                <i class="fas fa-map-marked-alt"></i>
-              </div>
-              <h5>Navigation</h5>
-              <p>
-                Volunteers and signages available to help navigate the campus
-                easily.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact & Support Section -->
-    <section id="contact" class="ak2k25-contact">
-      <div class="container">
-        <h2 class="ak2k25-section-title">Contact & Support</h2>
-        <div class="row">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="ak2k25-contact-card h-100">
-              <h4 class="mb-4">Event Queries</h4>
-              <h5>Faculty Coordinators</h5>
-              <ul class="ak2k25-coordinator-list">
-                <li>
-                  <i class="fas fa-user"></i> Dr. Rajesh Kumar - +91 9876543201
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> Prof. Sunitha M - +91 9876543202
-                </li>
-                <li>
-                  <i class="fas fa-user"></i> Dr. Vikram Singh - +91 9876543203
-                </li>
-              </ul>
-
-              <h5 class="mt-4">Student Coordinators</h5>
-              <ul class="ak2k25-coordinator-list">
-                <li><i class="fas fa-user"></i> Anjali - +91 9876543204</li>
-                <li><i class="fas fa-user"></i> Rohan - +91 9876543205</li>
-                <li><i class="fas fa-user"></i> Meera - +91 9876543206</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="ak2k25-contact-card h-100">
-              <h4 class="mb-4">Get in Touch</h4>
-              <form>
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control ak2k25-form-control"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control ak2k25-form-control"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control ak2k25-form-control"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control ak2k25-form-control"
-                    rows="4"
-                    placeholder="Your Message"
-                  ></textarea>
-                </div>
-                <button type="submit" class="ak2k25-btn-techfest">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Media Gallery -->
-    <section id="gallery" class="ak2k25-gallery">
-      <div class="container">
-        <h2 class="ak2k25-section-title">Past Events Gallery</h2>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-gallery-img"
-                alt="Past Event 1"
-              />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-gallery-img"
-                alt="Past Event 2"
-              />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-gallery-img"
-                alt="Past Event 3"
-              />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-gallery-img"
-                alt="Past Event 4"
-              />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-gallery-img"
-                alt="Past Event 5"
-              />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="ak2k25-gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1501281667305-0d4e0ab157b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                class="ak2k25-gallery-img"
-                alt="Past Event 6"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="ak2k25-techfest-footer">
+    <footer class="aakansha-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0">
-            <h4 class="mb-4">AKANKSHA 2K25</h4>
+            <h4 class="mb-4">AAKANKSHA 2K25</h4>
             <p>
-              Celebrating 20 years of innovation and technological excellence.
-              Join us for the most exciting tech festival of the year!
+              State level management fest boosting management and technical skills, 
+              offering platform for innovative ideas, fostering growth and progress.
             </p>
-            <div class="ak2k25-social-icons mt-4">
+            <div class="aakansha-social-icons mt-4">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1848,36 +769,39 @@
               <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ak2k25-footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 aakansha-footer-links">
             <h5>Quick Links</h5>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="events.html">Events</a></li>
-              <li><a href="#">Schedule</a></li>
-              <li><a href="#">Results</a></li>
+              <li><a href="schedule.html">Schedule</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 ak2k25-footer-links">
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 aakansha-footer-links">
             <h5>Events</h5>
             <ul>
-              <li><a href="#">Akanksha</a></li>
-              <li><a href="#">Takshak</a></li>
-              <li><a href="#">Freshers</a></li>
-              <li><a href="#">Workshops</a></li>
-              <li><a href="#">Exhibitions</a></li>
+              <li><a href="#events">Empire of Innovation</a></li>
+              <li><a href="#events">Recruitoria Kingdom</a></li>
+              <li><a href="#events">Crown Coin</a></li>
+              <li><a href="#events">Hustle</a></li>
+              <li><a href="#events">All Events</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-md-4 ak2k25-footer-links">
+          <div class="col-lg-4 col-md-4 aakansha-footer-links">
             <h5>Contact Us</h5>
             <ul>
               <li>
-                <i class="fas fa-map-marker-alt me-2"></i> College Campus, City,
-                State
+                <i class="fas fa-map-marker-alt me-2"></i> B.S.Channabasappa First Grade College, Davangere
               </li>
-              <li><i class="fas fa-phone me-2"></i> +91 9876543210</li>
+              <li><i class="fas fa-phone me-2"></i> Landline: 221816</li>
+              <li><i class="fas fa-mobile me-2"></i> Principal: 9886215251</li>
               <li>
-                <i class="fas fa-envelope me-2"></i> info@techfest2025.com
+                <i class="fas fa-envelope me-2"></i> bsccollege@gmail.com
+              </li>
+              <li>
+                <i class="fas fa-globe me-2"></i> www.bscfgc.com
               </li>
             </ul>
           </div>
@@ -1885,7 +809,7 @@
         <hr class="my-4 bg-light" />
         <div class="row">
           <div class="col-md-6 mb-3 mb-md-0">
-            <p class="mb-0">&copy; 2025 AKANKSHA 2K25. All rights reserved.</p>
+            <p class="mb-0">&copy; 2025 AAKANKSHA 2K25. All rights reserved.</p>
           </div>
           <div class="col-md-6 text-md-end">
             <p class="mb-0">
@@ -1898,7 +822,7 @@
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button class="ak2k25-dark-mode-toggle" id="ak2k25-darkModeToggle">
+    <button class="aakansha-dark-mode-toggle" id="aakansha-darkModeToggle">
       <i class="fas fa-moon"></i>
     </button>
 
@@ -1908,99 +832,63 @@
 
     <script>
       // Dark Mode Toggle
-      const ak2k25DarkModeToggle = document.getElementById(
-        "ak2k25-darkModeToggle"
+      const aakanshaDarkModeToggle = document.getElementById(
+        "aakansha-darkModeToggle"
       );
-      const ak2k25Body = document.body;
+      const aakanshaBody = document.body;
 
       // Check for saved dark mode preference
-      if (localStorage.getItem("ak2k25-darkMode") === "enabled") {
-        ak2k25Body.classList.add("ak2k25-dark-mode");
-        ak2k25DarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      if (localStorage.getItem("aakansha-darkMode") === "enabled") {
+        aakanshaBody.classList.add("aakansha-dark-mode");
+        aakanshaDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
 
-      ak2k25DarkModeToggle.addEventListener("click", () => {
-        ak2k25Body.classList.toggle("ak2k25-dark-mode");
+      aakanshaDarkModeToggle.addEventListener("click", () => {
+        aakanshaBody.classList.toggle("aakansha-dark-mode");
 
-        if (ak2k25Body.classList.contains("ak2k25-dark-mode")) {
-          localStorage.setItem("ak2k25-darkMode", "enabled");
-          ak2k25DarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (aakanshaBody.classList.contains("aakansha-dark-mode")) {
+          localStorage.setItem("aakansha-darkMode", "enabled");
+          aakanshaDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         } else {
-          localStorage.setItem("ak2k25-darkMode", "disabled");
-          ak2k25DarkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          localStorage.setItem("aakansha-darkMode", "disabled");
+          aakanshaDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         }
       });
 
       // Navbar scroll effect
       window.addEventListener("scroll", function () {
-        const ak2k25Navbar = document.querySelector(".ak2k25-techfest-navbar");
+        const aakanshaNavbar = document.querySelector(".aakansha-navbar");
         if (window.scrollY > 50) {
-          ak2k25Navbar.style.padding = "10px 0";
-          ak2k25Navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+          aakanshaNavbar.style.padding = "10px 0";
+          aakanshaNavbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
         } else {
-          ak2k25Navbar.style.padding = "15px 0";
-          ak2k25Navbar.style.boxShadow = "none";
+          aakanshaNavbar.style.padding = "15px 0";
+          aakanshaNavbar.style.boxShadow = "none";
         }
       });
 
       // Scroll animations
-      function ak2k25CheckVisibility() {
-        const ak2k25Elements = document.querySelectorAll(
-          ".ak2k25-category-card, .ak2k25-rules-list li, .ak2k25-timeline-item, .ak2k25-facility-card, .ak2k25-gallery-item, .ak2k25-about-section"
+      function aakanshaCheckVisibility() {
+        const aakanshaElements = document.querySelectorAll(
+          ".aakansha-event-card, .aakansha-rules-list li"
         );
 
-        ak2k25Elements.forEach((element) => {
+        aakanshaElements.forEach((element) => {
           const position = element.getBoundingClientRect();
 
           // Checking whether fully visible
           if (position.top < window.innerHeight && position.bottom >= 0) {
-            element.classList.add("ak2k25-visible");
+            element.classList.add("aakansha-visible");
           }
         });
       }
 
       // Check on load and scroll
-      window.addEventListener("load", ak2k25CheckVisibility);
-      window.addEventListener("scroll", ak2k25CheckVisibility);
+      window.addEventListener("load", aakanshaCheckVisibility);
+      window.addEventListener("scroll", aakanshaCheckVisibility);
 
       // Initial check
-      ak2k25CheckVisibility();
-
-      // Team members field toggle
-      document
-        .getElementById("teamSize")
-        .addEventListener("change", function () {
-          const teamSize = parseInt(this.value);
-          const teamSection = document.getElementById("teamMembersSection");
-
-          if (teamSize > 1) {
-            teamSection.style.display = "block";
-
-            // Show/hide team member fields based on selection
-            document
-              .querySelectorAll("#teamMembersSection .form-group")
-              .forEach((field, index) => {
-                if (index < (teamSize - 1) * 2) {
-                  field.style.display = "block";
-                } else {
-                  field.style.display = "none";
-                }
-              });
-          } else {
-            teamSection.style.display = "none";
-          }
-        });
-
-      // Form submission
-      document
-        .getElementById("eventRegistrationForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert(
-            "Registration form submitted! In a real application, this would connect to the backend."
-          );
-          // Here you would typically send the form data to your PHP backend
-        });
+      aakanshaCheckVisibility();
     </script>
   </body>
 </html>
