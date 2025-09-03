@@ -21,31 +21,31 @@
     />
     <style>
       :root {
-        --color-primary: #ffd700;
-        --color-secondary: #d32f2f;
-        --color-accent: #1e3a8a;
-        --color-bg: #faf3e0;
-        --color-text: #212529;
-        --color-white: #ffffff;
-        --color-dark: #121212;
-        --font-heading: "Playfair Display", serif;
-        --font-body: "Lato", sans-serif;
-        --transition: all 0.3s ease;
-        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        --color-primary-ak: #ffd700;
+        --color-secondary-ak: #d32f2f;
+        --color-accent-ak: #1e3a8a;
+        --color-bg-ak: #faf3e0;
+        --color-text-ak: #212529;
+        --color-white-ak: #ffffff;
+        --color-dark-ak: #121212;
+        --font-heading-ak: "Playfair Display", serif;
+        --font-body-ak: "Lato", sans-serif;
+        --transition-ak: all 0.3s ease;
+        --shadow-ak: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover-ak: 0 8px 25px rgba(0, 0, 0, 0.15);
       }
 
       body {
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background-color: var(--color-white);
+        font-family: var(--font-body-ak);
+        color: var(--color-text-ak);
+        background-color: var(--color-white-ak);
         overflow-x: hidden;
         transition: background-color 0.3s ease;
       }
 
-      body.dark-mode {
-        background-color: var(--color-dark);
-        color: var(--color-white);
+      body.dark-mode-ak {
+        background-color: var(--color-dark-ak);
+        color: var(--color-white-ak);
       }
 
       h1,
@@ -54,157 +54,157 @@
       h4,
       h5,
       h6 {
-        font-family: var(--font-heading);
+        font-family: var(--font-heading-ak);
         font-weight: 700;
       }
 
       /* Header & Navigation */
-      .techfest-navbar {
-        background-color: var(--color-white);
-        box-shadow: var(--shadow);
+      .ak-navbar {
+        background-color: var(--color-white-ak);
+        box-shadow: var(--shadow-ak);
         padding: 15px 0;
-        transition: var(--transition);
+        transition: var(--transition-ak);
       }
 
-      .dark-mode .techfest-navbar {
+      .dark-mode-ak .ak-navbar {
         background-color: #1a1a1a;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .navbar-brand {
+      .ak-navbar-brand {
         display: flex;
         align-items: center;
       }
 
-      .college-logo {
+      .ak-logo {
         height: 50px;
         margin-right: 15px;
       }
 
-      .nav-item {
+      .ak-nav-item {
         margin: 0 5px;
       }
 
-      .nav-link {
+      .ak-nav-link {
         font-weight: 500;
-        color: var(--color-text);
-        transition: var(--transition);
+        color: var(--color-text-ak);
+        transition: var(--transition-ak);
       }
 
-      .dark-mode .nav-link {
-        color: var(--color-white);
+      .dark-mode-ak .ak-nav-link {
+        color: var(--color-white-ak);
       }
 
-      .nav-link:hover {
-        color: var(--color-secondary);
+      .ak-nav-link:hover {
+        color: var(--color-secondary-ak);
       }
 
-      .navbar-toggler {
+      .ak-navbar-toggler {
         border: none;
         font-size: 1.5rem;
       }
 
       /* Hero Section */
-      .about-hero {
+      .ak-about-hero {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
           url("shiva.jpeg");
         background-size: cover;
         background-position: center;
         padding: 120px 0 80px;
-        color: var(--color-white);
+        color: var(--color-white-ak);
         text-align: center;
         position: relative;
       }
 
       /* Section Styling */
-      .section-title {
+      .ak-section-title {
         position: relative;
         margin-bottom: 40px;
         text-align: center;
       }
 
-      .section-title:after {
+      .ak-section-title:after {
         content: "";
         display: block;
         width: 80px;
         height: 4px;
         background: linear-gradient(
           to right,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--color-primary-ak),
+          var(--color-secondary-ak)
         );
         margin: 15px auto;
         border-radius: 2px;
       }
 
-      .dark-mode .section-title:after {
-        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      .dark-mode-ak .ak-section-title:after {
+        background: linear-gradient(to right, var(--color-primary-ak), #aa2c25);
       }
 
       /* Trust Section */
-      .trust-section {
+      .ak-trust-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--color-white-ak);
       }
 
-      .dark-mode .trust-section {
+      .dark-mode-ak .ak-trust-section {
         background-color: #1a1a1a;
       }
 
-      .trust-card {
+      .ak-trust-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--shadow-ak);
+        transition: var(--transition-ak);
         margin-bottom: 25px;
         height: 100%;
       }
 
-      .trust-card:hover {
+      .ak-trust-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--shadow-hover-ak);
       }
 
       /* Chairman Section */
-      .chairman-section {
+      .ak-chairman-section {
         padding: 80px 0;
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         position: relative;
         overflow: hidden;
       }
 
-      .dark-mode .chairman-section {
+      .dark-mode-ak .ak-chairman-section {
         background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
       }
 
-      .chairman-section::before {
+      .ak-chairman-section::before {
         content: "";
         position: absolute;
         top: -100px;
         right: -100px;
         width: 300px;
         height: 300px;
-        background: var(--color-primary);
+        background: var(--color-primary-ak);
         opacity: 0.1;
         border-radius: 50%;
-        animation: pulse 6s infinite ease-in-out;
+        animation: ak-pulse 6s infinite ease-in-out;
       }
 
-      .chairman-section::after {
+      .ak-chairman-section::after {
         content: "";
         position: absolute;
         bottom: -50px;
         left: -50px;
         width: 200px;
         height: 200px;
-        background: var(--color-secondary);
+        background: var(--color-secondary-ak);
         opacity: 0.1;
         border-radius: 50%;
-        animation: pulse 8s infinite ease-in-out;
+        animation: ak-pulse 8s infinite ease-in-out;
       }
 
-      @keyframes pulse {
+      @keyframes ak-pulse {
         0%,
         100% {
           transform: scale(1);
@@ -216,27 +216,27 @@
         }
       }
 
-      .chairman-content {
+      .ak-chairman-content {
         position: relative;
         z-index: 2;
       }
 
-      .chairman-img-container {
+      .ak-chairman-img-container {
         position: relative;
         display: inline-block;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: var(--shadow);
+        box-shadow: var(--shadow-ak);
         transform: perspective(1000px) rotateY(0deg);
         transition: transform 0.6s ease, box-shadow 0.4s ease;
       }
 
-      .chairman-img-container:hover {
+      .ak-chairman-img-container:hover {
         transform: perspective(1000px) rotateY(5deg);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
       }
 
-      .chairman-img {
+      .ak-chairman-img {
         width: 100%;
         max-width: 320px;
         height: auto;
@@ -244,11 +244,11 @@
         transition: transform 0.5s ease;
       }
 
-      .chairman-img-container:hover .chairman-img {
+      .ak-chairman-img-container:hover .ak-chairman-img {
         transform: scale(1.03);
       }
 
-      .img-overlay {
+      .ak-img-overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -263,24 +263,25 @@
         border-radius: 20px;
         opacity: 0;
         transition: opacity 0.4s ease;
+        pointer-events: none;
       }
 
-      .chairman-img-container:hover .img-overlay {
+      .ak-chairman-img-container:hover .ak-img-overlay {
         opacity: 1;
       }
 
-      .chairman-badge {
+      .ak-chairman-badge {
         position: absolute;
         top: 20px;
         right: 20px;
         width: 50px;
         height: 50px;
-        background: var(--color-primary);
+        background: var(--color-primary-ak);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--color-text);
+        color: var(--color-text-ak);
         font-size: 1.5rem;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         transform: translateY(-20px);
@@ -288,82 +289,82 @@
         transition: all 0.5s ease 0.2s;
       }
 
-      .chairman-img-container:hover .chairman-badge {
+      .ak-chairman-img-container:hover .ak-chairman-badge {
         transform: translateY(0);
         opacity: 1;
       }
 
-      .chairman-message-card {
-        background: var(--color-white);
+      .ak-chairman-message-card {
+        background: var(--color-white-ak);
         border-radius: 20px;
         padding: 40px;
-        box-shadow: var(--shadow);
+        box-shadow: var(--shadow-ak);
         position: relative;
         overflow: hidden;
         transition: all 0.4s ease;
       }
 
-      .dark-mode .chairman-message-card {
+      .dark-mode-ak .ak-chairman-message-card {
         background: #2a2a2a;
       }
 
-      .chairman-message-card:hover {
+      .ak-chairman-message-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--shadow-hover-ak);
       }
 
-      .message-header {
+      .ak-message-header {
         position: relative;
         margin-bottom: 25px;
       }
 
-      .quote-icon {
+      .ak-quote-icon {
         position: absolute;
         font-size: 3rem;
-        color: var(--color-primary);
+        color: var(--color-primary-ak);
         opacity: 0.2;
       }
 
-      .quote-icon.start {
+      .ak-quote-icon-start {
         top: -20px;
         left: -10px;
       }
 
-      .quote-icon.end {
+      .ak-quote-icon-end {
         bottom: -30px;
         right: -10px;
       }
 
-      .message-body {
+      .ak-message-body {
         position: relative;
         z-index: 2;
       }
 
-      .message-body p {
+      .ak-message-body p {
         margin-bottom: 20px;
         line-height: 1.8;
         transition: color 0.3s ease;
       }
 
-      .message-signature {
+      .ak-message-signature {
         text-align: right;
         margin-top: 30px;
         padding-top: 20px;
         border-top: 1px dashed rgba(0, 0, 0, 0.1);
       }
 
-      .dark-mode .message-signature {
+      .dark-mode-ak .ak-message-signature {
         border-top: 1px dashed rgba(255, 255, 255, 0.1);
       }
 
-      .signature-img {
+      .ak-signature-img {
         height: 40px;
         margin-bottom: 10px;
         opacity: 0.9;
       }
 
       /* Animation for text appearance */
-      @keyframes fadeInUp {
+      @keyframes ak-fadeInUp {
         from {
           opacity: 0;
           transform: translateY(20px);
@@ -374,186 +375,186 @@
         }
       }
 
-      .chairman-message-card .message-body p {
-        animation: fadeInUp 0.6s forwards;
+      .ak-chairman-message-card .ak-message-body p {
+        animation: ak-fadeInUp 0.6s forwards;
         opacity: 0;
       }
 
-      .chairman-message-card .message-body p:nth-child(1) {
+      .ak-chairman-message-card .ak-message-body p:nth-child(1) {
         animation-delay: 0.1s;
       }
-      .chairman-message-card .message-body p:nth-child(2) {
+      .ak-chairman-message-card .ak-message-body p:nth-child(2) {
         animation-delay: 0.2s;
       }
-      .chairman-message-card .message-body p:nth-child(3) {
+      .ak-chairman-message-card .ak-message-body p:nth-child(3) {
         animation-delay: 0.3s;
       }
-      .chairman-message-card .message-body p:nth-child(4) {
+      .ak-chairman-message-card .ak-message-body p:nth-child(4) {
         animation-delay: 0.4s;
       }
-      .chairman-message-card .message-body p:nth-child(5) {
+      .ak-chairman-message-card .ak-message-body p:nth-child(5) {
         animation-delay: 0.5s;
       }
 
       /* Principal Section */
-      .principal-section {
+      .ak-principal-section {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--color-bg-ak);
       }
 
-      .dark-mode .principal-section {
+      .dark-mode-ak .ak-principal-section {
         background-color: #1e1e1e;
       }
 
-      .principal-img {
+      .ak-principal-img {
         width: 280px;
         height: 280px;
         object-fit: cover;
         border-radius: 50%;
-        border: 5px solid var(--color-primary);
-        box-shadow: var(--shadow);
+        border: 5px solid var(--color-primary-ak);
+        box-shadow: var(--shadow-ak);
       }
 
-      .principal-message {
+      .ak-principal-message {
         font-style: italic;
-        border-left: 4px solid var(--color-primary);
+        border-left: 4px solid var(--color-primary-ak);
         padding-left: 20px;
         margin: 25px 0;
       }
 
       /* History Section */
-      .history-section {
+      .ak-history-section {
         padding: 80px 0;
-        background-color: var(--color-white);
+        background-color: var(--color-white-ak);
       }
 
-      .dark-mode .history-section {
+      .dark-mode-ak .ak-history-section {
         background-color: #1a1a1a;
       }
 
-      .history-img {
+      .ak-history-img {
         border-radius: 15px;
-        box-shadow: var(--shadow);
+        box-shadow: var(--shadow-ak);
       }
 
-      .milestone-card {
+      .ak-milestone-card {
         text-align: center;
         padding: 25px 15px;
         border-radius: 10px;
-        background: var(--color-white);
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        background: var(--color-white-ak);
+        box-shadow: var(--shadow-ak);
+        transition: var(--transition-ak);
         margin-bottom: 20px;
         height: 100%;
       }
 
-      .dark-mode .milestone-card {
+      .dark-mode-ak .ak-milestone-card {
         background-color: #2a2a2a;
       }
 
-      .milestone-card:hover {
+      .ak-milestone-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--shadow-hover-ak);
       }
 
-      .milestone-icon {
+      .ak-milestone-icon {
         font-size: 2.5rem;
-        color: var(--color-primary);
+        color: var(--color-primary-ak);
         margin-bottom: 15px;
       }
 
       /* Team Section */
-      .team-section {
+      .ak-team-section {
         padding: 80px 0;
-        background-color: var(--color-bg);
+        background-color: var(--color-bg-ak);
       }
 
-      .dark-mode .team-section {
+      .dark-mode-ak .ak-team-section {
         background-color: #1e1e1e;
       }
 
-      .team-card {
+      .ak-team-card {
         border-radius: 15px;
         overflow: hidden;
         border: none;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--shadow-ak);
+        transition: var(--transition-ak);
         margin-bottom: 25px;
         text-align: center;
       }
 
-      .team-card:hover {
+      .ak-team-card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--shadow-hover-ak);
       }
 
-      .team-img {
+      .ak-team-img {
         height: 220px;
         object-fit: cover;
       }
 
-      .team-social {
+      .ak-team-social {
         margin-top: 15px;
       }
 
-      .team-social a {
+      .ak-team-social a {
         display: inline-block;
         width: 36px;
         height: 36px;
         line-height: 36px;
         text-align: center;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--color-primary-ak);
+        color: var(--color-text-ak);
         border-radius: 50%;
         margin: 0 5px;
-        transition: var(--transition);
+        transition: var(--transition-ak);
       }
 
-      .team-social a:hover {
-        background: var(--color-secondary);
-        color: var(--color-white);
+      .ak-team-social a:hover {
+        background: var(--color-secondary-ak);
+        color: var(--color-white-ak);
         transform: translateY(-3px);
       }
 
       /* Footer */
-      .techfest-footer {
-        background-color: var(--color-accent);
-        color: var(--color-white);
+      .ak-footer {
+        background-color: var(--color-accent-ak);
+        color: var(--color-white-ak);
         padding: 60px 0 30px;
       }
 
-      .dark-mode .techfest-footer {
+      .dark-mode-ak .ak-footer {
         background-color: #152555;
       }
 
-      .footer-links h5 {
-        border-bottom: 2px solid var(--color-primary);
+      .ak-footer-links h5 {
+        border-bottom: 2px solid var(--color-primary-ak);
         padding-bottom: 10px;
         margin-bottom: 20px;
         display: inline-block;
       }
 
-      .footer-links ul {
+      .ak-footer-links ul {
         list-style: none;
         padding: 0;
       }
 
-      .footer-links li {
+      .ak-footer-links li {
         margin-bottom: 10px;
       }
 
-      .footer-links a {
+      .ak-footer-links a {
         color: rgba(255, 255, 255, 0.8);
-        transition: var(--transition);
+        transition: var(--transition-ak);
         text-decoration: none;
       }
 
-      .footer-links a:hover {
-        color: var(--color-primary);
+      .ak-footer-links a:hover {
+        color: var(--color-primary-ak);
         padding-left: 5px;
       }
 
-      .social-icons a {
+      .ak-social-icons a {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -562,18 +563,18 @@
         background: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         margin-right: 10px;
-        color: var(--color-white);
-        transition: var(--transition);
+        color: var(--color-white-ak);
+        transition: var(--transition-ak);
       }
 
-      .social-icons a:hover {
-        background: var(--color-primary);
-        color: var(--color-accent);
+      .ak-social-icons a:hover {
+        background: var(--color-primary-ak);
+        color: var(--color-accent-ak);
         transform: translateY(-5px);
       }
 
       /* Dark Mode Toggle */
-      .dark-mode-toggle {
+      .ak-dark-mode-toggle {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -581,97 +582,97 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-text);
+        background: var(--color-primary-ak);
+        color: var(--color-text-ak);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
+        box-shadow: var(--shadow-ak);
+        transition: var(--transition-ak);
         border: none;
       }
 
-      .dark-mode-toggle:hover {
+      .ak-dark-mode-toggle:hover {
         transform: rotate(30deg);
       }
 
       /* Button Styles */
-      .btn-techfest {
+      .ak-btn-techfest {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--color-primary-ak),
+          var(--color-secondary-ak)
         );
-        color: var(--color-white);
+        color: var(--color-white-ak);
         border: none;
         padding: 12px 30px;
         border-radius: 50px;
         font-weight: 600;
-        transition: var(--transition);
-        box-shadow: var(--shadow);
+        transition: var(--transition-ak);
+        box-shadow: var(--shadow-ak);
       }
 
-      .btn-techfest:hover {
+      .ak-btn-techfest:hover {
         transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-        color: var(--color-white);
+        box-shadow: var(--shadow-hover-ak);
+        color: var(--color-white-ak);
       }
 
       /* Text Gradient */
-      .text-gradient {
+      .ak-text-gradient {
         background: linear-gradient(
           45deg,
-          var(--color-primary),
-          var(--color-secondary)
+          var(--color-primary-ak),
+          var(--color-secondary-ak)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
       }
 
-      .bg-cream {
-        background-color: var(--color-bg);
+      .ak-bg-cream {
+        background-color: var(--color-bg-ak);
       }
 
-      .dark-mode .bg-cream {
+      .dark-mode-ak .ak-bg-cream {
         background-color: #1e1e1e;
       }
 
       /* Mobile Responsive Adjustments */
       @media (max-width: 768px) {
-        .about-hero {
+        .ak-about-hero {
           padding: 100px 0 60px;
         }
 
-        .principal-img {
+        .ak-principal-img {
           width: 220px;
           height: 220px;
           margin-bottom: 25px;
         }
 
-        .chairman-section::before,
-        .chairman-section::after {
+        .ak-chairman-section::before,
+        .ak-chairman-section::after {
           display: none;
         }
 
-        .chairman-img {
+        .ak-chairman-img {
           max-width: 280px;
         }
 
-        .message-signature {
+        .ak-message-signature {
           text-align: center;
         }
 
-        .chairman-message-card {
+        .ak-chairman-message-card {
           padding: 30px 25px;
         }
 
-        .quote-icon {
+        .ak-quote-icon {
           font-size: 2.5rem;
         }
 
-        .quote-icon.start {
+        .ak-quote-icon-start {
           top: -15px;
           left: -5px;
         }
@@ -680,20 +681,20 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg ak-navbar sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ak-navbar-brand" href="#">
           <img
             src="logobsc.png"
             alt="College Logo"
-            class="college-logo"
+            class="ak-logo"
           />
           <span class="fw-bold"
-            >AKANKSHA <span class="text-gradient">2K25</span></span
+            >AKANKSHA <span class="ak-text-gradient">2K25</span></span
           >
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ak-navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
@@ -702,15 +703,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link active" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item ak-nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link ak-nav-link dropdown-toggle"
                 href="events.html"
                 id="eventsDropdown"
                 role="button"
@@ -728,20 +729,20 @@
                 <li><a class="dropdown-item" href="#">Past Events</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="schedule.html">Schedule</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="schedule.html">Schedule</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="sponsors.html">Sponsors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-techfest ms-2" href="#"
+            <li class="nav-item ak-nav-item">
+              <a class="nav-link ak-nav-link ak-btn-techfest ms-2" href="#"
                 >Register Now</a
               >
             </li>
@@ -751,7 +752,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="about-hero">
+    <section class="ak-about-hero">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -765,11 +766,11 @@
     </section>
 
     <!-- Trust Section -->
-    <section class="trust-section">
+    <section class="ak-trust-section">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="ak-section-title">
           About
-          <span class="text-gradient">Sri Vinayaka Educational Trust</span>
+          <span class="ak-text-gradient">Sri Vinayaka Educational Trust</span>
         </h2>
 
         <div class="row align-items-center mb-5">
@@ -777,519 +778,7 @@
             <img
               src="bscclg.jpeg"
               alt="B.S. Channabasappa First Grade College Campus"
-              class="img-fluid rounded shadow history-img"
+              class="img-fluid rounded shadow ak-history-img"
             />
           </div>
-          <div class="col-lg-6">
-            <h3 class="mb-4">Our Legacy of Excellence</h3>
-            <p class="lead">
-              Sri Vinayaka Educational Trust was established with a vision to
-              provide quality education and foster innovation in the region.
-            </p>
-            <p>
-              The trust has been instrumental in establishing educational
-              institutions that cater to diverse fields of study, with B.S.
-              Channabasappa First Grade College being one of its flagship
-              institutions.
-            </p>
-            <p>
-              With a commitment to holistic education and community development,
-              the trust continues to set benchmarks in the education sector.
-            </p>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-4 mb-4">
-            <div class="trust-card card h-100">
-              <div class="card-body text-center p-4">
-                <div class="mb-4">
-                  <i class="fas fa-graduation-cap fa-3x text-gradient"></i>
-                </div>
-                <h4 class="card-title">Quality Education</h4>
-                <p class="card-text">
-                  Providing excellent education with well-qualified faculty and
-                  modern infrastructure.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="trust-card card h-100">
-              <div class="card-body text-center p-4">
-                <div class="mb-4">
-                  <i class="fas fa-flask fa-3x text-gradient"></i>
-                </div>
-                <h4 class="card-title">Student Development</h4>
-                <p class="card-text">
-                  Focusing on overall personality development through various
-                  co-curricular activities.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="trust-card card h-100">
-              <div class="card-body text-center p-4">
-                <div class="mb-4">
-                  <i class="fas fa-users fa-3x text-gradient"></i>
-                </div>
-                <h4 class="card-title">Community Service</h4>
-                <p class="card-text">
-                  Engaging in various community development programs and social
-                  initiatives.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chairman Message Section -->
-    <section class="chairman-section">
-      <div class="container">
-        <h2 class="section-title">
-          Chairman's <span class="text-gradient">Message</span>
-        </h2>
-
-        <div class="row align-items-center chairman-content">
-          <div class="col-lg-5 text-center mb-5 mb-lg-0">
-            <div class="chairman-img-container">
-              <img
-                src="Shivkumar.jpg"
-                alt="Chairman Sri B.S. Channabasappa"
-                class="chairman-img img-fluid"
-              />
-              <div class="img-overlay"></div>
-              <div class="chairman-badge">
-                <i class="fas fa-award"></i>
-              </div>
-            </div>
-            <h4 class="mt-4">Sri B.C.Shivakumar</h4>
-            <p class="text-muted">Chairman, Sri Vinayaka Educational Trust</p>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="chairman-message-card">
-              <div class="message-header">
-                <div class="quote-icon start">
-                  <i class="fas fa-quote-left"></i>
-                </div>
-                <div class="quote-icon end">
-                  <i class="fas fa-quote-right"></i>
-                </div>
-              </div>
-
-              <div class="message-body">
-                <p class="lead">
-                  Dear Students, Faculty, and Distinguished Guests,
-                </p>
-
-                <p>
-                  It is with immense pride and pleasure that I welcome you to
-                  <strong>AAKANKSHA 2K25</strong>, the State Level Management
-                  and Tech Fest organized by B.S. Channabasappa First Grade
-                  College.
-                </p>
-
-                <p>
-                  Sri B.C.Shivakumar is a rare combination of different good
-                  qualities. He is a philanthropist; polite, prudent, simple
-                  educationalist, donor and business magnet. He is an
-                  encouraging force behind every activity in the college. He
-                  dreams of elevating the standard of the students in order to
-                  enable them to be well accomplished citizens. His vision for
-                  the development of the college exceptionally appropriates the
-                  missions he advocates. His encouragement and guidance surely
-                  helps the institution to achieve its excellent academic
-                  performance.
-                </p>
-                <p class="mb-0">
-                  Let the spirit of innovation and competition thrive!
-                </p>
-              </div>
-
-              <div class="message-signature">
-                <img src="" alt="Signature" class="signature-img" />
-                <p class="mb-0">Sri B.C.Shivakumar</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Principal Section -->
-    <section class="principal-section">
-      <div class="container">
-        <h2 class="section-title">
-          Principal's <span class="text-gradient">Message</span>
-        </h2>
-
-        <div class="row align-items-center">
-          <div class="col-lg-4 text-center">
-            <img
-              src="https://bscfgc.com/images/principal.jpg"
-              alt="Principal Prof. M.C. Guru"
-              class="principal-img"
-            />
-            <h4 class="mt-4">Prof. M.C. Guru</h4>
-            <p class="text-muted">
-              Principal, B.S. Channabasappa First Grade College
-            </p>
-          </div>
-          <div class="col-lg-8">
-            <div class="ps-lg-4">
-              <h3 class="mb-4">Welcome to AAKANKSHA 2K25</h3>
-              <blockquote class="principal-message">
-                <p class="fs-5">
-                  "It gives me immense pleasure to welcome you to AAKANKSHA
-                  2K25, our State Level Management and Tech Fest. This event
-                  represents our commitment to providing students with platforms
-                  to showcase their talents and innovate."
-                </p>
-              </blockquote>
-              <p>
-                At B.S. Channabasappa First Grade College, we believe in
-                nurturing not just academic excellence but also creativity,
-                innovation, and leadership qualities among our students.
-              </p>
-              <p>
-                AAKANKSHA 2K25 is designed to provide students from various
-                institutions an opportunity to compete, learn, and grow through
-                various technical and management events.
-              </p>
-              <p>
-                I extend my best wishes to all participants and encourage
-                everyone to make the most of this opportunity to showcase your
-                skills and learn from your peers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- History Section -->
-    <section class="history-section">
-      <div class="container">
-        <h2 class="section-title">
-          College <span class="text-gradient">History</span>
-        </h2>
-        <p class="text-center lead mb-5">Journey of excellence in education</p>
-
-        <div class="row mb-5">
-          <div class="col-lg-6">
-            <h3 class="mb-4">Our Journey</h3>
-            <p>
-              B.S. Channabasappa First Grade College, located in S.S. Layout A
-              Block, Davanagere, has been a beacon of quality education in the
-              region. The college is named after the esteemed philanthropist and
-              educationist, Sri B.S. Channabasappa.
-            </p>
-            <p>
-              Established under the auspices of Sri Vinayaka Education Trust
-              (R), the college has consistently provided excellent education in
-              various disciplines, focusing on both academic excellence and
-              character building.
-            </p>
-            <p>
-              Over the years, the college has grown significantly, adding new
-              courses and facilities to meet the evolving educational needs of
-              students. Our alumni have excelled in various fields, making
-              significant contributions to society.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <img
-              src="shiva.jpeg"
-              alt="College History"
-              class="img-fluid rounded shadow history-img"
-            />
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-4 mb-4">
-            <div class="milestone-card">
-              <div class="milestone-icon">
-                <i class="fas fa-seedling"></i>
-              </div>
-              <h4>Establishment</h4>
-              <p>
-                College established with a vision to provide quality education
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="milestone-card">
-              <div class="milestone-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-              <h4>Expansion</h4>
-              <p>
-                Introduction of new courses and programs to meet student needs
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="milestone-card">
-              <div class="milestone-icon">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <h4>Recognition</h4>
-              <p>
-                Gained recognition for academic excellence and student
-                achievements
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="milestone-card">
-              <div class="milestone-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <h4>Alumni Success</h4>
-              <p>Alumni excelling in various professional fields</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="milestone-card">
-              <div class="milestone-icon">
-                <i class="fas fa-microphone-alt"></i>
-              </div>
-              <h4>Events & Fests</h4>
-              <p>Regular organization of cultural and technical events</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="milestone-card">
-              <div class="milestone-icon">
-                <i class="fas fa-crown"></i>
-              </div>
-              <h4>AAKANKSHA 2K25</h4>
-              <p>Hosting the state level management and tech fest</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-      <div class="container">
-        <h2 class="section-title">
-          Organizing <span class="text-gradient">Committee</span>
-        </h2>
-        <p class="text-center lead mb-5">
-          The dedicated team behind AAKANKSHA 2K25
-        </p>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 mb-4">
-            <div class="team-card card h-100">
-              <img
-                src="https://bscfgc.com/images/principal.jpg"
-                class="team-img card-img-top"
-                alt="Principal"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Prof. M.C. Guru</h5>
-                <p class="card-text">Principal & Chief Patron</p>
-                <div class="team-social">
-                  <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4">
-            <div class="team-card card h-100">
-              <img
-                src="https://bscfgc.com/images/staff1.jpg"
-                class="team-img card-img-top"
-                alt="Faculty Coordinator"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Faculty Coordinator</h5>
-                <p class="card-text">Event Management Head</p>
-                <div class="team-social">
-                  <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4">
-            <div class="team-card card h-100">
-              <img
-                src="https://bscfgc.com/images/staff2.jpg"
-                class="team-img card-img-top"
-                alt="Technical Head"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Technical Head</h5>
-                <p class="card-text">Tech Events Coordinator</p>
-                <div class="team-social">
-                  <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4">
-            <div class="team-card card h-100">
-              <img
-                src="https://bscfgc.com/images/staff3.jpg"
-                class="team-img card-img-top"
-                alt="Student Coordinator"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Student Coordinator</h5>
-                <p class="card-text">Student Representative</p>
-                <div class="team-social">
-                  <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="#" class="btn btn-techfest">Contact Committee</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="techfest-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h4 class="mb-4">AAKANKSHA 2K25</h4>
-            <p>
-              State Level Management and Tech Fest organized by B.S.
-              Channabasappa First Grade College, Davanagere.
-            </p>
-            <div class="social-icons mt-4">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
-            <h5>Quick Links</h5>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Admissions</a></li>
-              <li><a href="#">Results</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
-            <h5>Events</h5>
-            <ul>
-              <li><a href="#">AAKANKSHA 2K25</a></li>
-              <li><a href="#">Cultural Events</a></li>
-              <li><a href="#">Workshops</a></li>
-              <li><a href="#">Seminars</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4 col-md-4 footer-links">
-            <h5>Contact Us</h5>
-            <ul>
-              <li>
-                <i class="fas fa-map-marker-alt me-2"></i> S.S. Layout A Block,
-                Davanagere - 577004
-              </li>
-              <li><i class="fas fa-phone me-2"></i> 08192 - 221816</li>
-              <li><i class="fas fa-envelope me-2"></i> bsccollege@gmail.com</li>
-              <li><i class="fas fa-envelope me-2"></i> principal@bscfgc.com</li>
-              <li><i class="fas fa-globe me-2"></i> www.bscfgc.com</li>
-            </ul>
-          </div>
-        </div>
-        <hr class="my-4 bg-light" />
-        <div class="row">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <p class="mb-0">&copy; 2025 AKANKSHA 2K25. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <p class="mb-0">
-              Designed with <i class="fas fa-heart text-danger"></i>
-              <a href="" style="color: #f0f0f0">L K Technologies</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" id="darkModeToggle">
-      <i class="fas fa-moon"></i>
-    </button>
-
-    <!-- Bootstrap & jQuery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      // Dark Mode Toggle
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      const body = document.body;
-
-      // Check for saved dark mode preference
-      if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-      }
-
-      darkModeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        if (body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-          localStorage.setItem("darkMode", "disabled");
-          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        }
-      });
-
-      // Navbar scroll effect
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".techfest-navbar");
-        if (window.scrollY > 50) {
-          navbar.style.padding = "10px 0";
-          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
-        } else {
-          navbar.style.padding = "15px 0";
-          navbar.style.boxShadow = "none";
-        }
-      });
-
-      // Add intersection observer for scroll animations
-      document.addEventListener("DOMContentLoaded", function () {
-        const chairmanSection = document.querySelector(".chairman-section");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                chairmanSection.classList.add("animated");
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
-
-        if (chairmanSection) {
-          observer.observe(chairmanSection);
-        }
-      });
-    </script>
-  </body>
-</html>
+        
