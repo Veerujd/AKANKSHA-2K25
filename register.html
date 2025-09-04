@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration - AKANKSHA 2K25</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --color-primary: #ffd700;
+        --color-secondary: #d32f2f;
+        --color-accent: #1e3a8a;
+        --color-bg: #faf3e0;
+        --color-text: #212529;
+        --color-white: #ffffff;
+        --color-dark: #121212;
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Roboto", sans-serif;
+        --transition: all 0.3s ease;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-white);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-mode {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      /* Header & Navigation */
+      .techfest-navbar {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: var(--transition);
+      }
+
+      .dark-mode .techfest-navbar {
+        background-color: #1a1a1a;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .college-logo {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-text);
+        transition: var(--transition);
+      }
+
+      .dark-mode .nav-link {
+        color: var(--color-white);
+      }
+
+      .nav-link:hover {
+        color: var(--color-secondary);
+      }
+
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .registration-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0 80px;
+        color: var(--color-white);
+        text-align: center;
+        position: relative;
+      }
+
+      /* Section Styling */
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+
+      .dark-mode .section-title:after {
+        background: linear-gradient(to right, var(--color-primary), #aa2c25);
+      }
+
+      /* Registration Form */
+      .registration-form-section {
+        padding: 80px 0;
+        background-color: var(--color-white);
+      }
+
+      .dark-mode .registration-form-section {
+        background-color: #1a1a1a;
+      }
+
+      .form-section {
+        margin-bottom: 50px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .form-section {
+        background-color: #2a2a2a;
+      }
+
+      .form-section h3 {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--color-primary);
+      }
+
+      .form-control {
+        padding: 12px 15px;
+        border: 2px solid #e1e1e1;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: var(--transition);
+      }
+
+      .dark-mode .form-control {
+        background-color: #1a1a1a;
+        border-color: #444;
+        color: var(--color-white);
+      }
+
+      .form-control:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+      }
+
+      .event-checkbox {
+        margin-bottom: 15px;
+      }
+
+      .event-checkbox .form-check-input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      .event-checkbox .form-check-label {
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      .participant-fields {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: none;
+      }
+
+      .dark-mode .participant-fields {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .participant-fields h5 {
+        margin-bottom: 15px;
+        color: var(--color-secondary);
+      }
+
+      /* Footer */
+      .techfest-footer {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        padding: 60px 0 30px;
+      }
+
+      .dark-mode .techfest-footer {
+        background-color: #152555;
+      }
+
+      .footer-links h5 {
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-primary);
+        padding-left: 5px;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        color: var(--color-white);
+        transition: var(--transition);
+      }
+
+      .social-icons a:hover {
+        background: var(--color-primary);
+        color: var(--color-accent);
+        transform: translateY(-5px);
+      }
+
+      /* Dark Mode Toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: none;
+      }
+
+      .dark-mode-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Button Styles */
+      .btn-techfest {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-techfest:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      .btn-admin {
+        background: linear-gradient(45deg, var(--color-accent), #2c4b9c);
+        color: var(--color-white);
+        border: none;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .btn-admin:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+        color: var(--color-white);
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(
+          45deg,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .bg-cream {
+        background-color: var(--color-bg);
+      }
+
+      .dark-mode .bg-cream {
+        background-color: #1e1e1e;
+      }
+
+      /* Mobile Responsive Adjustments */
+      @media (max-width: 768px) {
+        .registration-hero {
+          padding: 100px 0 60px;
+        }
+
+        .form-section {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg techfest-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logobsc.png"
+            alt="College Logo"
+            class="college-logo"
+          />
+          <span class="fw-bold"
+            >AKANKSHA <span class="text-gradient">2K25</span></span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="events.html"
+                id="eventsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Events
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="events.html">Akanksha 2k25</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Takshak 2k25</a></li>
+                <li><a class="dropdown-item" href="#">Freshers Party</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Past Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-techfest ms-2" href="register.html"
+                >Register Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="registration-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="anniversary-badge">
+              <i class="fas fa-medal me-2"></i>20 Years Celebration Edition
+            </div>
+            <h1 class="display-4 fw-bold mb-3">AKANKSHA 2K25 Registration</h1>
+            <p class="lead">Join the most exciting tech festival of the year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration-form-section">
+      <div class="container">
+        <h2 class="section-title">
+          Event <span class="text-gradient">Registration</span>
+        </h2>
+        <p class="text-center lead mb-5">
+          Fill out the form below to register for AKANKSHA 2K25 events
+        </p>
+
+        <form name="AAKANKSHA_2K25_Registration" id="registrationForm">
+          <!-- College & Team Information Section -->
+          <div class="form-section">
+            <h3>College & Team Information</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="college_name_address" class="form-label"
+                    >Name & Address of the College</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="college_name_address"
+                    name="college_name_address"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="faculty_name" class="form-label"
+                    >Faculty Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="faculty_name"
+                    name="faculty_name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="faculty_mobile" class="form-label"
+                    >Faculty Mobile No</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="faculty_mobile"
+                    name="faculty_mobile"
+                    pattern="^\d{10}$"
+                    required
+                  />
+                  <small class="form-text text-muted"
+                    >10 digits without any spaces or special characters</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="team_leader_name" class="form-label"
+                    >Team Leader Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="team_leader_name"
+                    name="team_leader_name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="team_leader_mobile" class="form-label"
+                    >Team Leader Mobile No</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="team_leader_mobile"
+                    name="team_leader_mobile"
+                    pattern="^\d{10}$"
+                    required
+                  />
+                  <small class="form-text text-muted"
+                    >10 digits without any spaces or special characters</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event Selection Section -->
+          <div class="form-section">
+            <h3>Select Events to Register</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="empire_of_innovation"
+                    name="events"
+                    value="empire_of_innovation"
+                    data-max-participants="4"
+                  />
+                  <label class="form-check-label" for="empire_of_innovation"
+                    >Empire of Innovation (Max 4 participants)</label
+                  >
+                </div>
+
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="recruitoria_kingdom"
+                    name="events"
+                    value="recruitoria_kingdom"
+                    data-max-participants="2"
+                  />
+                  <label class="form-check-label" for="recruitoria_kingdom"
+                    >Recruitoria Kingdom (Max 2 participants)</label
+                  >
+                </div>
+
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="crown_coin"
+                    name="events"
+                    value="crown_coin"
+                    data-max-participants="2"
+                  />
+                  <label class="form-check-label" for="crown_coin"
+                    >Crown Coin (Max 2 participants)</label
+                  >
+                </div>
+
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="hustle"
+                    name="events"
+                    value="hustle"
+                    data-max-participants="2"
+                  />
+                  <label class="form-check-label" for="hustle"
+                    >Hustle (Max 2 participants)</label
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="technocratic_entertainment"
+                    name="events"
+                    value="technocratic_entertainment"
+                    data-max-participants="4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="technocratic_entertainment"
+                    >Technocratic Entertainment (Max 4 participants)</label
+                  >
+                </div>
+
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="kings_court"
+                    name="events"
+                    value="kings_court"
+                    data-max-participants="2"
+                  />
+                  <label class="form-check-label" for="kings_court"
+                    >Kings Court (Max 2 participants)</label
+                  >
+                </div>
+
+                <div class="event-checkbox form-check">
+                  <input
+                    class="form-check-input event-select"
+                    type="checkbox"
+                    id="royal_ballet_fashion"
+                    name="events"
+                    value="royal_ballet_fashion"
+                    data-min-participants="4"
+                    data-max-participants="8"
+                  />
+                  <label class="form-check-label" for="royal_ballet_fashion"
+                    >Royal Ballet Fashion (4-8 participants)</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participant Details Section -->
+          <div class="form-section">
+            <h3>Participant Details</h3>
+            <p class="text-muted mb-4">
+              Fill out participant details for each event you've selected
+            </p>
+
+            <!-- Empire of Innovation Participants -->
+            <div
+              id="empire_of_innovation_participants"
+              class="participant-fields"
+            >
+              <h5>Empire of Innovation Participants (Max: 4)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_name_1" class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="empire_participant_name_1"
+                      name="empire_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_mobile_1" class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="empire_participant_mobile_1"
+                      name="empire_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat for participants 2-4 -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_name_2" class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="empire_participant_name_2"
+                      name="empire_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_mobile_2" class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="empire_participant_mobile_2"
+                      name="empire_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_name_3" class="form-label"
+                      >Participant Name 3</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="empire_participant_name_3"
+                      name="empire_participant_name_3"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_mobile_3" class="form-label"
+                      >Mobile No 3</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="empire_participant_mobile_3"
+                      name="empire_participant_mobile_3"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_name_4" class="form-label"
+                      >Participant Name 4</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="empire_participant_name_4"
+                      name="empire_participant_name_4"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="empire_participant_mobile_4" class="form-label"
+                      >Mobile No 4</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="empire_participant_mobile_4"
+                      name="empire_participant_mobile_4"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recruitoria Kingdom Participants -->
+            <div
+              id="recruitoria_kingdom_participants"
+              class="participant-fields"
+            >
+              <h5>Recruitoria Kingdom Participants (Max: 2)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="recruitoria_participant_name_1"
+                      class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="recruitoria_participant_name_1"
+                      name="recruitoria_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="recruitoria_participant_mobile_1"
+                      class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="recruitoria_participant_mobile_1"
+                      name="recruitoria_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="recruitoria_participant_name_2"
+                      class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="recruitoria_participant_name_2"
+                      name="recruitoria_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="recruitoria_participant_mobile_2"
+                      class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="recruitoria_participant_mobile_2"
+                      name="recruitoria_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Crown Coin Participants -->
+            <div id="crown_coin_participants" class="participant-fields">
+              <h5>Crown Coin Participants (Max: 2)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="crown_coin_participant_name_1"
+                      class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="crown_coin_participant_name_1"
+                      name="crown_coin_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="crown_coin_participant_mobile_1"
+                      class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="crown_coin_participant_mobile_1"
+                      name="crown_coin_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="crown_coin_participant_name_2"
+                      class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="crown_coin_participant_name_2"
+                      name="crown_coin_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="crown_coin_participant_mobile_2"
+                      class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="crown_coin_participant_mobile_2"
+                      name="crown_coin_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hustle Participants -->
+            <div id="hustle_participants" class="participant-fields">
+              <h5>Hustle Participants (Max: 2)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="hustle_participant_name_1" class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="hustle_participant_name_1"
+                      name="hustle_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="hustle_participant_mobile_1" class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="hustle_participant_mobile_1"
+                      name="hustle_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="hustle_participant_name_2" class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="hustle_participant_name_2"
+                      name="hustle_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="hustle_participant_mobile_2" class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="hustle_participant_mobile_2"
+                      name="hustle_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technocratic Entertainment Participants -->
+            <div
+              id="technocratic_entertainment_participants"
+              class="participant-fields"
+            >
+              <h5>Technocratic Entertainment Participants (Max: 4)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_name_1"
+                      class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="technocratic_participant_name_1"
+                      name="technocratic_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_mobile_1"
+                      class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="technocratic_participant_mobile_1"
+                      name="technocratic_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat for participants 2-4 -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_name_2"
+                      class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="technocratic_participant_name_2"
+                      name="technocratic_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_mobile_2"
+                      class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="technocratic_participant_mobile_2"
+                      name="technocratic_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_name_3"
+                      class="form-label"
+                      >Participant Name 3</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="technocratic_participant_name_3"
+                      name="technocratic_participant_name_3"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_mobile_3"
+                      class="form-label"
+                      >Mobile No 3</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="technocratic_participant_mobile_3"
+                      name="technocratic_participant_mobile_3"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_name_4"
+                      class="form-label"
+                      >Participant Name 4</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="technocratic_participant_name_4"
+                      name="technocratic_participant_name_4"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="technocratic_participant_mobile_4"
+                      class="form-label"
+                      >Mobile No 4</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="technocratic_participant_mobile_4"
+                      name="technocratic_participant_mobile_4"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kings Court Participants -->
+            <div id="kings_court_participants" class="participant-fields">
+              <h5>Kings Court Participants (Max: 2)</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="kings_court_participant_name_1"
+                      class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="kings_court_participant_name_1"
+                      name="kings_court_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="kings_court_participant_mobile_1"
+                      class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="kings_court_participant_mobile_1"
+                      name="kings_court_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="kings_court_participant_name_2"
+                      class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="kings_court_participant_name_2"
+                      name="kings_court_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="kings_court_participant_mobile_2"
+                      class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="kings_court_participant_mobile_2"
+                      name="kings_court_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Royal Ballet Fashion Participants -->
+            <div
+              id="royal_ballet_fashion_participants"
+              class="participant-fields"
+            >
+              <h5>Royal Ballet Fashion Participants (4-8 participants)</h5>
+              <p class="text-muted mb-3">
+                Note: Time allotted 4+1 minutes. Audio should be in MP4 format
+                only.
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_1"
+                      class="form-label"
+                      >Participant Name 1</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_1"
+                      name="royal_ballet_participant_name_1"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_1"
+                      class="form-label"
+                      >Mobile No 1</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_1"
+                      name="royal_ballet_participant_mobile_1"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat for participants 2-8 -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_2"
+                      class="form-label"
+                      >Participant Name 2</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_2"
+                      name="royal_ballet_participant_name_2"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_2"
+                      class="form-label"
+                      >Mobile No 2</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_2"
+                      name="royal_ballet_participant_mobile_2"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_3"
+                      class="form-label"
+                      >Participant Name 3</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_3"
+                      name="royal_ballet_participant_name_3"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_3"
+                      class="form-label"
+                      >Mobile No 3</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_3"
+                      name="royal_ballet_participant_mobile_3"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_4"
+                      class="form-label"
+                      >Participant Name 4</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_4"
+                      name="royal_ballet_participant_name_4"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_4"
+                      class="form-label"
+                      >Mobile No 4</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_4"
+                      name="royal_ballet_participant_mobile_4"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_5"
+                      class="form-label"
+                      >Participant Name 5</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_5"
+                      name="royal_ballet_participant_name_5"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_5"
+                      class="form-label"
+                      >Mobile No 5</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_5"
+                      name="royal_ballet_participant_mobile_5"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_6"
+                      class="form-label"
+                      >Participant Name 6</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_6"
+                      name="royal_ballet_participant_name_6"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_6"
+                      class="form-label"
+                      >Mobile No 6</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_6"
+                      name="royal_ballet_participant_mobile_6"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_7"
+                      class="form-label"
+                      >Participant Name 7</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_7"
+                      name="royal_ballet_participant_name_7"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_7"
+                      class="form-label"
+                      >Mobile No 7</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_7"
+                      name="royal_ballet_participant_mobile_7"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_name_8"
+                      class="form-label"
+                      >Participant Name 8</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="royal_ballet_participant_name_8"
+                      name="royal_ballet_participant_name_8"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      for="royal_ballet_participant_mobile_8"
+                      class="form-label"
+                      >Mobile No 8</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="royal_ballet_participant_mobile_8"
+                      name="royal_ballet_participant_mobile_8"
+                      pattern="^\d{10}$"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Section -->
+          <div class="form-section text-center">
+            <h3>Submit Registration</h3>
+            <p class="mb-4">
+              Review your information before submitting the registration form
+            </p>
+            <button type="submit" class="btn btn-techfest btn-lg">
+              Submit Registration
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="techfest-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h4 class="mb-4">AAKANKSHA 2K25</h4>
+            <p>
+              State Level Management and Tech Fest organized by B.S.
+              Channabasappa First Grade College, Davanagere.
+            </p>
+            <div class="social-icons mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">Results</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+            <h5>Events</h5>
+            <ul>
+              <li><a href="#">AAKANKSHA 2K25</a></li>
+              <li><a href="#">Cultural Events</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Seminars</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> S.S. Layout A Block,
+                Davanagere - 577004
+              </li>
+              <li><i class="fas fa-phone me-2"></i> 08192 - 221816</li>
+              <li><i class="fas fa-envelope me-2"></i> bsccollege@gmail.com</li>
+              <li><i class="fas fa-envelope me-2"></i> principal@bscfgc.com</li>
+              <li><i class="fas fa-globe me-2"></i> www.bscfgc.com</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2025 AKANKSHA 2K25. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              Designed with <i class="fas fa-heart text-danger"></i>
+              <a href="" style="color: #f0f0f0">L K Technologies</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved dark mode preference
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("darkMode", "enabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem("darkMode", "disabled");
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".techfest-navbar");
+        if (window.scrollY > 50) {
+          navbar.style.padding = "10px 0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          navbar.style.padding = "15px 0";
+          navbar.style.boxShadow = "none";
+        }
+      });
+
+      // Event selection to show participant fields
+      document.querySelectorAll(".event-select").forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          const participantFields = document.getElementById(
+            this.value + "_participants"
+          );
+          if (this.checked) {
+            participantFields.style.display = "block";
+          } else {
+            participantFields.style.display = "none";
+          }
+        });
+      });
+
+      // Form submission
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Basic validation
+          let isValid = true;
+          const requiredFields = this.querySelectorAll("[required]");
+          requiredFields.forEach((field) => {
+            if (!field.value.trim()) {
+              isValid = false;
+              field.classList.add("is-invalid");
+            } else {
+              field.classList.remove("is-invalid");
+            }
+          });
+
+          // Validate mobile numbers
+          const mobileFields = this.querySelectorAll("input[type='tel']");
+          mobileFields.forEach((field) => {
+            if (field.value && !field.checkValidity()) {
+              isValid = false;
+              field.classList.add("is-invalid");
+            }
+          });
+
+          if (isValid) {
+            alert(
+              "Registration submitted successfully! In a real application, this would connect to the backend database."
+            );
+            // Here you would typically send the form data to your PHP backend
+          } else {
+            alert("Please fill all required fields correctly.");
+          }
+        });
+    </script>
+  </body>
+</html>
