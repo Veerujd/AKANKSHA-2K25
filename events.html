@@ -19,11 +19,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Animate.css for additional animations -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <style>
       :root {
         --aakansha-color-primary: #ffd700;
@@ -45,7 +40,7 @@
         color: var(--aakansha-color-text);
         background-color: var(--aakansha-color-white);
         overflow-x: hidden;
-        transition: background-color 0.5s ease;
+        transition: background-color 0.3s ease;
       }
 
       body.aakansha-dark-mode {
@@ -84,11 +79,6 @@
       .aakansha-college-logo {
         height: 50px;
         margin-right: 15px;
-        transition: transform 0.3s ease;
-      }
-
-      .aakansha-college-logo:hover {
-        transform: rotate(5deg);
       }
 
       .aakansha-nav-item {
@@ -99,31 +89,10 @@
         font-weight: 500;
         color: var(--aakansha-color-text);
         transition: var(--aakansha-transition);
-        position: relative;
       }
 
       .aakansha-dark-mode .aakansha-nav-link {
         color: var(--aakansha-color-white);
-      }
-
-      .aakansha-nav-link:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background: linear-gradient(
-          45deg,
-          var(--aakansha-color-primary),
-          var(--aakansha-color-secondary)
-        );
-        transition: width 0.3s ease;
-      }
-
-      .aakansha-nav-link:hover:after,
-      .aakansha-nav-link.active:after {
-        width: 100%;
       }
 
       .aakansha-nav-link:hover {
@@ -133,11 +102,6 @@
       .aakansha-navbar-toggler {
         border: none;
         font-size: 1.5rem;
-        transition: transform 0.3s ease;
-      }
-
-      .aakansha-navbar-toggler:hover {
-        transform: rotate(90deg);
       }
 
       /* Hero Section */
@@ -150,30 +114,6 @@
         color: var(--aakansha-color-white);
         text-align: center;
         position: relative;
-        overflow: hidden;
-      }
-
-      .aakansha-events-hero:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(211,47,47,0.1));
-        animation: aakansha-hero-gradient 10s ease infinite;
-        z-index: 0;
-      }
-
-      @keyframes aakansha-hero-gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-
-      .aakansha-events-hero .container {
-        position: relative;
-        z-index: 1;
       }
 
       .aakansha-anniversary-badge {
@@ -187,7 +127,7 @@
         border-radius: 30px;
         font-weight: 600;
         margin-bottom: 20px;
-        animation: aakansha-pulse 2s infinite, aakansha-float 3s ease-in-out infinite;
+        animation: aakansha-pulse 2s infinite;
       }
 
       @keyframes aakansha-pulse {
@@ -199,18 +139,6 @@
         }
         100% {
           transform: scale(1);
-        }
-      }
-
-      @keyframes aakansha-float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
         }
       }
 
@@ -233,18 +161,6 @@
         );
         margin: 15px auto;
         border-radius: 2px;
-        animation: aakansha-line-expand 1s ease-out forwards;
-      }
-
-      @keyframes aakansha-line-expand {
-        0% {
-          width: 0;
-          opacity: 0;
-        }
-        100% {
-          width: 80px;
-          opacity: 1;
-        }
       }
 
       .aakansha-dark-mode .aakansha-section-title:after {
@@ -274,29 +190,22 @@
         margin-bottom: 30px;
         height: 100%;
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
-        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateY(30px);
       }
 
       .aakansha-event-card.aakansha-visible {
         opacity: 1;
-        transform: translateY(0) scale(1);
-        transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+        transform: translateY(0);
       }
 
       .aakansha-event-card:hover {
-        transform: translateY(-10px) scale(1.02);
+        transform: translateY(-10px);
         box-shadow: var(--aakansha-shadow-hover);
       }
 
       .aakansha-event-img {
         height: 200px;
         object-fit: cover;
-        transition: transform 0.5s ease;
-      }
-
-      .aakansha-event-card:hover .aakansha-event-img {
-        transform: scale(1.05);
       }
 
       .aakansha-event-badge {
@@ -309,24 +218,12 @@
         border-radius: 30px;
         font-weight: 600;
         font-size: 0.9rem;
-        animation: aakansha-badge-shake 2s ease infinite;
-      }
-
-      @keyframes aakansha-badge-shake {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(5deg); }
-        75% { transform: rotate(-5deg); }
       }
 
       .aakansha-event-icon {
         font-size: 2rem;
         color: var(--aakansha-color-primary);
         margin-bottom: 15px;
-        transition: transform 0.3s ease;
-      }
-
-      .aakansha-event-card:hover .aakansha-event-icon {
-        transform: rotate(15deg) scale(1.2);
       }
 
       .aakansha-coordinator-list {
@@ -339,28 +236,15 @@
         border-bottom: 1px solid #eee;
         display: flex;
         align-items: center;
-        transition: var(--aakansha-transition);
       }
 
       .aakansha-dark-mode .aakansha-coordinator-list li {
         border-color: #444;
       }
 
-      .aakansha-coordinator-list li:hover {
-        transform: translateX(5px);
-        background-color: rgba(255, 215, 0, 0.1);
-        border-radius: 5px;
-        padding-left: 10px;
-      }
-
       .aakansha-coordinator-list i {
         margin-right: 10px;
         color: var(--aakansha-color-primary);
-        transition: transform 0.3s ease;
-      }
-
-      .aakansha-coordinator-list li:hover i {
-        transform: scale(1.2);
       }
 
       /* Rules Section */
@@ -394,7 +278,6 @@
       .aakansha-rules-list li.aakansha-visible {
         opacity: 1;
         transform: translateX(0);
-        transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
       }
 
       .aakansha-dark-mode .aakansha-rules-list li {
@@ -403,7 +286,6 @@
 
       .aakansha-rules-list li:hover {
         transform: translateX(5px);
-        box-shadow: var(--aakansha-shadow-hover);
       }
 
       .aakansha-rules-list li:before {
@@ -421,11 +303,6 @@
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        transition: transform 0.3s ease;
-      }
-
-      .aakansha-rules-list li:hover:before {
-        transform: translateY(-50%) scale(1.2) rotate(10deg);
       }
 
       /* Footer */
@@ -454,7 +331,6 @@
 
       .aakansha-footer-links li {
         margin-bottom: 10px;
-        transition: var(--aakansha-transition);
       }
 
       .aakansha-footer-links a {
@@ -484,7 +360,7 @@
       .aakansha-social-icons a:hover {
         background: var(--aakansha-color-primary);
         color: var(--aakansha-color-accent);
-        transform: translateY(-5px) rotate(5deg);
+        transform: translateY(-5px);
       }
 
       /* Dark Mode Toggle */
@@ -505,25 +381,10 @@
         box-shadow: var(--aakansha-shadow);
         transition: var(--aakansha-transition);
         border: none;
-        animation: aakansha-bounce-in 1s ease;
-      }
-
-      @keyframes aakansha-bounce-in {
-        0% {
-          transform: scale(0);
-          opacity: 0;
-        }
-        60% {
-          transform: scale(1.1);
-        }
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
       }
 
       .aakansha-dark-mode-toggle:hover {
-        transform: rotate(30deg) scale(1.1);
+        transform: rotate(30deg);
       }
 
       /* Button Styles */
@@ -540,28 +401,6 @@
         font-weight: 600;
         transition: var(--aakansha-transition);
         box-shadow: var(--aakansha-shadow);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .aakansha-btn:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: 0.5s;
-      }
-
-      .aakansha-btn:hover:before {
-        left: 100%;
       }
 
       .aakansha-btn:hover {
@@ -602,174 +441,14 @@
         transform: translateY(0);
       }
 
-      /* Hero text animation */
-      .aakansha-hero-title {
-        animation: aakansha-fade-in-down 1s ease forwards;
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-
-      .aakansha-hero-subtitle {
-        animation: aakansha-fade-in-up 1s ease 0.3s forwards;
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      .aakansha-hero-button {
-        animation: aakansha-fade-in 1s ease 0.6s forwards;
-        opacity: 0;
-      }
-
-      @keyframes aakansha-fade-in-down {
-        0% {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes aakansha-fade-in-up {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes aakansha-fade-in {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
       /* Mobile Responsive Adjustments */
-      @media (max-width: 1200px) {
-        .aakansha-event-card {
-          margin-bottom: 25px;
-        }
-      }
-
-      @media (max-width: 992px) {
+      @media (max-width: 768px) {
         .aakansha-events-hero {
           padding: 100px 0 60px;
         }
 
-        .aakansha-hero-title {
-          font-size: 2.5rem;
-        }
-        
         .aakansha-event-card {
           margin-bottom: 20px;
-        }
-        
-        .aakansha-event-img {
-          height: 180px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .aakansha-navbar-brand span {
-          font-size: 1.2rem;
-        }
-        
-        .aakansha-college-logo {
-          height: 40px;
-        }
-        
-        .aakansha-events-hero {
-          padding: 80px 0 40px;
-        }
-        
-        .aakansha-hero-title {
-          font-size: 2rem;
-        }
-        
-        .aakansha-section-title {
-          font-size: 1.8rem;
-        }
-        
-        .aakansha-event-card {
-          margin-bottom: 15px;
-        }
-        
-        .aakansha-event-img {
-          height: 160px;
-        }
-        
-        .aakansha-rules-list li {
-          padding: 12px;
-          padding-left: 50px;
-          margin-bottom: 12px;
-        }
-        
-        .aakansha-rules-list li:before {
-          left: 15px;
-          width: 25px;
-          height: 25px;
-        }
-        
-        .aakansha-footer {
-          padding: 40px 0 20px;
-        }
-        
-        .aakansha-dark-mode-toggle {
-          width: 50px;
-          height: 50px;
-          bottom: 20px;
-          right: 20px;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .aakansha-hero-title {
-          font-size: 1.8rem;
-        }
-        
-        .aakansha-hero-subtitle {
-          font-size: 1rem;
-        }
-        
-        .aakansha-section-title {
-          font-size: 1.6rem;
-          margin-bottom: 30px;
-        }
-        
-        .aakansha-event-card {
-          margin-bottom: 15px;
-        }
-        
-        .aakansha-event-img {
-          height: 140px;
-        }
-        
-        .aakansha-coordinator-list li {
-          font-size: 0.9rem;
-        }
-        
-        .aakansha-btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-      }
-
-      /* Reduced motion for accessibility */
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
         }
       }
     </style>
@@ -805,7 +484,9 @@
               <a class="nav-link aakansha-nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item aakansha-nav-item">
-              <a class="nav-link aakansha-nav-link active" href="events.html">Events</a>
+              <a class="nav-link aakansha-nav-link active" href="events.html"
+                >Events</a
+              >
             </li>
             <li class="nav-item aakansha-nav-item">
               <a class="nav-link aakansha-nav-link" href="schedule.html"
@@ -818,9 +499,7 @@
               >
             </li>
             <li class="nav-item aakansha-nav-item">
-              <a
-                class="nav-link aakansha-nav-link aakansha-btn ms-2"
-                href="#"
+              <a class="nav-link aakansha-nav-link aakansha-btn ms-2" href="#"
                 >Register Now</a
               >
             </li>
@@ -833,9 +512,11 @@
     <section class="aakansha-events-hero">
       <div class="container">
         <div class="aakansha-anniversary-badge">8th Edition</div>
-        <h1 class="display-3 fw-bold mb-4 aakansha-hero-title">AAKANKSHA 2K25 Events</h1>
-        <p class="lead mb-4 aakansha-hero-subtitle">Empire of Innovation - Lead the Change, Rule the Market</p>
-        <a href="#events" class="aakansha-btn aakansha-hero-button">Explore Events</a>
+        <h1 class="display-3 fw-bold mb-4">AAKANKSHA 2K25 Events</h1>
+        <p class="lead mb-4">
+          Empire of Innovation - Lead the Change, Rule the Market
+        </p>
+        <a href="#events" class="aakansha-btn">Explore Events</a>
       </div>
     </section>
 
@@ -855,19 +536,36 @@
               <div class="aakansha-event-badge">4 Participants</div>
               <div class="card-body">
                 <h5 class="card-title">Empire of Innovation</h5>
-                <p class="card-text">A competition to showcase innovative ideas and business models.</p>
-                
+                <p class="card-text">
+                  A competition to showcase innovative ideas and business
+                  models.
+                </p>
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Sri. Dhananjay N S - 99455 58448</li>
-                  <li><i class="fas fa-user-tie"></i> Sri. Vinayaka S S - 98809 51668</li>
-                  <li><i class="fas fa-user-tie"></i> Smt. Jayalakshmi J P - 77953 13990</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri. Dhananjay N S - 99455
+                    58448
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri. Vinayaka S S - 98809
+                    51668
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Jayalakshmi J P - 77953
+                    13990
+                  </li>
                 </ul>
-                
+
                 <h6>Student Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-graduate"></i> Gnaneshwara - 96638 06421</li>
-                  <li><i class="fas fa-user-graduate"></i> Sanjana S - 89516 68037</li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Gnaneshwara - 96638
+                    06421
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Sanjana S - 89516 68037
+                  </li>
                 </ul>
               </div>
             </div>
@@ -884,19 +582,34 @@
               <div class="aakansha-event-badge">2 Participants</div>
               <div class="card-body">
                 <h5 class="card-title">Recruitoria Kingdom</h5>
-                <p class="card-text">HR and recruitment simulation competition.</p>
-                
+                <p class="card-text">
+                  HR and recruitment simulation competition.
+                </p>
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Smt. Anusha S H - 83108 18638</li>
-                  <li><i class="fas fa-user-tie"></i> Sri Tejas M S - 98445 56166</li>
-                  <li><i class="fas fa-user-tie"></i> Smt. Jyothi H - 81235 66919</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Anusha S H - 83108
+                    18638
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri Tejas M S - 98445 56166
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Jyothi H - 81235 66919
+                  </li>
                 </ul>
-                
+
                 <h6>Student Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-graduate"></i> Shivalingeshwar - 93539 97139</li>
-                  <li><i class="fas fa-user-graduate"></i> Suhani P S - 95914 88230</li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Shivalingeshwar - 93539
+                    97139
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Suhani P S - 95914
+                    88230
+                  </li>
                 </ul>
               </div>
             </div>
@@ -913,19 +626,34 @@
               <div class="aakansha-event-badge">2 Participants</div>
               <div class="card-body">
                 <h5 class="card-title">Crown Coin</h5>
-                <p class="card-text">Finance and investment strategy competition.</p>
-                
+                <p class="card-text">
+                  Finance and investment strategy competition.
+                </p>
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Smt. Rekha H G - 98442 85188</li>
-                  <li><i class="fas fa-user-tie"></i> Sri Santosh MS - 63611 15194</li>
-                  <li><i class="fas fa-user-tie"></i> Sri Manjunath B - 99647 56302</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Rekha H G - 98442 85188
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri Santosh MS - 63611 15194
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri Manjunath B - 99647
+                    56302
+                  </li>
                 </ul>
-                
+
                 <h6>Student Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-graduate"></i> Hemanthraj K S - 79757 45279</li>
-                  <li><i class="fas fa-user-graduate"></i> Shraddha VS - 74835 91865</li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Hemanthraj K S - 79757
+                    45279
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Shraddha VS - 74835
+                    91865
+                  </li>
                 </ul>
               </div>
             </div>
@@ -943,18 +671,33 @@
               <div class="card-body">
                 <h5 class="card-title">Hustle</h5>
                 <p class="card-text">Entrepreneurship and startup challenge.</p>
-                
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Sri Praveen Kumar K - 97417 26679</li>
-                  <li><i class="fas fa-user-tie"></i> Smt. Akshata P K - 86183 79003</li>
-                  <li><i class="fas fa-user-tie"></i> Miss. Shwetha Angadi - 84969 34371</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri Praveen Kumar K - 97417
+                    26679
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Akshata P K - 86183
+                    79003
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Miss. Shwetha Angadi - 84969
+                    34371
+                  </li>
                 </ul>
-                
+
                 <h6>Student Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-graduate"></i> Vaibhav S P - 74837 95944</li>
-                  <li><i class="fas fa-user-graduate"></i> Harshitha MK - 91089 95833</li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Vaibhav S P - 74837
+                    95944
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Harshitha MK - 91089
+                    95833
+                  </li>
                 </ul>
               </div>
             </div>
@@ -971,19 +714,33 @@
               <div class="aakansha-event-badge">4 Participants</div>
               <div class="card-body">
                 <h5 class="card-title">Technocratic Entertainment</h5>
-                <p class="card-text">Technology and entertainment fusion competition.</p>
-                
+                <p class="card-text">
+                  Technology and entertainment fusion competition.
+                </p>
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Smt. Latha M - 98442 19466</li>
-                  <li><i class="fas fa-user-tie"></i> Smt. Sheela M S - 94492 82697</li>
-                  <li><i class="fas fa-user-tie"></i> Miss. Sahana A B - N/A</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Latha M - 98442 19466
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Sheela M S - 94492
+                    82697
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Miss. Sahana A B - N/A
+                  </li>
                 </ul>
-                
+
                 <h6>Student Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-graduate"></i> Sudhir - 63600 61370</li>
-                  <li><i class="fas fa-user-graduate"></i> Vijayashree - 97413 97905</li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Sudhir - 63600 61370
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Vijayashree - 97413
+                    97905
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1001,18 +758,31 @@
               <div class="card-body">
                 <h5 class="card-title">Kings Court</h5>
                 <p class="card-text">Debate and discussion competition.</p>
-                
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Smt. Kiran M B - 86608 39099</li>
-                  <li><i class="fas fa-user-tie"></i> Miss. Mamatha S H - 91481 26794</li>
-                  <li><i class="fas fa-user-tie"></i> Miss. Sindhu S R - 70227 81610</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Kiran M B - 86608 39099
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Miss. Mamatha S H - 91481
+                    26794
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Miss. Sindhu S R - 70227
+                    81610
+                  </li>
                 </ul>
-                
+
                 <h6>Student Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-graduate"></i> Akasha CR - 95351 39924</li>
-                  <li><i class="fas fa-user-graduate"></i> Priyanka S - 84314 19268</li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Akasha CR - 95351 39924
+                  </li>
+                  <li>
+                    <i class="fas fa-user-graduate"></i> Priyanka S - 84314
+                    19268
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1029,12 +799,18 @@
               <div class="aakansha-event-badge">4-8 Participants</div>
               <div class="card-body">
                 <h5 class="card-title">Royal Ballet Fashion</h5>
-                <p class="card-text">Fashion show and cultural performance event.</p>
-                
+                <p class="card-text">
+                  Fashion show and cultural performance event.
+                </p>
+
                 <h6 class="mt-4">Faculty Coordinators:</h6>
                 <ul class="aakansha-coordinator-list">
-                  <li><i class="fas fa-user-tie"></i> Sri Annesh P - 98803 04338</li>
-                  <li><i class="fas fa-user-tie"></i> Smt. Kavitha V - 74111 57189</li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Sri Annesh P - 98803 04338
+                  </li>
+                  <li>
+                    <i class="fas fa-user-tie"></i> Smt. Kavitha V - 74111 57189
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1053,7 +829,9 @@
               <li>Registration Fee: ₹800 per team</li>
               <li>Maximum of 2 teams per college</li>
               <li>Eligible Courses: B.Com, B.B.A., B.C.A., B.Sc. (CS)</li>
-              <li>Participants must carry their own laptops and Wi-Fi hotspots</li>
+              <li>
+                Participants must carry their own laptops and Wi-Fi hotspots
+              </li>
               <li>One faculty member must accompany each team</li>
               <li>2 Passport size photos with names on backside required</li>
               <li>Student ID and Principal Approval Letter are mandatory</li>
@@ -1079,8 +857,9 @@
           <div class="col-lg-4 mb-4 mb-lg-0">
             <h4 class="mb-4">AAKANKSHA 2K25</h4>
             <p>
-              State level management fest boosting management and technical skills, 
-              offering platform for innovative ideas, fostering growth and progress.
+              State level management fest boosting management and technical
+              skills, offering platform for innovative ideas, fostering growth
+              and progress.
             </p>
             <div class="aakansha-social-icons mt-4">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1114,16 +893,13 @@
             <h5>Contact Us</h5>
             <ul>
               <li>
-                <i class="fas fa-map-marker-alt me-2"></i> B.S.Channabasappa First Grade College, Davangere
+                <i class="fas fa-map-marker-alt me-2"></i> B.S.Channabasappa
+                First Grade College, Davangere
               </li>
               <li><i class="fas fa-phone me-2"></i> Landline: 221816</li>
               <li><i class="fas fa-mobile me-2"></i> Principal: 9886215251</li>
-              <li>
-                <i class="fas fa-envelope me-2"></i> bsccollege@gmail.com
-              </li>
-              <li>
-                <i class="fas fa-globe me-2"></i> www.bscfgc.com
-              </li>
+              <li><i class="fas fa-envelope me-2"></i> bsccollege@gmail.com</li>
+              <li><i class="fas fa-globe me-2"></i> www.bscfgc.com</li>
             </ul>
           </div>
         </div>
@@ -1188,30 +964,18 @@
         }
       });
 
-      // Scroll animations with staggered effect
+      // Scroll animations
       function aakanshaCheckVisibility() {
-        const aakanshaEventCards = document.querySelectorAll(".aakansha-event-card");
-        const aakanshaRulesItems = document.querySelectorAll(".aakansha-rules-list li");
+        const aakanshaElements = document.querySelectorAll(
+          ".aakansha-event-card, .aakansha-rules-list li"
+        );
 
-        aakanshaEventCards.forEach((element, index) => {
+        aakanshaElements.forEach((element) => {
           const position = element.getBoundingClientRect();
 
           // Checking whether fully visible
           if (position.top < window.innerHeight && position.bottom >= 0) {
-            setTimeout(() => {
-              element.classList.add("aakansha-visible");
-            }, index * 150); // Stagger the animation
-          }
-        });
-
-        aakanshaRulesItems.forEach((element, index) => {
-          const position = element.getBoundingClientRect();
-
-          // Checking whether fully visible
-          if (position.top < window.innerHeight && position.bottom >= 0) {
-            setTimeout(() => {
-              element.classList.add("aakansha-visible");
-            }, index * 100); // Stagger the animation
+            element.classList.add("aakansha-visible");
           }
         });
       }
